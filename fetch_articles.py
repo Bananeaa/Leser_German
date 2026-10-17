@@ -14,9 +14,9 @@ HEADERS = {
 }
 
 FEED_URLS = [
-    "https://www.nachrichtenleicht.de/api/partnerfeeds/nachrichtenleicht/nachrichten?format=rss",
-    "https://www.nachrichtenleicht.de/nachrichtenleicht-100.rss",
-    "https://www.nachrichtenleicht.de/rss",
+    "https://www.nachrichtenleicht.de/nachrichtenleicht-nachrichten-100.rss", 
+    "https://www.nachrichtenleicht.de/nachrichtenleicht-vermischtes-100.rss", 
+    "https://www.nachrichtenleicht.de/nachrichtenleicht-kultur-index-100.rss",
 ]
 
 def fetch_url(url):
