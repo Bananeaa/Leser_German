@@ -128,8 +128,27 @@ html, body { height: 100%; background: var(--bg); color: var(--fg); font-family:
 .cat-title { font-family: var(--font-body); font-size: 0.88rem; font-weight: 600; line-height: 1.35; text-wrap: balance; }
 .cat-desc { font-size: 0.76rem; color: var(--fg-muted); margin-top: 6px; line-height: 1.45;
   display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.cat-level { display: inline-block; margin-top: 8px; font-size: 0.6rem; background: var(--accent-pale);
+.cat-meta { display: flex; align-items: center; gap: 6px; margin-top: 8px; flex-wrap: wrap; }
+.cat-level { display: inline-block; font-size: 0.6rem; background: var(--accent-pale);
   color: var(--accent); padding: 2px 6px; border-radius: 20px; font-weight: 600; letter-spacing: 0.04em; }
+.cat-tag { display: inline-block; font-size: 0.6rem; background: var(--bg);
+  color: var(--fg-muted); border: 1px solid var(--border); padding: 2px 6px; border-radius: 20px;
+  font-weight: 500; letter-spacing: 0.03em; }
+
+/* Tag filter chips */
+#tag-filter {
+  display: flex; flex-wrap: wrap; gap: 6px;
+  padding: 12px max(20px, env(safe-area-inset-left, 0px)) 4px max(20px, env(safe-area-inset-left, 0px));
+}
+.tag-chip {
+  background: var(--bg-shelf); border: 1px solid var(--border);
+  border-radius: 20px; padding: 4px 11px;
+  font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500;
+  color: var(--fg-muted); cursor: pointer; transition: background 0.15s, color 0.15s, border-color 0.15s;
+  user-select: none;
+}
+.tag-chip:hover { border-color: var(--accent); color: var(--accent); }
+.tag-chip.active { background: var(--accent); border-color: var(--accent); color: #fff; }
 
 /* ─────────────────────────────────────────
    READER
@@ -246,6 +265,7 @@ body::before {
     </div>
   </header>
 
+  <div id="tag-filter"></div>
   <div id="catalogue-loading" style="padding: 32px max(20px,env(safe-area-inset-left,0px)); font-family: var(--font-ui); font-size: 0.82rem; color: var(--fg-muted);">Artikel werden geladen…</div>
   <div class="catalogue-grid" id="catalogue-grid"></div>
 </div>
@@ -272,56 +292,8 @@ body::before {
 </div>
 
 <script>
-/* ── Dictionary ── */
-const DICT = {
-  "zum":{en:"to the"},"mal":{en:"time / once"},"seit":{en:"since / for"},"langer":{en:"long"},
-  "zeit":{en:"time",article:"die"},"wieder":{en:"again"},"beste":{en:"best"},
-  "welt":{en:"world",article:"die"},"er":{en:"he"},"heißt":{en:"is called / named"},
-  "spätestens":{en:"at the latest"},"dezember":{en:"December"},"wird":{en:"will / becomes"},
-  "ihm":{en:"him"},"hat":{en:"has"},"erst":{en:"only / first"},"anderer":{en:"another"},
-  "geschafft":{en:"achieved / managed"},"boris":{en:"Boris (name)"},"becker":{en:"Becker (name)"},
-  "schon":{en:"already"},"jahre":{en:"years"},"vor":{en:"before / ago"},"vier":{en:"four"},
-  "dachte":{en:"thought"},"ich":{en:"I"},"muss":{en:"must"},"aufhören":{en:"to stop / quit"},
-  "hatte":{en:"had"},"schlimme":{en:"serious / bad"},"verletzung":{en:"injury",article:"die"},
-  "aber":{en:"but"},"sehr":{en:"very"},"viel":{en:"much / a lot"},"trainiert":{en:"trained"},
-  "diesem":{en:"this"},"jahr":{en:"year",article:"das"},"wichtige":{en:"important"},
-  "turniere":{en:"tournaments"},"gewonnen":{en:"won"},"tennis":{en:"tennis"},
-  "spieler":{en:"player",article:"der"},"weltrangliste":{en:"world ranking list",article:"die"},
-  "rang":{en:"rank",article:"der"},"liste":{en:"list",article:"die"},
-  "deutschland":{en:"Germany"},"neuen":{en:"new"},"bundes":{en:"federal"},
-  "arbeits":{en:"work / labour"},"minister":{en:"minister",article:"der"},
-  "alexander":{en:"Alexander (name)"},"schweitzer":{en:"Schweitzer (name)"},
-  "ist":{en:"is"},"alt":{en:"old"},"und":{en:"and"},"partei":{en:"party (political)",article:"die"},
-  "spd":{en:"SPD (Social Democratic Party)"},"bundestag":{en:"federal parliament",article:"der"},
-  "amtseid":{en:"oath of office",article:"der"},"geleistet":{en:"performed / taken (an oath)"},
-  "geschworen":{en:"sworn"},"sich":{en:"himself / oneself"},"für":{en:"for"},
-  "menschen":{en:"people"},"einzusetzen":{en:"to advocate for"},"gesetze":{en:"laws"},
-  "achten":{en:"to respect"},"kommt":{en:"comes"},"aus":{en:"from"},
-  "bundesland":{en:"federal state",article:"das"},"rheinland-pfalz":{en:"Rhineland-Palatinate (German state)"},
-  "dort":{en:"there"},"ministerpräsident":{en:"minister-president / premier",article:"der"},
-  "nun":{en:"now"},"geplante":{en:"planned"},"rentenreform":{en:"pension reform",article:"die"},
-  "kümmern":{en:"to take care of"},"nachfolger":{en:"successor",article:"der"},
-  "zurückgetreten":{en:"resigned"},"war":{en:"was"},"als":{en:"as / when"},
-  "papst":{en:"Pope",article:"der"},"leo":{en:"Leo (name)"},"operiert":{en:"operated on"},
-  "worden":{en:"been (passive)"},"dabei":{en:"in the process / thereby"},
-  "wurde":{en:"was / became"},"klar":{en:"clear"},"lungenkrebs":{en:"lung cancer",article:"der"},
-  "krebs":{en:"cancer",article:"der"},"schwere":{en:"serious / severe"},
-  "krankheit":{en:"illness / disease",article:"die"},"man":{en:"one (impersonal) / you"},
-  "körper":{en:"body",article:"der"},"geschwür":{en:"tumor / growth",article:"das"},
-  "ausbreiten":{en:"to spread"},"kann":{en:"can"},"tumor":{en:"tumor",article:"der"},
-  "ärzte":{en:"doctors"},"lunge":{en:"lung",article:"die"},
-  "herausgeschnitten":{en:"cut out / removed"},"jetzt":{en:"now"},
-  "gibt":{en:"there is / gives"},"weitere":{en:"further"},"untersuchungen":{en:"examinations"},
-  "wollen":{en:"want to"},"herausfinden":{en:"to find out"},"ob":{en:"whether"},
-  "noch":{en:"still / yet"},"woanders":{en:"elsewhere"},"müsste":{en:"would have to"},
-  "weiter":{en:"further / continue"},"behandelt":{en:"treated"},"viele":{en:"many"},
-  "politiker":{en:"politicians"},"kirchen":{en:"church"},"leute":{en:"people"},
-  "gewünscht":{en:"wished / hoped"},"dass":{en:"that"},"gesund":{en:"healthy"},
-  "soll":{en:"is supposed to"},"bis":{en:"until"},"nächsten":{en:"next"},
-  "dienstag":{en:"Tuesday"},"krankenhaus":{en:"hospital",article:"das"},
-  "bleiben":{en:"to stay"},"november":{en:"November"},"will":{en:"wants to"},
-  "weiterhin":{en:"still / continue to"},"reise":{en:"trip / journey",article:"die"},
-  "südamerika":{en:"South America"},"machen":{en:"to make / do"},
+/* ── Base dictionary (grammar words always available) ── */
+const BASE_DICT = {
   "die":{en:"the (fem./pl.)"},"der":{en:"the (masc.)"},"das":{en:"the (neut.)"},
   "ein":{en:"a / an"},"eine":{en:"a / an (fem.)"},"in":{en:"in"},"den":{en:"the (acc.)"},
   "dem":{en:"the (dat.)"},"des":{en:"of the"},"an":{en:"at / on"},"auf":{en:"on / onto"},
@@ -329,22 +301,37 @@ const DICT = {
   "am":{en:"at the / on the"},"nicht":{en:"not"},"sein":{en:"to be / his"},
   "seine":{en:"his"},"sie":{en:"she / they"},"auch":{en:"also / too"},
   "nach":{en:"after / to"},"bei":{en:"at / with"},"wie":{en:"how / like"},
-  "so":{en:"so / thus"},"oder":{en:"or"},"wurden":{en:"were (plural past)"},
-  "müssen":{en:"must / have to"},"können":{en:"can / be able to"},"haben":{en:"to have"},
-  "sind":{en:"are"},"einer":{en:"one / a (masc.)"},"einen":{en:"a / an (masc. acc.)"},
-  "dieses":{en:"this (neut.)"},"dieser":{en:"this (masc.)"},"diese":{en:"this (fem./pl.)"},
-  "dann":{en:"then"},"mehr":{en:"more"},"immer":{en:"always / still"},"nur":{en:"only"},
-  "ganz":{en:"whole / completely"},"neue":{en:"new"},"neuer":{en:"new (masc.)"},
+  "so":{en:"so / thus"},"oder":{en:"or"},"ist":{en:"is"},"und":{en:"and"},
+  "er":{en:"he"},"ich":{en:"I"},"war":{en:"was"},"hat":{en:"has"},
+  "wird":{en:"will / becomes"},"kann":{en:"can"},"sich":{en:"himself / oneself"},
+  "aber":{en:"but"},"für":{en:"for"},"aus":{en:"from"},"als":{en:"as / when"},
+  "dass":{en:"that"},"bis":{en:"until"},"noch":{en:"still / yet"},"ob":{en:"whether"},
+  "nur":{en:"only"},"mehr":{en:"more"},"auch":{en:"also / too"},"dann":{en:"then"},
   "über":{en:"about / over"},"unter":{en:"under"},"durch":{en:"through"},
-  "gegen":{en:"against"},"ohne":{en:"without"},"werden":{en:"to become / will"},
-  "einem":{en:"a / an (dative)"},"wegen":{en:"because of"},"keine":{en:"no / none (fem.)"},
-  "kein":{en:"no / none"},"alle":{en:"all / everyone"},"denn":{en:"because / for"},
-  "hier":{en:"here"},"zwei":{en:"two"},"drei":{en:"three"},"ersten":{en:"first"},
-  "ihr":{en:"her / your (informal pl.)"},"ihn":{en:"him (accusative)"},
+  "gegen":{en:"against"},"ohne":{en:"without"},"nun":{en:"now"},"jetzt":{en:"now"},
+  "hier":{en:"here"},"dort":{en:"there"},"sehr":{en:"very"},"schon":{en:"already"},
+  "zwei":{en:"two"},"drei":{en:"three"},"vier":{en:"four"},
   "wer":{en:"who"},"was":{en:"what"},"wo":{en:"where"},"warum":{en:"why"},
-  "beim":{en:"at the"},"zur":{en:"to the (fem.)"},"ins":{en:"into the"},
-  "ans":{en:"to the / at the"}
+  "beim":{en:"at the"},"zur":{en:"to the (fem.)"},"zum":{en:"to the"},
+  "ins":{en:"into the"},"ans":{en:"to the / at the"},"seit":{en:"since / for"},
+  "wurden":{en:"were (plural past)"},"sind":{en:"are"},"haben":{en:"to have"},
+  "werden":{en:"to become / will"},"müssen":{en:"must / have to"},
+  "können":{en:"can / be able to"},"wollen":{en:"want to"},
+  "alle":{en:"all / everyone"},"viele":{en:"many"},"keine":{en:"no / none (fem.)"},
+  "kein":{en:"no / none"},"einem":{en:"a / an (dative)"},
+  "einer":{en:"one / a (masc.)"},"einen":{en:"a / an (masc. acc.)"},
+  "dieser":{en:"this (masc.)"},"diese":{en:"this (fem./pl.)"},
+  "dieses":{en:"this (neut.)"},"diesem":{en:"this (dative)"},
+  "immer":{en:"always / still"},"ganz":{en:"whole / completely"},
+  "weiter":{en:"further / continue"},"wieder":{en:"again"},
+  "man":{en:"one (impersonal)"},"ihm":{en:"him (dative)"},
+  "ihn":{en:"him (accusative)"},"ihr":{en:"her / their"},
+  "nach":{en:"after / to"},"wegen":{en:"because of"},
+  "denn":{en:"because / for"},"mal":{en:"time / once"}
 };
+
+/* ── Wiktionary dictionary (injected by fetch_articles.py) ── */
+const WIKT_DICT = {};
 
 /* ── Articles (loaded from GitHub) ── */
 let ARTICLES = [];
@@ -647,10 +634,15 @@ function isWord(t) { return /[a-zA-ZäöüÄÖÜß]/.test(t); }
 function norm(w) { return w.toLowerCase().replace(/[.,!?;:"""()]/g, ''); }
 function lookup(word) {
   const n = norm(word);
-  if (DICT[n]) return DICT[n];
-  for (const sfx of ['en','er','es','em','s','n','te','ten','t']) {
-    const stem = n.replace(new RegExp(sfx + '$'), '');
-    if (stem.length >= 2 && DICT[stem]) return DICT[stem];
+  // Check Wiktionary dict first (article-specific), then base grammar dict
+  if (WIKT_DICT[n]) return WIKT_DICT[n];
+  if (BASE_DICT[n]) return BASE_DICT[n];
+  // Try suffix stripping for inflected forms
+  for (const sfx of ['en','er','es','em','s','n','te','ten','t','st','ste','sten','stem']) {
+    if (n.length - sfx.length < 3) continue;
+    const stem = n.slice(0, n.length - sfx.length);
+    if (WIKT_DICT[stem]) return WIKT_DICT[stem];
+    if (BASE_DICT[stem]) return BASE_DICT[stem];
   }
   return null;
 }
@@ -665,26 +657,56 @@ function renderWords(text) {
 }
 
 /* ── Build shelf ── */
+let activeTag = null;
+
 function buildShelf() {
   const grid = document.getElementById('catalogue-grid');
+  const filterBar = document.getElementById('tag-filter');
 
-  ARTICLES.forEach(art => {
+  // Collect unique tags in order of appearance
+  const tags = [];
+  ARTICLES.forEach(a => { if (a.tag && !tags.includes(a.tag)) tags.push(a.tag); });
+
+  // Build filter chips
+  filterBar.innerHTML = '';
+  if (tags.length > 1) {
+    tags.forEach(tag => {
+      const chip = document.createElement('button');
+      chip.className = 'tag-chip' + (activeTag === tag ? ' active' : '');
+      chip.textContent = tag;
+      chip.addEventListener('click', () => {
+        activeTag = (activeTag === tag) ? null : tag;
+        renderCards();
+        filterBar.querySelectorAll('.tag-chip').forEach(c => c.classList.toggle('active', c.textContent === activeTag));
+      });
+      filterBar.appendChild(chip);
+    });
+  }
+
+  renderCards();
+  updateCounters();
+}
+
+function renderCards() {
+  const grid = document.getElementById('catalogue-grid');
+  grid.innerHTML = '';
+  const visible = activeTag ? ARTICLES.filter(a => a.tag === activeTag) : ARTICLES;
+  visible.forEach(art => {
     const read = isRead(art.id);
-
-    /* Catalogue card */
     const card = document.createElement('div');
     card.className = 'cat-card' + (read ? ' read' : '');
     card.dataset.id = art.id;
     card.innerHTML = `
       <div class="cat-date">${art.date}</div>
       <div class="cat-title">${art.title}</div>
-      <div class="cat-desc">${art.desc}</div>
-      <span class="cat-level">A1–A2</span>`;
+      <div class="cat-desc">${art.desc || ''}</div>
+      <div class="cat-meta">
+        <span class="cat-level">${art.level || 'B1'}</span>
+        ${art.tag ? `<span class="cat-tag">${art.tag}</span>` : ''}
+      </div>`;
     card.addEventListener('click', () => openArticle(art));
     grid.appendChild(card);
   });
-
-  updateCounters();
 }
 
 /* ── Navigation ── */
@@ -765,7 +787,10 @@ function showPopup(el) {
   seenWords[n2] = true; saveSeenWords(); updateCounters();
   el.classList.add('looked-up');
   document.getElementById('popup-word').textContent = el.dataset.word;
-  document.getElementById('popup-article-tag').textContent = entry.article ? entry.article : '';
+  const tagParts = [];
+  if (entry.article) tagParts.push(entry.article);
+  if (entry.level) tagParts.push(entry.level);
+  document.getElementById('popup-article-tag').textContent = tagParts.join(' · ');
   document.getElementById('popup-translation').textContent = entry.en;
   const rect = el.getBoundingClientRect();
   let left = Math.min(rect.left, window.innerWidth - 256);
