@@ -114,3 +114,20 @@ print(f"\nDone — {len(articles)} articles")
 with open("articles.json", "w", encoding="utf-8") as f:
     json.dump(articles, f, ensure_ascii=False, indent=2)
 print("Saved → articles.json")
+
+# Also inject articles into leser.html
+try:
+    with open("leser.html", "r", encoding="utf-8") as f:
+        html = f.read()
+    articles_json = json.dumps(articles, ensure_ascii=False)
+    # Replace the FALLBACK_ARTICLES array in the HTML
+    html = re.sub(
+        r'const FALLBACK_ARTICLES = \[.*?\];',
+        f'const FALLBACK_ARTICLES = {articles_json};',
+        html, flags=re.DOTALL
+    )
+    with open("leser.html", "w", encoding="utf-8") as f:
+        f.write(html)
+    print("Injected articles into leser.html")
+except Exception as e:
+    print(f"HTML inject failed: {e}")
