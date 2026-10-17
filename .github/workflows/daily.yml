@@ -18,8 +18,6 @@ jobs:
         with:
           python-version: '3.12'
 
-      - run: pip install feedparser
-
       - run: python fetch_articles.py
 
       - name: Commit updated articles
