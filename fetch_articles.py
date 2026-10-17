@@ -5,6 +5,7 @@ import re
 import time
 from datetime import datetime
 
+# Tagesschau has a public RSS and allows scraping from cloud IPs
 FEED_URL = "https://www.tagesschau.de/xml/rss2/"
 
 HEADERS = {
@@ -33,13 +34,21 @@ def translate_mymemory(text):
     return ""
 
 def extract_tagesschau(html):
+    """Extract article paragraphs from a tagesschau.de page."""
     html = re.sub(r"<script[^>]*>.*?</script>", "", html, flags=re.DOTALL)
     html = re.sub(r"<style[^>]*>.*?</style>", "", html, flags=re.DOTALL)
+
+    # Tagesschau article body is in <div class="seitenkopf__title"> and
+    # paragraphs inside <p class="textabsatz"> or <div class="m-ten-teaser__...">
+    # Most reliably: find all <p class="textabsatz ..."> tags
     paras = re.findall(r'<p[^>]+class="[^"]*textabsatz[^"]*"[^>]*>(.*?)</p>', html, re.DOTALL)
+
+    # Fallback: any <p> inside article tag
     if not paras:
         m = re.search(r'<article[^>]*>(.*?)</article>', html, re.DOTALL)
         if m:
             paras = re.findall(r'<p[^>]*>(.*?)</p>', m.group(1), re.DOTALL)
+
     result = []
     for p in paras:
         text = re.sub(r"<[^>]+>", "", p).strip()
@@ -61,6 +70,7 @@ def parse_rss(xml):
         desc    = tag("description")
         if not title or not link:
             continue
+        # Only keep German-language article links
         if "tagesschau.de" not in link:
             continue
         try:
@@ -70,6 +80,8 @@ def parse_rss(xml):
             date_str = pubdate[:10] if pubdate else ""
         result.append({"title": title, "link": link, "date": date_str, "desc": desc})
     return result
+
+# ── Main ──────────────────────────────────────────────────────────────────────
 
 print(f"Fetching feed: {FEED_URL}")
 try:
@@ -89,25 +101,35 @@ for item in feed_items:
         print(f"  Extracted {len(paras)} paragraphs")
     except Exception as e:
         print(f"  Fetch failed: {e}")
+        # Use RSS description as fallback
         desc = re.sub(r"<[^>]+>", "", item["desc"]).strip()
         paras = [desc] if len(desc) > 60 else []
+
     if not paras:
         print("  Skipping — no text")
         continue
+
     translations = []
     for i, p in enumerate(paras):
         print(f"  Translating {i+1}/{len(paras)}...")
         t = translate_mymemory(p)
         translations.append(t)
         time.sleep(0.4)
+
     art_id = re.sub(r"[^a-z0-9]", "-", item["title"].lower())[:40].strip("-")
+    # Build paragraphs as [{de, en}] pairs — matches renderArticle in leser.html
+    para_pairs = [{"de": p, "en": translations[i] if i < len(translations) else ""} for i, p in enumerate(paras)]
+    # Use first paragraph (truncated) as description for shelf card
+    desc = paras[0][:120].rsplit(" ", 1)[0] + "…" if paras else ""
     articles.append({
-        "id":           art_id,
-        "title":        item["title"],
-        "date":         item["date"],
-        "level":        "B1",
-        "paragraphs":   paras,
-        "translations": translations,
+        "id":         art_id,
+        "title":      item["title"],
+        "date":       item["date"],
+        "level":      "B1",
+        "desc":       desc,
+        "source":     "tagesschau.de",
+        "url":        item["link"],
+        "paragraphs": para_pairs,
     })
 
 print(f"\nDone — {len(articles)} articles")
@@ -115,19 +137,23 @@ with open("articles.json", "w", encoding="utf-8") as f:
     json.dump(articles, f, ensure_ascii=False, indent=2)
 print("Saved → articles.json")
 
-# Also inject articles into leser.html
-try:
-    with open("leser.html", "r", encoding="utf-8") as f:
-        html = f.read()
-    articles_json = json.dumps(articles, ensure_ascii=False)
-    # Replace the FALLBACK_ARTICLES array in the HTML
-    html = re.sub(
-        r'const FALLBACK_ARTICLES = \[.*?\];',
-        f'const FALLBACK_ARTICLES = {articles_json};',
-        html, flags=re.DOTALL
-    )
-    with open("leser.html", "w", encoding="utf-8") as f:
-        f.write(html)
-    print("Injected articles into leser.html")
-except Exception as e:
-    print(f"HTML inject failed: {e}")
+# ── Inject into leser.html ────────────────────────────────────────────────────
+if articles:
+    try:
+        with open("leser.html", "r", encoding="utf-8") as f:
+            html = f.read()
+        articles_json = json.dumps(articles, ensure_ascii=False, indent=2)
+        new_html = re.sub(
+            r'const FALLBACK_ARTICLES = \[.*?\];',
+            f'const FALLBACK_ARTICLES = {articles_json};',
+            html,
+            flags=re.DOTALL
+        )
+        if new_html != html:
+            with open("leser.html", "w", encoding="utf-8") as f:
+                f.write(new_html)
+            print("Injected articles into leser.html")
+        else:
+            print("WARNING: FALLBACK_ARTICLES pattern not found in leser.html")
+    except FileNotFoundError:
+        print("leser.html not found — skipping inject")
