@@ -18,7 +18,11 @@ jobs:
         with:
           python-version: '3.12'
 
+      - run: pip install feedparser requests beautifulsoup4 google-generativeai --break-system-packages
+
       - run: python fetch_articles.py
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
       - name: Commit updated articles
         run: |
