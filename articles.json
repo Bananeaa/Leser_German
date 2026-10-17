@@ -1,162 +1,248 @@
 [
   {
-    "id": "forscher--meeresboden-bremst-eisschmelze",
-    "title": "Forscher: Meeresboden bremst Eisschmelze in Antarktis",
+    "id": "zusammenst--e-zwischen-polizei-und-demon",
+    "title": "Zusammenstöße zwischen Polizei und Demonstranten bei Protesten in Frankreich",
     "date": "2026-10-17",
     "level": "B1",
+    "desc": "An einem landesweiten Protesttag gegen hohe Lebenshaltungskosten ist es in Frankreich zu Zusammenstößen zwischen…",
+    "source": "tagesschau.de",
+    "url": "https://www.tagesschau.de/ausland/europa/frankreich-proteste-212.html",
     "paragraphs": [
-      "Die Antarktis ist der Eisschrank der Erde: Etwa 90 Prozent des Eises weltweit sind am Südpol gespeichert. Vom 19. Bis 30. Oktober trifft sich die \"Kommission zur Erhaltung der lebenden Meeresschätze der Antarktis\" im australischen Hobart. Ihr Ziel ist der Schutz des marinen Lebens rund um den Kontinent am Südpol. Denn auch dort schmilzt das Eis aufgrund der Erderwärmung. Sie ist die größte Bedrohung von Walen, Pinguinen bis hin zu Kleinstlebewesen (Krill) und verändert stark ihren Lebensraum.",
-      "150 Milliarden Tonnen verliere der Eiskontinent im Jahresdurchschnitt, so der Kieler Meeresgeophysiker Sebastian Krastel. Langfristig vernichtet das die Lebensgrundlagen der Tierwelt und erhöht zugleich den Meeresspiegel. Sollte sich dieses Abschmelzen verstärken, könnten Milliarden Menschen an den Küsten der Welt ihre Heimat verlieren, ergänzt der Geologe Marcus Gutjahr vom Kieler Geomar Forschungszentrum.",
-      "Während der Westen des Eisschildes der Antarktis seit Jahrzehnten abschmilzt, war der Osten lange Zeit stabil. Bislang dachte man, dass das vor allem an der höheren Lage liegt und am arktischen Küstenstrom, der die Ostantarktis von wärmerem Meerwasser abschirmt.",
-      "Bei ihrer letzten Antarktisexpedition mit dem Eisbrecher „Polarstern“ haben die Forschenden jedoch eine weitere Ursache entdeckt, die die Resilienz unterstützt: den Meeresboden.",
-      "Das Team um Sebastian Krastel hat bei Echolotmessungen vor der Ostküste den Meeresgrund kartiert und einen 260 Meter hohen und 65 Kilometer langen Hügel aus Sand, Schlamm und Gestein entdeckt, der mit dem Eis ins Meer transportiert wurde. Dieser Sedimentkeil hat das Eis stabilisiert. An dieser Stelle wurde deshalb der Rückzug des Eises gebremst. Solche geologischen Formationen gebe es häufig im Südpolarmeer, sagt Krastel. Doch dieser positive Effekt könne das Abschmelzen allenfalls mildern, nicht verhindern.",
-      "Die Ostantarktis hat dem Klimawandel lange Zeit getrotzt. Nach wie vor liegen die Durchschnittstemperaturen im Jahr bei konstant minus 55 Grad Celsius. Doch nun hat auch hier das Schmelzen begonnen. Durch die globale Erwärmung haben sich Windrichtungen und Strömungen verändert. Warme Wassermassen gelangen als sogenanntes zirkumpolares Tiefenwasser an die Küste und schmelzen die Gletscher von unten.",
-      "Ein Beispiel dafür ist der 130 Kilometer lange Denman-Gletscher, dessen Eiszunge bis ins Meer reicht. \"Ab einer Meerestiefe von 300 Meter wird das Wasser plötzlich wärmer und trägt das Eis ab\", so Marcus Gutjahr. Diese Entdeckung beunruhigt die Forschenden: Sie zeigt, dass auch diese lange Zeit resiliente Antarktisregion immer verwundbarer wird.",
-      "Allein im Denman-Gletscher steckt genug Eismasse, um den Meeresspiegel weltweit um 1,5 Meter ansteigen zu lassen. Das Eis der Antarktis hat zudem direkten Einfluss auf die globalen Durchschnittstemperaturen: Eis und Schnee reflektieren Sonnenenergie zurück ins All. Das ist der sogenannte Albedo-Effekt.",
-      "Meerwasser dagegen ist dunkler und nimmt Wärme auf. Das führt zu einer Kettenreaktion: Wegen der Erderwärmung schmilzt das Eis und wird zu Wasser, der Albedo-Effekt wird kleiner, der Ozean nimmt mehr Wärme auf verstärkt so die Erderwärmung.",
-      "Die Erwärmung des Meerwassers bedroht die Stabilität des Eisschilds der Ostantarktis. Ohne eine schnelle und deutliche Reduktion beim Ausstoß der Klimagase wird ein unumkehrbarer Prozess einsetzen: Das Eis am Südpol wird immer schneller abschmelzen und der Meeresspiegel unaufhaltsam ansteigen."
-    ],
-    "translations": [
-      "Antarctica is Earth's refrigerator: about 90 percent of the world's ice is stored at the South Pole. From 19 to 30 October, the \"Commission for the Conservation of Antarctic Marine Living Resources\" will meet in Hobart, Australia. Their goal is to protect marine life around the continent at the South Pole. Because even there, the ice is melting due to global warming. It is the biggest threat from whales, penguins to microorganisms (krill) and is changing its habitat greatly.",
-      "According to the Kiel marine geophysicist Sebastian Krastel, the ice continent is losing 150 billion tonnes on an annual average. In the long term, this destroys the livelihoods of the animal world and at the same time raises the sea level. If this melting were to intensify, billions of people could lose their homes on the coasts of the world, adds geologist Marcus Gutjahr from the Geomar Research Center in Kiel.",
-      "While the west of the Antarctic ice sheet has been melting for decades, the east has been stable for a long time. Until now, it was thought that this was mainly due to the higher altitude and the Arctic coastal current, which shields East Antarctica from warmer seawater.",
-      "However, during their last Antarctic expedition with the icebreaker \"Polarstern\", the researchers discovered another cause that supports resilience: the seabed.",
-      "The team led by Sebastian Krastel has mapped the seabed during sonar measurements off the east coast and discovered a 260-meter-high and 65-kilometer-long hill made of sand, mud and rock, which was transported into the sea with the ice. This sediment wedge has stabilized the ice. At this point, the retreat of the ice was therefore slowed down. Such geological formations often occur in the Southern Ocean, says Krastel. But this positive effect could at best mitigate the melting, not",
-      "East Antarctica has long defied climate change. Average annual temperatures remain constant at minus 55 degrees Celsius. But now the melting has begun here as well. Wind directions and currents have changed due to global warming. Warm water masses reach the coast as so-called circumpolar deep water and melt the glaciers from below.",
-      "An example of this is the 130-kilometre-long Denman Glacier, whose ice tongue reaches into the sea. \"From a sea depth of 300 meters, the water suddenly warms up and removes the ice,\" says Marcus Gutjahr. This discovery worries the researchers: it shows that this long resilient Antarctic region is also becoming increasingly vulnerable.",
-      "In the Denman Glacier alone, there is enough ice mass to cause sea levels to rise by 1.5 metres worldwide. The ice of Antarctica also has a direct influence on global average temperatures: ice and snow reflect solar energy back into space. This is the so-called albedo effect.",
-      "Seawater, on the other hand, is darker and absorbs heat. This leads to a chain reaction: because of global warming, the ice melts and becomes water, the albedo effect becomes smaller, and the ocean absorbs more heat, thus intensifying global warming.",
-      "The warming of the seawater threatens the stability of the East Antarctic ice sheet. Without a rapid and significant reduction in greenhouse gas emissions, an irreversible process will begin: the ice at the South Pole will melt faster and faster and the sea level will rise unstoppably."
+      {
+        "de": "An einem landesweiten Protesttag gegen hohe Lebenshaltungskosten ist es in Frankreich zu Zusammenstößen zwischen Demonstranten und der Polizei gekommen. In Paris, Lyon und Straßburg gingen Beamte mit Tränengas und Schlagstöcken gegen Protestierende vor, wie das Innenministerium mitteilte.",
+        "en": "On a nationwide day of protest against the high cost of living, there have been clashes between protesters and the police in France. Officials in Paris, Lyon and Strasbourg used tear gas and batons against protesters, the Interior Ministry said."
+      },
+      {
+        "de": "In Marseille versuchten Demonstranten demnach, in eine Polizeiwache einzudringen, und plünderten Geschäfte. Rund 100 Menschen wurden nach Angaben der Pariser Polizeipräfektur festgenommen, weil sie Waffen und andere verbotene Gegenstände dabei hatten. Frankreichs Präsident Emmanuel Macron hatte die Menschen am Vorabend noch ermahnt, friedlich zu protestieren.",
+        "en": "In Marseille, protesters tried to break into a police station and looted shops. According to the Paris police prefecture, around 100 people were arrested for carrying weapons and other prohibited items. French President Emmanuel Macron had warned the people the night before to protest peacefully."
+      },
+      {
+        "de": "Das Innenministerium verzeichnete am Mittag in ganz Frankreich 140 Protestaktionen mit 32.800 Beteiligten. Landesweit seien bislang 166 Menschen festgenommen worden. Am Nachmittag sind in Paris und vielen anderen Städten Demonstrationszüge geplant. Insgesamt wird mit bis zu 170.000 Demonstranten gerechnet, davon zwischen 30.000 und 60.000 allein in Paris.",
+        "en": "The Ministry of the Interior recorded 140 protests with 32,800 participants throughout France at noon. So far, 166 people have been arrested nationwide. Demonstration trains are planned in the afternoon in Paris and many other cities. In total, up to 170,000 demonstrators are expected, between 30,000 and 60,000 of them in Paris alone."
+      },
+      {
+        "de": "Das Innenministerium erklärte, bei den Protesten sei eine sehr starke Mobilisierung der ultralinken Szene zu beobachten, die einzig und allein darauf aus sei, Unruhe zu stiften. Es gebe gezielte, gewalttätige Übergriffe durch zu schwarzen Blöcken zusammengeschlossene vermummte Personen, insbesondere in Paris, Marseille, Rennes, Toulouse und Angers.",
+        "en": "The Ministry of the Interior stated that the protests were accompanied by a very strong mobilisation of the ultra-left scene, which was aimed solely at causing unrest. There were targeted, violent attacks by masked persons united into black blocks, especially in Paris, Marseille, Rennes, Toulouse and Angers."
+      },
+      {
+        "de": "Das Ministerium berichtete von Plünderungsversuchen, Angriffen auf Ordnungskräfte, Brandstiftungen im öffentlichen Raum und gezielten Angriffe auf Behörden und Medien. Rund 100 Vermummte blockierten in Paris den Zugang zum rechten TV-Sender CNews, wie Medien berichteten. In dem Gebäude befindet sich auch der Radiosender Europe1.",
+        "en": "The ministry reported attempts at looting, attacks on law enforcement, arson in public spaces and targeted attacks on authorities and media. Around 100 masked people blocked access to the right-wing TV channel CNews in Paris, according to media reports. The building also houses the Europe1 radio station."
+      },
+      {
+        "de": "Dem schon seit längerem angekündigten Protesttag wollen sich auch Schüler und Studenten anschließen, die seit Wochen für bessere Lernbedingungen und eine bessere Ausstattung von Schulen demonstrieren. Bei dem Protestaufruf, der keiner Organisation klar zuzuordnen ist und der über die sozialen Medien verbreitet wurde, geht es auch um hohe Spritpreise, niedrige Löhne, die große Zahl von zu Niedriglöhnen Beschäftigten sowie Probleme der Landwirtschaft und der Feuerwehr.",
+        "en": "The protest day, which has been announced for some time, will also be joined by pupils and students who have been demonstrating for weeks for better learning conditions and better equipment in schools. The protest call, which is not clearly attributable to any organisation and which has been spread via social media, is also about high fuel prices, low wages, the large number of low-wage workers and problems of agriculture and the fire brigade."
+      },
+      {
+        "de": "Außerdem gibt es einen Aufruf zu einer Neuauflage der Gelbwestenbewegung. Diese hatte Frankreich mit ihren Protesten im Jahr 2019 lange in Atem gehalten und sich wie aus dem Nichts verbreitet. Auslöser war damals eine geplante Erhöhung der Steuern auf Kraftstoffe. Daraus entstand rasch eine breitere Bewegung gegen hohe Lebenshaltungskosten und soziale Ungerechtigkeit, die Macron während seiner ersten Amtszeit schwer zu schaffen machte.",
+        "en": "There is also a call for a new edition of the yellow vest movement. This had long held France in suspense with its protests in 2019 and spread out of nowhere. The trigger at the time was a planned increase in taxes on fuels. This quickly led to a broader movement against high living costs and social injustice, which made it difficult for Macron to cope during his first term in office."
+      }
     ]
   },
   {
-    "id": "russland-sanktionen-auf-eis--wie-sich-tr",
-    "title": "Russland-Sanktionen auf Eis: Wie sich Trump Putin weiter annähert",
+    "id": "sondierungen-in-berlin--linke--gr-ne-und",
+    "title": "Sondierungen in Berlin: Linke, Grüne und SPD erzielen offenbar Einigung",
     "date": "2026-10-17",
     "level": "B1",
+    "desc": "Die Sondierungsgespräche in Berlin von Linken, Grünen und SPD sind abgeschlossen. Die drei Parteien wollen am Samstag…",
+    "source": "tagesschau.de",
+    "url": "https://www.tagesschau.de/inland/regional/berlin/sondierungen-berlin-112.html",
     "paragraphs": [
-      "Letztens bei CNN: James Talarico, Kandidat der Demokraten in Texas für einen Sitz im US-Senat, diskutiert mit Bürgern. Ein Student fragt ihn: \"Warum sollten wir der Ukraine all das Geld geben, anstatt es in unsere Gemeinden zu stecken und unseren Mitbürgern in Texas zu helfen?\"",
-      "Talarico antwortet: \"Im Zweiten Weltkrieg haben wir gelernt: Wenn wir einem Aggressor in Europa nicht die Stirn bieten, rächt sich das später. Wir müssen die Ukraine und unsere NATO-Verbündeten stärken, während sie sich der russischen Aggression entgegenstellen - damit wir das nicht tun müssen.\"",
-      "In gewisser Weise sehe er das als eine kostensparende Maßnahme.",
-      "In den USA sind es jetzt vor allem die Demokraten, die zur Ukraine stehen. Und einige Republikaner, die wissen: Bis Donald Trump die Bühne betrat, kämpfte ihre Partei für Freiheit und Demokratie. Führende Köpfe von Trumps MAGA-Bewegung sind hingegen pro-russisch eingestellt.",
-      "Am Donnerstag sagt der Präsident dem Sender Newsmax: \"Wenn Sie mir sagen, dass (der ukrainische Präsident) Selenskyj wieder Raffinerien beschießt - dadurch lässt er den weltweiten Ölpreis steigen. Das ist eine Schande. Es gibt auch viele andere Ziele.\" Ohnehin wolle der ukrainische Präsident keine Übereinkunft für ein Ende des Krieges.",
-      "Die Ereignisse der vergangenen Tage zeigen: Trump hat die Seiten gewechselt. So kaufen die USA nun wieder russischen Diesel, und das Weiße Haus - so Medienberichte - drosselte das Satellitensystem Starshield. Trump dementiert dies allerdings. Die Ukraine nutzt das System, um russische Ziele innerhalb der Ukraine anzugreifen.",
-      "Richard Haass, ehemaliger Diplomat und Mitarbeiter in der Administration von George W. Bush, ist nicht überrascht. \"Das passt zu gut zum Muster der US-Außenpolitik in den letzten anderthalb Jahren in Bezug auf diesen Krieg. Immer wieder haben wir Dinge für Russland getan - und Dinge gegen die Ukraine. Das ist einfach nur die jüngste Entwicklung in dieser Reihe.\"",
-      "Dieser Verrat werde in Schande leben, sagt der konservative Publizist Charlie Sykes. Die Historikerin Anne Applebaum stellt fest, Trumps Handlungen sähen nach dem Versuch aus, die Ukraine zur Kapitulation zu zwingen.",
-      "Phillips O'Brien, auch er Historiker, ätzt, das Lügen sei vorbei - und Trump frei, das zu sein, was er immer habe sein wollen: \"Putins bester Freund\"; die USA würden von einem \"nützlichen Idioten\" der Russen regiert.",
-      "In einem Leitartikel des konservativen Wall Street Journal ist von einem \"moralischen und strategischen Fehler\" des Präsidenten die Rede."
-    ],
-    "translations": [
-      "Most recently on CNN: James Talarico, Democrat candidate in Texas for a U.S. Senate seat, debates with citizens. A student asks him, “Why should we give Ukraine all that money instead of putting it into our communities and helping our fellow Texas citizens?”",
-      "Talarico replies: \"In World War II, we learned that if we don't stand up to an aggressor in Europe, it will pay for itself later. We need to strengthen Ukraine and our NATO allies as they confront Russian aggression - so we don't have to.”",
-      "In a way, he sees this as a cost-saving measure.",
-      "In the USA, it is now mainly the Democrats who stand by Ukraine. And some Republicans who know: until Donald Trump took the stage, their party fought for freedom and democracy. Leading figures of Trump's Maga movement, on the other hand, are pro-Russian.",
-      "On Thursday, the president told Newsmax: \"If you tell me that (the Ukrainian president) Zelensky is bombarding refineries again - this will cause the global price of oil to rise. That's a shame. There are also many other goals.\" In any case, the Ukrainian president does not want an agreement to end the war.",
-      "The events of the past few days show that Trump has switched sides. The US is now buying Russian diesel again, and the White House - according to media reports - has throttled the Starshield satellite system. However, Trump denies this. Ukraine uses the system to attack Russian targets inside Ukraine.",
-      "Richard Haass, former diplomat and employee in the administration of George W. Bush, is not surprised. “That fits too well with the pattern of U.S. foreign policy over the past year and a half regarding this war. Time and again we have done things for Russia - and things against Ukraine. This is just the latest development in this series.\"",
-      "This betrayal will live in shame, says conservative publicist Charlie Sykes. Historian Anne Applebaum notes that Trump's actions look like an attempt to force Ukraine to surrender.",
-      "Phillips O'Brien, also a historian, etches that the lying is over - and Trump is free to be what he always wanted to be: \"Putin's best friend\"; the US is ruled by a \"useful idiot\" of the Russians.",
-      "An editorial in the conservative Wall Street Journal speaks of a \"moral and strategic error\" on the part of the president."
+      {
+        "de": "Die Sondierungsgespräche in Berlin von Linken, Grünen und SPD sind abgeschlossen. Die drei Parteien wollen am Samstag um 17 Uhr ein gemeinsames Pressestatement im Haus der Statistik geben, wie sie gemeinsam mitteilten (rbb|24 streamt live). Die Nachrichtenagenturen DPA und AFP meldeten unter Berufung auf Parteikreise, dass eine Einigung zur Aufnahme von Koalitionsverhandlungen erzielt wurde.",
+        "en": "The exploratory talks in Berlin between the Left Party, the Greens and the SPD have been concluded. The three parties want to make a joint press statement at the House of Statistics on Saturday at 5 pm, as they announced together (rbb|24 streamt live). The DPA and AFP news agencies reported, citing party circles, that an agreement had been reached to open coalition negotiations."
+      },
+      {
+        "de": "Bevor die Koalitionsgespräche starten können, müssen Parteigremien grünes Licht dafür geben. Die Grünen haben dazu einen kleinen Parteitag an diesem Montag einberufen. Bei der SPD dürfte der Landesvorstand auf Basis des Sondierungspapiers entscheiden, ein Termin wurde zunächst nicht genannt. Die Linke hat - wegen der zweiwöchigen Herbstferien in Berlin - erst für den 31. Oktober einen Parteitag anberaumt, der die Aufnahme von Koalitionsverhandlungen beschließen soll. Im Falle einer Zustimmung aller drei Parteien könnten diese könnten dann also Anfang November starten. Die angestrebte Dreierkoalition von Linke, Grünen und SPD hätte im neuen Berliner Abgeordnetenhaus 91 Sitze, das wären 14 mehr als die absolute Mehrheit. Möglich wäre auch eine Koalition von CDU, Grünen und SPD, deren Mandatszahl allerdings nur zwei Sitze über der absoluten Mehrheit läge.",
+        "en": "Before the coalition talks can start, party committees must give the green light. The Greens have convened a small party congress on this Monday. In the case of the SPD, the state executive is likely to decide on the basis of the exploratory paper, an appointment was not initially mentioned. Due to the two-week autumn holidays in Berlin, the Left Party has only scheduled a party congress for 31 October, which should decide to open coalition negotiations. In case of consent al"
+      },
+      {
+        "de": "Die Linke hatte die Wahl zum Abgeordnetenhaus am 20. September deutlich gewonnen. Am Donnerstag vergangener Woche einigte sich die Partei nach mehreren Vorgesprächen auf Sondierungen mit SPD und Grünen. Überschattet wurden die Gespräche zwischen den drei Parteien von Anfang an von Antisemitismusvorwürfen gegen einzelne Linken-Mitglieder. Die Linke ließ alle ihrer Fraktionsmitglieder einen Text dazu unterschreiben – der aber nur in Teilen der vorigen Einigung aller drei Parteien zu dem Thema entsprach. Grüne und SPD kritisierten das und unterbrachen kurzzeitig die Sondierungen. Nun ist klar: Der gemeinsame Text soll Teil des Koalitionsvertrags werden, wenn es so weit kommt. Angedacht sind auch Sanktionen bis hin zum Fraktionsausschluss im Falle von antisemitischen Vorfällen.",
+        "en": "The Left Party had clearly won the election to the House of Representatives on 20 September. On Thursday last week, after several preliminary talks, the party agreed on exploratory talks with the SPD and the Greens. From the outset, the talks between the three parties were overshadowed by accusations of anti-Semitism against individual left-wing members. The Left Party had all its parliamentary group members sign a text on this – but this was only partially accepted in the previous agreement of all three parties on the subject."
+      },
+      {
+        "de": "Erschwerend kam hinzu, dass sich die Linke-Fraktionsspitze auch damit beschäftigen musste, wie sie mit der umstrittenen Neuköllner Abgeordneten Vanessa Emde umgeht. Sie hatte am Donnerstagabend auf Instagram die Erklärung zum Antisemitismus scharf kritisiert, die sie noch am Dienstag selbst unterschrieben hatte. Aus Sicht der Fraktionsspitze ist keine Grundlage mehr für eine Zusammenarbeit gegeben.",
+        "en": "To make matters worse, the Left faction leadership also had to deal with how it deals with the controversial Neukölln MP Vanessa Emde. She had sharply criticized on Instagram on Thursday evening the declaration on anti-Semitism, which she had signed herself on Tuesday. From the point of view of the top of the parliamentary group, there is no longer any basis for cooperation."
+      },
+      {
+        "de": "Sendung: Antenne Brandenburg vom rbb, 17.10.2026, 15:00 Uhr Audio: Antenne Brandenburg vom rbb, 17.10.2026, Tobias Schmutzler",
+        "en": "Broadcast: Antenne Brandenburg from rbb, 17.10.2026, 15:00 Audio: Antenne Brandenburg from rbb, 17.10.2026, Tobias Schmutzler"
+      }
     ]
   },
   {
-    "id": "nationales-interesse----trump-setzt-gep",
-    "title": "\"Nationales Interesse\" - Trump setzt geplante Sanktionen gegen Russland aus",
+    "id": "tanker-im-persischen-golf-attackiert",
+    "title": "Tanker im Persischen Golf attackiert",
     "date": "2026-10-17",
     "level": "B1",
+    "desc": "Immer wieder kommt es in der Straße von Hormus zu Angriffen auf Tanker und andere Schiffe. Nun wurden Hunderte…",
+    "source": "tagesschau.de",
+    "url": "https://www.tagesschau.de/ausland/asien/persischer-golf-tanker-angriffe-100.html",
     "paragraphs": [
-      "Wenige Tage nach seinem Diesel-Abkommen mit Moskau hat US-Präsident Donald Trump nun überraschend ein erst kürzlich verabschiedetes Sanktionspaket gegen Russland auf Eis gelegt. Die vom US-Kongress beschlossenen drastischen Strafmaßnahmen ruhen damit bis auf Weiteres.",
-      "Trump begründete sein Vorgehen damit, dass dies \"zum jetzigen Zeitpunkt im nationalen Interesse\" der USA liege. Das Weiße Haus machte bisher keine Angaben darüber, inwiefern die Aussetzung der Sanktionen im nationalen Interesse liege.",
-      "Die russische Regierung begrüßte den Schritt. Die Aussetzung der Sanktionen sei \"ein wichtiger und wahrhaft historischer Moment\", erklärte der Wirtschaftsbeauftragte von Präsident Wladimir Putin, Kirill Dmitrijew, in Onlinenetzwerken.",
-      "Die Sanktionen hätten \"schwere Schäden\" in der US-Wirtschaft sowie auf den globalen Märkten verursacht, sagte Dmitrijew. Als Kreml-Unterhändler verhandelt er mit den US-Gesandten Steve Witkoff und Jared Kushner auch über ein Ende des russischen Angriffskriegs gegen die Ukraine.",
-      "Erst Mitte September hatte Trump das vom US-Parlament verabschiedete Gesetz mit neuen weitreichenden Strafmaßnahmen gegen Russland unterzeichnet. Es richtete sich insbesondere gegen den russischen Energiesektor.",
-      "Trump setzte die Zölle nun per Dekret kurz vor Ende einer vom Kongress vorgegebenen Frist aus. Das Gesetz sah vor, dass die im Text verankerten Zölle und Sanktionen 30 Tage nach der Unterzeichnung automatisch greifen - es sei denn, der Präsident würde innerhalb dieser Zeit anders entscheiden.",
-      "Der Kongress wollte mit den Sanktionen den Druck auf Russland erhöhen, angesichts gestiegener Treibstoffpreise setzte der wegen der Zwischenwahlen unter Druck stehende Trump jedoch andere Prioritäten.",
-      "Vor wenigen Tagen hatte er ungeachtet bestehender Sanktionen mit dem Kreml die Lieferung von russischem Diesel vereinbart und danach den Druck auf die Ukraine und Präsident Wolodymyr Selenskyj verstärkt.",
-      "Trump bestritt nun aber, dass er für die vorübergehende Drosselung des militärisch genutzten US-Satelliteninternets von Starlink in der Ukraine verantwortlich gewesen sei. \"Das habe ich nicht getan. Nein, wir haben das überhaupt nicht getan\", sagte er vor Reportern in Washington.",
-      "Trumps Aussagen stehen im Widerspruch zu jenen von Elon Musk, dem der Konzern SpaceX, der Starlink betreibt, gehört. \"Jegliche Geschwindigkeits- oder Nutzungsbeschränkungen werden vom US-Militär und letztlich vom US-Präsidenten festgelegt\", hatte dieser zuvor auf X gepostet."
-    ],
-    "translations": [
-      "A few days after his diesel agreement with Moscow, US President Donald Trump has surprisingly put a recently adopted sanctions package against Russia on hold. The drastic punitive measures adopted by the US Congress are therefore suspended until further notice.",
-      "Trump justified his action on the grounds that this was \"in the national interest\" of the USA at the present time. So far, the White House has not provided any information on the extent to which the suspension of sanctions is in the national interest.",
-      "The Russian government welcomed the move. The suspension of sanctions is \"an important and truly historic moment,\" President Vladimir Putin's economic envoy Kirill Dmitriev told online networks.",
-      "The sanctions have caused “severe damage” to the US economy as well as global markets, Dmitriev said. As a Kremlin negotiator, he is also negotiating with US envoys Steve Witkoff and Jared Kushner to end the Russian war of aggression against Ukraine.",
-      "It was only in mid-September that Trump signed the bill passed by the US Parliament with new far-reaching punitive measures against Russia. It was aimed in particular at the Russian energy sector.",
-      "Trump now suspended the tariffs by decree shortly before the end of a deadline set by Congress. The law stipulated that the tariffs and sanctions enshrined in the text would automatically take effect 30 days after signing - unless the president decided otherwise within that time.",
-      "Congress wanted to use the sanctions to increase pressure on Russia, but in view of increased fuel prices, Trump, who is under pressure due to the midterm elections, set other priorities.",
-      "A few days ago, despite existing sanctions, he agreed with the Kremlin to supply Russian diesel and then increased pressure on Ukraine and President Volodymyr Zelensky.",
-      "Trump denied, however, that he was responsible for the temporary throttling of Starlink's US military satellite internet in Ukraine. “I didn't do that. No, we didn't do that at all,” he told reporters in Washington.",
-      "Trump's statements contradict those of Elon Musk, who owns SpaceX, which operates Starlink. “Any speed or usage restrictions are set by the US military and ultimately by the US President,” he had previously posted on X."
+      {
+        "de": "Immer wieder kommt es in der Straße von Hormus zu Angriffen auf Tanker und andere Schiffe. Nun wurden Hunderte Kilometer entfernt im Persischen Golf Attacken auf Tankschiffe gemeldet. In zwei separaten Meldungen berichtete die britische Behörde zur Sicherheit der Schifffahrt (UKMTO) über Vorfälle unweit der Küste Saudi-Arabiens.",
+        "en": "There are repeated attacks on tankers and other ships in the Strait of Hormuz. Attacks on tankers have now been reported hundreds of kilometres away in the Persian Gulf. In two separate reports, the UK Maritime Safety Authority (UKMTO) reported incidents near the coast of Saudi Arabia."
+      },
+      {
+        "de": "Ein Schiff sei von einem unbekannten Projektil getroffen worden. In einer später veröffentlichten Mitteilung hieß es, ein weiterer Tanker sei von einem kleinen Schiff mit einem Raketenwerfer angegriffen worden.",
+        "en": "A ship was hit by an unknown projectile. A later announcement said that another tanker had been attacked by a small ship with a rocket launcher."
+      },
+      {
+        "de": "Wer die Angriffe unweit der Küste Saudi-Arabiens ausführte, ist noch unklar. Beobachter schließen nicht aus, dass die von Iran unterstützten jemenitischen Huthi sie verübten.",
+        "en": "Who carried out the attacks near the coast of Saudi Arabia is still unclear. Observers do not rule out that the Iranian-backed Yemeni Houthis perpetrated them."
+      },
+      {
+        "de": "Zuvor hatten sich die zahlreichen Angriffe auf Schiffe auf die Straße von Hormus beschränkt. Von dort meldeten in der vergangenen Nacht die iranischen Revolutionsgarden, dass ein Supertanker in der Straße von Hormus auf eine Seemine gefahren sei. Es habe eine Explosion und einen Brand an Bord des riesigen Schiffs gegeben, berichteten iranische Medien.",
+        "en": "Previously, the numerous attacks on ships had been limited to the Strait of Hormuz. From there, the Iranian Revolutionary Guards reported last night that a supertanker had sailed into a sea mine in the Strait of Hormuz. There had been an explosion and a fire on board the huge ship, Iranian media reported."
+      },
+      {
+        "de": "Den Medienangaben zufolge war der Tanker mit mehr als zwei Millionen Barrel (Fässer je 159 Liter) Rohöl geladen. Das Schiff habe versucht, die Meerenge unerlaubt mit Täuschungsmanövern und mit der Unterstützung des US-Militärs zu passieren.",
+        "en": "According to the media, the tanker was loaded with more than two million barrels of crude oil. The ship had tried to pass the strait illegally with deceptive maneuvers and with the support of the US military."
+      },
+      {
+        "de": "Die Angriffe auf Handelsschiffe in der Straße von Hormus haben sich in den vergangenen Tagen gesteigert. Vor wenigen Tagen war ein Containerschiff in der Meerenge nach einem Angriff gesunken.",
+        "en": "Attacks on merchant ships in the Strait of Hormuz have increased in recent days. A few days ago, a container ship sank in the strait after an attack."
+      },
+      {
+        "de": "Iran beansprucht die Kontrolle über die strategisch und ökonomisch wichtige Meerenge von Hormus am Ausgang des Persischen Golfs. Seit dem Beginn der Angriffe der USA und Israels Ende Februar greifen die iranischen Streitkräfte dort regelmäßig Schiffe an, die nach Teheraner Darstellung ohne Genehmigung unterwegs sind.",
+        "en": "Iran claims control of the strategically and economically important Strait of Hormuz at the exit of the Persian Gulf. Since the beginning of the attacks by the US and Israel at the end of February, Iranian forces have been regularly attacking ships there, which Tehran depicts as being on the move without permission."
+      }
     ]
   },
   {
-    "id": "nachfolge-als-un-generalsekret-r--bewerb",
-    "title": "Nachfolge als UN-Generalsekretär: Bewerber scheitern an Vetomächten",
+    "id": "merz-verteidigt-reformkurs-und-warnt-koa",
+    "title": "Merz verteidigt Reformkurs und warnt Koalitionspartner SPD",
     "date": "2026-10-17",
     "level": "B1",
+    "desc": "Bundeskanzler Friedrich Merz hat auf dem \"Deutschlandtag\" der Jungen Union den Reformkurs der Koalition verteidigt -…",
+    "source": "tagesschau.de",
+    "url": "https://www.tagesschau.de/inland/innenpolitik/merz-junge-union-104.html",
     "paragraphs": [
-      "Die bisherige Favoritin für das Amt des UN-Generalsekretärs, die frühere Vizepräsidentin von Costa Rica, Rebeca Grynspan, darf aber weiter hoffen. Bei der sechsten Probeabstimmung im UN-Sicherheitsrat lag die 70-Jährige erneut an der Spitze des Bewerberfeldes.",
-      "Für Grynspan sprachen sich 9 der 15 Mitgliedsstaaten aus. Ein Staat enthielt sich. Fünf Staaten stimmten gegen sie, darunter auch zwei Vetomächte. Dies wurde dadurch sichtbar, weil die fünf Vetomächte erstmals mit roten Stimmzetteln wählten.",
-      "Da die Abstimmung jedoch geheim ist, blieb unklar, wer die beiden ablehnenden Vetomächte sind. UN-Beobachter gehen davon aus, dass es sich wahrscheinlich um Russland und die USA handelt.",
-      "Um UN-Generalsekretär zu werden, benötigt man nicht nur die Zustimmung von mindestens 9 der 15 Mitgliedsstaaten. Zusätzlich darf keine der fünf Vetomächte mit Nein stimmen.",
-      "UN-Beobachter gehen nun von zwei Szenarien aus: Entweder gelingt es Grynspan, in weiteren Gesprächen die noch ablehnenden Vetomächte umzustimmen. Oder die Vetomächte präsentieren in den nächsten Wochen einen ganz neuen Kandidaten.",
-      "Damit wäre allerdings das bisherige transparente Auswahlverfahren gescheitert, das die frühere Präsidentin der UN-Generalversammlung Annalena Baerbock angestoßen hatte, um das bislang übliche Auskungeln der Spitzenpersonalie unter den Vetomächten zu beenden."
-    ],
-    "translations": [
-      "However, the previous favorite for the office of UN Secretary-General, the former vice president of Costa Rica, Rebeca Grynspan, can continue to hope. In the sixth trial vote in the UN Security Council, the 70-year-old was once again at the top of the candidate field.",
-      "9 of the 15 member states voted in favour of Grynspan. One state abstained. Five states voted against it, including two veto powers. This became visible because the five veto powers voted for the first time with red ballots.",
-      "However, since the vote is secret, it remained unclear who the two opposing veto powers are. UN observers assume that it is probably Russia and the USA.",
-      "To become UN Secretary-General, you not only need the approval of at least 9 of the 15 member states. In addition, none of the five veto powers may vote no.",
-      "UN observers now assume two scenarios: either Grynspan succeeds in persuading the still-rejecting veto powers in further talks. Or the veto powers will present a completely new candidate in the next few weeks.",
-      "However, this would have failed the previous transparent selection process initiated by the former President of the UN General Assembly, Annalena Baerbock, in order to end the hitherto usual disengagement of top personnel among the veto powers."
+      {
+        "de": "Bundeskanzler Friedrich Merz hat auf dem \"Deutschlandtag\" der Jungen Union den Reformkurs der Koalition verteidigt - und klargestellt, dass er das Bündnis mit der SPD nicht um jeden Preis fortführen wolle. \"Ich möchte, dass diese Koalition erfolgreich ist\", sagte er beim \"Deutschlandtag\" der Jungen Union.",
+        "en": "At the \"Germany Day\" of the Young Union, Chancellor Friedrich Merz defended the coalition's reform course - and made it clear that he did not want to continue the alliance with the SPD at any cost. \"I want this coalition to be successful,\" he said at the \"Germany Day\" of the Young Union."
+      },
+      {
+        "de": "\"Aber ich stelle den Erfolg der Koalition, oder anders ausgedrückt, den Fortbestand der Koalition nicht über jede denkbare politische Leistung, die wir zusammen erbringen müssen\", betonte der CDU-Vorsitzende. \"Es gibt auch für mich Grenzen.\"",
+        "en": "\"But I do not place the success of the coalition, or in other words, the continued existence of the coalition, above every conceivable political achievement that we have to make together,\" stressed the CDU leader. “There are limits for me, too.”"
+      },
+      {
+        "de": "In Zukunft müsse auch die Handschrift der Union besser erkennbar werden. \"Es muss auch klar sein, wer in dieser Koalition der größere Koalitionspartner ist und wer der kleinere Koalitionspartner ist\", ergänzte Merz.",
+        "en": "In the future, the handwriting of the Union must also become more recognizable. \"It must also be clear who is the larger coalition partner in this coalition and who is the smaller coalition partner,\" Merz added."
+      },
+      {
+        "de": "Mit Blick auf Sachsen-Anhalt warnte er vor einer Zusammenarbeit mit der AfD. \"Wer aus unseren Reihen der Meinung ist, solche Leute in Staatsämter wählen zu sollen, der hat in der CDU Deutschlands nichts, aber auch gar nichts zu suchen\", sagte Merz. Er nahm damit Bezug auf die Vermutung, dass CDU-Abgeordnete im neuen Landtag von Sachsen-Anhalt für den neuen Landtagspräsidenten von der AfD abgestimmt haben könnten.",
+        "en": "With a view to Saxony-Anhalt, he warned against working with the AfD. \"Anyone from our ranks who is of the opinion that such people should be elected to state offices has nothing to do with the CDU in Germany,\" said Merz. He was referring to the assumption that CDU deputies in the new state parliament of Saxony-Anhalt could have voted for the new state president of the AfD."
+      },
+      {
+        "de": "Zugleich warnte Merz vor einer möglichen linksgeführten Regierung in Berlin. SPD und Grünen machte er dabei schwere Vorwürfe. \"Wer die politische Mitte stärken will, darf mit Linksradikalen keine Gespräche führen\", sagte er und ergänzte: \"Hört auf damit, diesen Weg zu gehen.\"",
+        "en": "At the same time, Merz warned of a possible left-leaning government in Berlin. He made serious accusations against the SPD and the Greens. \"Whoever wants to strengthen the political centre must not hold talks with left-wing radicals,\" he said, adding: \"Stop going down this path.\""
+      },
+      {
+        "de": "Die Union werde gegen die Linke kämpfen. \"Wir stehen gegen jeden auf, der das Existenzrecht Israels infrage stellt“, sagte der CDU-Chef weiter. Antisemitismus habe in Deutschland keinen Platz.",
+        "en": "The Union will fight against the Left. \"We stand up against anyone who questions Israel's right to exist,\" said the CDU leader. Anti-Semitism has no place in Germany."
+      },
+      {
+        "de": "Linke, Grüne und SPD in Berlin haben Sondierungsgespräche aufgenommen. Sie könnten nach Einschätzungen aus den Verhandlungsteams im Verlauf des Wochenendes abgeschlossen werden. In den Sondierungen führte das Thema Antisemitismus immer wieder zu Konflikten und zeitweise sogar zur Unterbrechung der Gespräche.",
+        "en": "The left, the Greens and the SPD in Berlin have started exploratory talks. According to estimates from the negotiating teams, they could be concluded over the course of the weekend. In the explorations, the topic of anti-Semitism repeatedly led to conflicts and at times even to the interruption of talks."
+      },
+      {
+        "de": "Merz betonte bei seinem Auftritt auch, dass der Reformprozess bald abgeschlossen werden müsse. \"Reformprozesse sind immer mit Diskussionen, mit Kontroversen verbunden\", so Merz. \"Sie wühlen das Land auf, sie wühlen unsere Partei haben.\" Erst wenn sie abgeschlossen seien, könne wieder Ruhe einkehren.",
+        "en": "Merz also emphasized during his appearance that the reform process must be completed soon. \"Reform processes are always associated with discussions, with controversies,\" says Merz. “They are stirring up the country, they are stirring up our party.\" Only when they are complete can peace and quiet return."
+      },
+      {
+        "de": "Bei der Reform der Rente erwarte er, dass es noch in diesem Jahr eine Entscheidung des Bundeskabinetts geben werde. Der CDU-Chef betonte: \"Ich möchte, dass wir die Reformvorschläge der Rentenkommission so umsetzen, wie sie auf dem Tisch liegen.\"",
+        "en": "In the reform of the pension, he expects that there will be a decision by the Federal Cabinet later this year. The CDU leader stressed: \"I want us to implement the pension commission's reform proposals as they are on the table.\""
+      },
+      {
+        "de": "Der Vorschlag der Rentenkommission sieht auch die Abschaffung der abschlagsfreien Rente nach 45 Versicherungsjahren vor. Dagegen gibt es schon länger Widerstand in der SPD. Auch drei CDU-Ministerpräsidenten hatten sich gegen die Pläne gestellt.",
+        "en": "The proposal of the Pension Commission also provides for the abolition of the deduction-free pension after 45 years of insurance. There has been resistance to this in the SPD for some time. Three CDU Prime Ministers had also opposed the plans."
+      }
     ]
   },
   {
-    "id": "gkv-verbandschef-fordert-besserstellung",
-    "title": "GKV-Verbandschef fordert Besserstellung gesetzlich Versicherter",
+    "id": "nach-lungen-op--papst-kann-klinik-verlas",
+    "title": "Nach Lungen-OP: Papst kann Klinik verlassen",
     "date": "2026-10-17",
     "level": "B1",
+    "desc": "Papst Leo XIV. kann wenige Tage nach seiner Krebsoperation die Gemelli-Klinik in Rom wieder verlassen. Das Oberhaupt…",
+    "source": "tagesschau.de",
+    "url": "https://www.tagesschau.de/ausland/europa/papst-krankenhaus-op-100.html",
     "paragraphs": [
-      "Gesetzlich Versicherte müssen nach Ansicht des Spitzenverbandes der gesetzlichen Krankenkassen (GKV) bei der Vergabe von Arztterminen bessergestellt werden. \"Wir müssen den Zugang zur ambulanten Versorgung so organisieren, dass Termine nach medizinischem Bedarf vergeben werden - und nicht danach, wie jemand versichert ist\", sagte Verbandschef Oliver Blatt den Funke-Medien.",
-      "75 Millionen Menschen seien gesetzlich versichert und finanzierten den allergrößten Teil der ärztlichen Honorare. Trotzdem würden sie bei der Terminvergabe häufig benachteiligt. Das sei eine \"himmelschreiende Ungerechtigkeit\".",
-      "Den Begriff \"Zwei-Klassen-Medizin\" lehne er jedoch ab, so Blatt. Im Krankenhaus und von den meisten Ärzten würden gesetzlich Versicherte genauso gut behandelt wie Privatpatienten. Die Ungleichbehandlung zeige sich vor allem bei den Wartezeiten. \"Ärzte sollen weiterhin Privatpatienten behandeln, aber nicht automatisch bevorzugen\", forderte der GKV-Chef.",
-      "Bundeskanzler Friedrich Merz hatte im September eine Debatte über das bestehende duale System aus gesetzlicher und privater Krankenversicherung angestoßen. Er sprach von einem Gerechtigkeitsproblem, wenn sich der Eindruck verfestige, dass Privatpatienten bevorzugt behandelt würden - und stellte Änderungen in Aussicht."
-    ],
-    "translations": [
-      "Statutory insured persons must, in the opinion of the umbrella association of statutory health insurance funds (GKV), be better prepared for the allocation of doctor's appointments. \"We have to organise access to outpatient care in such a way that appointments are made according to medical needs - and not according to how someone is insured,\" Oliver Blatt, head of the association, told Funke-Medien.",
-      "75 million people are insured by law and finance the vast majority of medical fees. Nevertheless, they are often disadvantaged when it comes to scheduling appointments. This is a \"blatant injustice\".",
-      "However, he rejects the term \"two-tier medicine\", according to Blatt. In the hospital and by most doctors, legally insured persons are treated just as well as private patients. The unequal treatment is particularly evident in the waiting times. \"Doctors should continue to treat private patients, but not automatically prefer them,\" demanded the head of the GKV.",
-      "In September, Chancellor Friedrich Merz launched a debate on the existing dual system of statutory and private health insurance. He spoke of a justice problem when the impression solidified that private patients were being treated preferentially - and promised changes."
+      {
+        "de": "Papst Leo XIV. kann wenige Tage nach seiner Krebsoperation die Gemelli-Klinik in Rom wieder verlassen. Das Oberhaupt der katholischen Kirche werde heute in den Vatikan zurückkehren, teilte der Vatikan mit.",
+        "en": "Pope Leo XIV can leave the Gemelli Clinic in Rome a few days after his cancer surgery. The head of the Catholic Church will return to the Vatican today, the Vatican said."
+      },
+      {
+        "de": "Die Entscheidung zur Entlassung des Papstes beruhe auf neuen von seinen Ärzten vorgelegten Untersuchungsergebnissen, teilte der Pressedienst des Vatikans mit. \"Er wird das Krankenhaus am frühen Nachmittag verlassen und in den Vatikan zurückkehren. Morgen wird er das Angelus-Gebet vom Fenster der päpstlichen Wohnung aus sprechen\", stand in der Mitteilung.",
+        "en": "The decision to dismiss the pope was based on new findings presented by his doctors, the Vatican press service said. “He will leave the hospital in the early afternoon and return to the Vatican. Tomorrow he will say the Angelus prayer from the window of the papal apartment,\" the message said."
+      },
+      {
+        "de": "Der Papst habe sich am Freitag einer Blutuntersuchung und einer Röntgenaufnahme des Brustkorbs unterzogen, hieß es weiter. Dabei sei \"eine anhaltende Verbesserung seines Gesundheitszustands\" festgestellt worden.",
+        "en": "The pope underwent a blood test and chest X-ray on Friday, it said. In doing so, \"a sustained improvement in his state of health\" was noted."
+      },
+      {
+        "de": "Im Gemelli-Krankenhaus zelebrierte das Oberhaupt der katholischen Kirche zusammen mit einigen Angestellten sogar wieder eine Messe.",
+        "en": "In Gemelli Hospital, the head of the Catholic Church even celebrated Mass together with some employees."
+      },
+      {
+        "de": "Er hatte auch aus dem Krankenhaus heraus mit dem russischen Präsidenten Wladimir Putin telefoniert und ihn zu einem Waffenstillstand in der Frontstadt Oleschky im Süden der Ukraine aufgefordert.",
+        "en": "He had also telephoned Russian President Vladimir Putin from the hospital and called for a ceasefire in the frontline town of Oleschky in southern Ukraine."
+      },
+      {
+        "de": "Bei Papst Leo XIV. wurde am Dienstag der untere Lappen seines rechten Lungenflügels entfernt, wo sich ein bösartiger Tumor befand. Welche weitere Behandlung nach der Entlassung erforderlich ist, wird vermutlich erst nach weiteren Befunden klar.",
+        "en": "In Pope Leo XIV's case, the lower lobe of his right lung was removed on Tuesday, where there was a malignant tumor. Which further treatment is required after discharge will probably only become clear after further findings."
+      }
     ]
   },
   {
-    "id": "wie-sich-bundespolitiker-auf-social-medi",
-    "title": "Wie sich Bundespolitiker auf Social Media schlagen",
+    "id": "steigende-preise-f-r-benzin--heiz-l--gas",
+    "title": "Steigende Preise für Benzin, Heizöl, Gas - wie teuer wird der Winter?",
     "date": "2026-10-17",
     "level": "B1",
+    "desc": "Rund 400 Euro im Monat gibt die Pendlerin Daria Schulz inzwischen fürs Tanken aus. Die 130 Kilometer zum Büro kann sie…",
+    "source": "tagesschau.de",
+    "url": "https://www.tagesschau.de/wirtschaft/verbraucher/energie-heizen-winter-100.html",
     "paragraphs": [
-      "61 Millionen Aufrufe in 365 Videos auf TikTok. So oft wurden die Videos von Spitzenpolitikerinnen, Fraktionschefs und Bundesministerien seit Anfang September auf der Videoplattform angeklickt. Mehr als die Hälfte der Klicks entfallen auf zwei Konten: Alice Weidel und die AfD-Fraktion im Bundestag. Auf Instagram kommen nochmal mehr als 60 Millionen Klicks hinzu. Diese digitalen Zahlen sind im Bundestag nicht sichtbar, aber sie prägen schon längst, wie Politik gemacht wird.",
-      "Eine Auswertung der Accounts der Bundespolitikerinnen und Politiker seit der Sommerpause zeigt, dass die Politiker im Netz ganz unterschiedlich Gehör finden. Auffällig ist, dass neben den Postings der AfD auch die Videos und Fotos der Linken viel angeschaut werden. Allein diese beiden Parteien erzielen auf TikTok mehr als die Hälfte aller Aufrufe, während deren Wählerinnen und Wähler bei der vergangenen Bundestagswahl nur etwa ein Drittel der Stimmen ausgemacht haben.",
-      "Gemessen an ihrer Wählerschaft sind AfD und Linke Online überrepräsentiert. Dafür sorgt wohl unter anderem, dass AfD und Linke besonders viel veröffentlichen. Außerdem setzen diese beiden Parteien online stark auf Angriffe auf den politischen Gegner. Das wird laut Analysen von den Algorithmen von TikTok und Instagram belohnt.",
-      "Nach der AfD klafft online eine große Lücke. Beim Blick auf die Reichweite folgen der Partei erst mit einigem Abstand die Accounts der politischen Konkurrenz: Bundestagspräsidentin Julia Klöckner mit 6,6 Millionen Aufrufen seit der Sommerpause, die Linken-Fraktion und der Bundeskanzler mit jeweils knapp 5,3 Millionen.",
-      "Bei Kanzler Friedrich Merz zeigt ein Blick in die Kommentarspalte, dass die vielen Aufrufe eher durch sein hohes Amt zustande kommen als durch auf Social Media zugeschnittenen Content. Das beste Video des Kanzlers selbst mit den meisten Aufrufen (3,3 Millionen) behandelt die Spritpreisentlastung.",
-      "Was aber ein Blick auf die Zahlen seit Ende der Sommerpause zeigt: Der Kanzler als Thema - das bringt Klicks. So beginnt das erfolgreichste Video von Linken-Fraktionschefin Heidi Reichinneck auf Instagram (rund zwei Millionen Aufrufe) mit den Worten \"Herr Merz - wenn ich von Ihnen noch einmal höre!\" und das erfolgreichste der AfD-Fraktion, eine Rede von AfD-Chefin Alice Weidel mit mehr als vier Millionen Aufrufen mit \"Herr Merz, die Deutschen sind nicht zu faul, um mehr zu arbeiten!\".",
-      "Besonders deutlich ist dieses Phänomen beim erfolgreichsten Video auf Instagram seit der Sommerpause: 6,7 Millionen Views trotz einer Länge von 15 Minuten ist die Rede im Bundestag von Katharina Dröge: beginnend mit den Worten \"Sehr geehrter Herr Merz, ich sage Ihnen ganz persönlich, ich nehme Ihnen Ihre Betroffenheit und Erschütterung über dieses schlimme Wahlergebnis in Sachsen-Anhalt sehr ab.\"",
-      "In der Regierung fällt Außenminister Johann Wadephul (CDU) nicht gerade mit außergewöhnlichen Auftritten auf. Anders aber im Netz: Ob mit Essenstests im Ausland oder wiederkehrende Videos wie Wadephuls Reaktion auf russische Desinformation. Seine Auftritte mit Musik, bekannten Memes und schnellen Schnitten passen zu Instagram und TikTok. Und das wissen er und sein Team: Sein mit am meisten geklicktes Video auf Instagram (7,5 Mio) hat er am 6.10. in ähnlicher Form erneut gepostet.",
-      "Damit hat er Erfolg: Über 300.000 Menschen folgen Wadephul auf Instagram, 185.000 auf TikTok. Sie liken und kommentieren die Videos des Ministers oder schicken sie weiter. Das alles erzeugt Engagement, eine wichtige Währung auf der Plattform. Auf TikTok haben Wadephuls Beiträge nach Heidi Reichinnek und der Linken-Fraktion das höchste Engagement.",
-      "Social Media Content spielt im Bundestag und in der Politik eine zentrale Rolle und trägt mittlerweile maßgeblich zur Außenwahrnehmung bei. Wie verändert diese Tatsache die Politik? Martin Fuchs, Politik- und Digitalberater, beobachtet politische Social-Media-Kommunikation seit Jahren und sagt: \"Das hat auf jeden Fall das Bild der Bürgerinnen und Bürger von Politik verändert. Weil natürlich meistens die Sachen groß werden und breite Wahrnehmung erzielen, die polarisierend sind, die zugespitzt sind, und ich glaube der Diskurs hat sich dadurch verändert, sowohl analog als auch digital - und das nicht unbedingt zum Besseren.\""
-    ],
-    "translations": [
-      "61 million views in 365 videos on TikTok. Since the beginning of September, the videos of top politicians, parliamentary group leaders and federal ministries have been clicked on on the video platform so often. Two accounts account for more than half of the clicks: Alice Weidel and the AfD faction in the Bundestag. More than 60 million clicks are added to Instagram. These digital figures are not visible in the Bundestag, but they have long since shaped how politics is made.",
-      "An evaluation of the accounts of federal politicians since the summer break shows that politicians are heard very differently on the Internet. It is striking that in addition to the AfD's postings, the videos and photos of the left are also widely viewed. These two parties alone get more than half of all calls on TikTok, while their voters only accounted for about a third of the votes in the last federal election.",
-      "Measured by their electorate, the AfD and the Left Party are overrepresented online. This is probably due, among other things, to the fact that the AfD and the Left Party publish a lot. In addition, these two parties rely heavily online on attacks on the political opponent. According to analyses, this is rewarded by the algorithms of TikTok and Instagram.",
-      "After the AfD, there is a big gap online. When looking at the party's reach, the accounts of the political competition only follow by some distance: Bundestag President Julia Klöckner with 6.6 million views since the summer break, the Left Party and the Federal Chancellor with almost 5.3 million each.",
-      "For Chancellor Friedrich Merz, a look at the comment column shows that the many calls are more likely to come from his high office than from content tailored to social media. The best video of the chancellor himself with the most views (3.3 million) deals with the fuel price relief.",
-      "But what a look at the figures since the end of the summer break shows: The Chancellor as a topic - that brings clicks. Thus, the most successful video of Left Party leader Heidi Reichinneck on Instagram (around two million views) begins with the words \"Mr. Merz - if I hear from you again!\" and the most successful video of the AfD group, a speech by AfD leader Alice Weidel with more than four million views with \"Mr. Merz, the Germans are not too lazy to work more!\".",
-      "This phenomenon is particularly evident in the most successful video on Instagram since the summer break: 6.7 million views despite a length of 15 minutes is the speech in the Bundestag by Katharina Dröge: starting with the words \"Dear Mr. Merz, I tell you personally, I am very relieved of your concern and shock at this bad election result in Saxony-Anhalt.\"",
-      "In the government, Foreign Minister Johann Wadephul (CDU) does not exactly stand out with extraordinary appearances. Other but on the net: Whether with food tests abroad or recurring videos such as Wadephul's reaction to Russian disinformation. His performances with music, familiar memes and quick cuts match Instagram and TikTok. And he and his team know this: he re-posted his most clicked video on Instagram (7.5 million) on 6 October in a similar form.",
-      "He succeeds with this: over 300,000 people follow Wadephul on Instagram, 185,000 on TikTok. They like and comment on the minister's videos or forward them. All of this generates engagement, an important currency on the platform. On TikTok, Wadephul's contributions have the highest engagement after Heidi Reichinnek and the Left faction.",
-      ""
+      {
+        "de": "Rund 400 Euro im Monat gibt die Pendlerin Daria Schulz inzwischen fürs Tanken aus. Die 130 Kilometer zum Büro kann sie sich kaum noch leisten. \"Das ist natürlich ein Ausgabeposten, den ich nicht einfach so wegstecke\", sagt Schulz.",
+        "en": "Commuter Daria Schulz now spends around 400 euros a month on refuelling. She can hardly afford the 130 kilometres to the office. \"Of course, this is an expense item that I don't just put away,\" says Schulz."
+      },
+      {
+        "de": "Der Preis für Superbenzin ist binnen eines Jahres um rund 30 Prozent gestiegen, der Dieselpreis um rund 45 Prozent. Im EU-Vergleich bleibt der Spritpreis in Deutschland trotz Tankrabatt hoch, vor allem wegen der Steuern und Abgaben. Auch die Freigabe der strategischen Reserven kann Autofahrer nur vorübergehend entlasten.",
+        "en": "The price of premium gasoline has risen by around 30 percent within a year, while the price of diesel has risen by around 45 percent. In the EU comparison, the fuel price in Germany remains high despite the tank discount, mainly due to taxes and levies. The release of strategic reserves can only temporarily relieve motorists."
+      },
+      {
+        "de": "Auch der Unternehmer Daniel Beständig aus der Nähe von Schweinfurt weiß nicht, wie er die Energiekosten noch stemmen soll. Er betreibt eine internationale Spedition mit 22 Fahrzeugen. Im Vergleich zu 2020 hat er nach eigenen Angaben eine Million Euro Mehrkosten im Jahr nur für Sprit.",
+        "en": "Even the entrepreneur Daniel Konstant from the vicinity of Schweinfurt does not know how to cope with the energy costs. He runs an international forwarding company with 22 vehicles. Compared to 2020, it claims to have an additional one million euros in costs per year just for fuel."
+      },
+      {
+        "de": "Mit den Kraftstoff- und Energiepreisen hätten Mittelständler wie er momentan richtig zu kämpfen, sagt Beständig.",
+        "en": "Medium-sized companies like him are currently really struggling with fuel and energy prices, says Konstant."
+      },
+      {
+        "de": "Der Bundesverband Logistik &amp; Verkehr warnt vor einem Kollaps der Branche. Die Liquidität sinkt, Investitionen werden verschoben und Fuhrparks reduziert.",
+        "en": "The Federal Association of Logistics &amp; Transport warns of a collapse of the industry. Liquidity decreases, investments are postponed and fleets are reduced."
+      },
+      {
+        "de": "Beständig transportiert überwiegend Lebensmittel. Bei festen Aufträgen kann er die Spritkosten an den Kunden weitergeben. Die wiederum geben sie an ihre Kunden - die Verbraucher - weiter. Das sei eine Spirale, sagt Beständig.",
+        "en": "Consistently transports predominantly food. In the case of fixed orders, he can pass on the fuel costs to the customer. In turn, they pass them on to their customers - the consumers. This is a spiral, says Consistent."
+      },
+      {
+        "de": "\"Am Schluss - wir sehen das in den Supermärkten, gerade im Lebensmittelbereich - sind wir im Vergleich zu den letzten Jahren schon deutlich nach oben gegangen mit den Preisen\", sagt der Unternehmer.",
+        "en": "\"In the end - we see this in supermarkets, especially in the food sector - we have already gone up significantly compared to recent years with prices,\" says the entrepreneur."
+      },
+      {
+        "de": "Allein im September sind die Energiepreise im Vergleich zum Vorjahresmonat um 14,9 Prozent gestiegen. Das hat dazu geführt, dass die Inflationsrate inzwischen bei 3,3 Prozent liegt.",
+        "en": "In September alone, energy prices rose by 14.9 percent compared to the same month last year. As a result, the inflation rate has now reached 3.3 percent."
+      },
+      {
+        "de": "Ab Januar ist ein Spritpreisdeckel geplant, also ein staatlich festgelegter Höchstpreis. Ökonomen warnen vor unerwünschten Folgen. \"Wenn ich in einem ansonsten freien Markt einen Preis deckle, habe ich zwei Effekte\", erläutert Andrej Putisek von der Hochschule für Technik Stuttgart. \"Eine steigende Nachfrage und ein gesunkenes Angebot. Mit Spritpreisdeckel habe ich die Befürchtung, dass es zu einer Knappheit kommen wird.\"",
+        "en": "From January, a fuel price cap is planned, i.e. a maximum price set by the state. Economists warn of undesirable consequences. \"When I cap a price in an otherwise free market, I have two effects,\" explains Andrej Putisek from the Stuttgart University of Applied Sciences. “Rising demand and declining supply. With the fuel price cap, I have a fear that there will be a shortage.\""
+      },
+      {
+        "de": "Der Preis für Heizöl ist innerhalb eines Jahres um rund 80 Prozent gestiegen. Beim Brennstoffhändler Dieter Dlask aus Bergkirchen gingen die Aufträge wegen der Preisexplosion drastisch zurück: \"Wir haben Einbrüche bis zu 60 Prozent im Absatz. Und unsere Margen sind - im Gegensatz zu denen der Ölkonzerne - gleichbleibend und sehr dünn.\"",
+        "en": "The price of heating oil has risen by around 80 percent within a year. At the fuel trader Dieter Dlask from Bergkirchen, orders fell drastically due to the price explosion: \"We have slumps of up to 60 percent in sales. And our margins - unlike those of the oil companies - are consistent and very thin.\""
+      }
     ]
   }
 ]
