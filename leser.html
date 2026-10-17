@@ -504,7 +504,16 @@ document.getElementById('back-btn').addEventListener('click', goBack);
 function renderArticle(art) {
   document.getElementById('topbar-title').textContent = art.title;
 
-  const bodyHtml = art.paragraphs.map((p, i) => `
+  // Support both formats:
+  // old: paragraphs = [{de:"...", en:"..."}]
+  // new: paragraphs = ["..."], translations = ["..."]
+  const paras = art.paragraphs.map((p, i) => {
+    const de = (typeof p === 'object') ? p.de : p;
+    const en = (typeof p === 'object') ? p.en : (art.translations && art.translations[i]) || '';
+    return {de, en};
+  });
+
+  const bodyHtml = paras.map((p, i) => `
     <div class="para-block">
       <div class="para-german">${renderWords(p.de)}</div>
       <div class="para-translation" data-para="${i}">${p.en}</div>
