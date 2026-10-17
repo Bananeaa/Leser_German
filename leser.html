@@ -1,16 +1,585 @@
-# Also inject articles into leser.html
-try:
-    with open("leser.html", "r", encoding="utf-8") as f:
-        html = f.read()
-    articles_json = json.dumps(articles, ensure_ascii=False)
-    # Replace the FALLBACK_ARTICLES array in the HTML
-    html = re.sub(
-        r'const FALLBACK_ARTICLES = \[.*?\];',
-        f'const FALLBACK_ARTICLES = {articles_json};',
-        html, flags=re.DOTALL
-    )
-    with open("leser.html", "w", encoding="utf-8") as f:
-        f.write(html)
-    print("Injected articles into leser.html")
-except Exception as e:
-    print(f"HTML inject failed: {e}")
+<title>Leser</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap">
+
+<style>
+/*
+  Layout: shelf catalogue (home) ↔ full-screen reader (article)
+  Palette: aged paper, ink, forest green accent, warm amber popup
+*/
+:root {
+  /* Colors — light */
+  --bg:          #f2ede4;
+  --bg-shelf:    #e8e1d5;
+  --bg-reader:   #fdfaf5;
+  --fg:          #19160f;
+  --fg-muted:    #6a6050;
+  --fg-faint:    #aea190;
+  --accent:      #3d6b4a;
+  --accent-pale: #cfe0d5;
+  --border:      #d4cec3;
+  --spine-1:     #4a6b7a; /* blue-slate */
+  --spine-2:     #6b4a3d; /* sienna     */
+  --spine-3:     #4a5e3d; /* forest     */
+  --popup-bg:    #fffbf3;
+  --popup-bdr:   #c8a250;
+  --shadow:      rgba(60,45,20,0.15);
+  --shadow-book: rgba(30,20,5,0.22);
+  --font-body:   'Lora', Georgia, serif;
+  --font-ui:     'Inter', system-ui, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg:          #16130c;
+    --bg-shelf:    #100e08;
+    --bg-reader:   #1c1912;
+    --fg:          #e6dfd0;
+    --fg-muted:    #998f7e;
+    --fg-faint:    #554e42;
+    --accent:      #68a87a;
+    --accent-pale: #1a3025;
+    --border:      #2c2820;
+    --spine-1:     #3a5a6a;
+    --spine-2:     #6a3a2d;
+    --spine-3:     #3a5030;
+    --popup-bg:    #241f14;
+    --popup-bdr:   #8a6830;
+    --shadow:      rgba(0,0,0,0.4);
+    --shadow-book: rgba(0,0,0,0.55);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+    --bg:          #16130c;
+    --bg-shelf:    #100e08;
+    --bg-reader:   #1c1912;
+    --fg:          #e6dfd0;
+    --fg-muted:    #998f7e;
+    --fg-faint:    #554e42;
+    --accent:      #68a87a;
+    --accent-pale: #1a3025;
+    --border:      #2c2820;
+    --spine-1:     #3a5a6a;
+    --spine-2:     #6a3a2d;
+    --spine-3:     #3a5030;
+    --popup-bg:    #241f14;
+    --popup-bdr:   #8a6830;
+    --shadow:      rgba(0,0,0,0.4);
+    --shadow-book: rgba(0,0,0,0.55);
+    color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; background: var(--bg); color: var(--fg); font-family: var(--font-ui); font-size: 15px; }
+
+/* ── Screens ── */
+.screen { position: absolute; inset: 0; overflow-y: auto; transition: opacity 0.28s ease, transform 0.28s ease; }
+.screen.hidden { opacity: 0; pointer-events: none; }
+#shelf-screen { background: var(--bg); }
+#reader-screen { background: var(--bg-reader); transform: translateX(0); }
+#reader-screen.hidden { transform: translateX(40px); }
+
+/* ─────────────────────────────────────────
+   SHELF / CATALOGUE
+───────────────────────────────────────── */
+#shelf-header {
+  padding: 32px max(20px, env(safe-area-inset-right, 0px)) 0 max(20px, env(safe-area-inset-left, 0px));
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 18px;
+  display: flex; align-items: flex-end; justify-content: space-between;
+  gap: 12px;
+}
+.shelf-wordmark { display: flex; flex-direction: column; }
+.shelf-wordmark h1 {
+  font-family: var(--font-body); font-size: 1.7rem; font-weight: 600;
+  letter-spacing: -0.02em; line-height: 1;
+}
+.shelf-wordmark p {
+  font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--fg-muted); margin-top: 5px;
+}
+#shelf-stats {
+  font-size: 0.75rem; color: var(--fg-muted);
+  text-align: right; white-space: nowrap;
+}
+#shelf-stats strong { color: var(--accent); font-variant-numeric: tabular-nums; }
+
+/* Catalogue cards below shelf (horizontal list on wider screens) */
+.catalogue-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+  padding: 20px max(20px, env(safe-area-inset-right, 0px)) 40px max(20px, env(safe-area-inset-left, 0px));
+}
+.cat-card {
+  background: var(--bg-shelf); border: 1px solid var(--border);
+  border-radius: 8px; padding: 14px 16px;
+  cursor: pointer; transition: background 0.15s, box-shadow 0.15s;
+  position: relative;
+}
+.cat-card:hover { background: var(--accent-pale); box-shadow: 0 2px 8px var(--shadow); }
+.cat-card.read::after {
+  content: 'gelesen'; position: absolute; top: 12px; right: 12px;
+  font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--accent); font-family: var(--font-ui); font-weight: 600;
+}
+.cat-date { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--fg-faint); margin-bottom: 6px; }
+.cat-title { font-family: var(--font-body); font-size: 0.88rem; font-weight: 600; line-height: 1.35; text-wrap: balance; }
+.cat-desc { font-size: 0.76rem; color: var(--fg-muted); margin-top: 6px; line-height: 1.45;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.cat-level { display: inline-block; margin-top: 8px; font-size: 0.6rem; background: var(--accent-pale);
+  color: var(--accent); padding: 2px 6px; border-radius: 20px; font-weight: 600; letter-spacing: 0.04em; }
+
+/* ─────────────────────────────────────────
+   READER
+───────────────────────────────────────── */
+#reader-topbar {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
+  background: var(--bg-reader); border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px max(16px, env(safe-area-inset-right, 0px)) 10px max(16px, env(safe-area-inset-left, 0px));
+}
+#back-btn {
+  display: flex; align-items: center; gap: 5px;
+  background: none; border: none; cursor: pointer;
+  font-family: var(--font-ui); font-size: 0.78rem; color: var(--accent);
+  padding: 4px 0; flex-shrink: 0;
+}
+#back-btn svg { flex-shrink: 0; }
+#topbar-title {
+  flex: 1; min-width: 0;
+  font-family: var(--font-body); font-size: 0.82rem; font-weight: 600;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  color: var(--fg-muted);
+}
+#word-counter { font-size: 0.7rem; color: var(--fg-faint); white-space: nowrap; flex-shrink: 0; font-variant-numeric: tabular-nums; }
+
+/* body paint for sticky topbar safe area */
+body::before {
+  content: ''; position: fixed; inset: 0 0 auto;
+  height: env(safe-area-inset-top, 0px); background: var(--bg-reader); z-index: 30;
+}
+
+#reader-inner {
+  max-width: 640px; margin: 0 auto;
+  padding: 36px max(20px, env(safe-area-inset-right, 0px)) 80px max(20px, env(safe-area-inset-left, 0px));
+}
+
+/* Article layout */
+.article-meta { margin-bottom: 22px; padding-bottom: 22px; border-bottom: 1px solid var(--border); }
+.article-eyebrow { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); font-weight: 600; margin-bottom: 10px; }
+.article-title { font-family: var(--font-body); font-size: 1.7rem; font-weight: 600; line-height: 1.22; text-wrap: balance; margin-bottom: 8px; }
+.article-date { font-size: 0.73rem; color: var(--fg-muted); }
+
+/* Translation bar */
+#trans-bar {
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 24px; padding: 8px 12px;
+  background: var(--bg-shelf); border-radius: 8px; border: 1px solid var(--border);
+  font-family: var(--font-ui); font-size: 0.78rem; color: var(--fg-muted);
+}
+#trans-bar label { display: flex; align-items: center; gap: 8px; cursor: pointer; user-select: none; }
+.toggle-switch { position: relative; width: 32px; height: 18px; flex-shrink: 0; }
+.toggle-switch input { opacity: 0; width: 0; height: 0; position: absolute; }
+.toggle-track { position: absolute; inset: 0; background: var(--border); border-radius: 9px; transition: background 0.2s; }
+.toggle-switch input:checked + .toggle-track { background: var(--accent); }
+.toggle-thumb { position: absolute; top: 2px; left: 2px; width: 14px; height: 14px; background: white; border-radius: 50%; transition: transform 0.2s; pointer-events: none; }
+.toggle-switch input:checked ~ .toggle-thumb { transform: translateX(14px); }
+
+/* Article body */
+.article-body { font-family: var(--font-body); font-size: 1.05rem; line-height: 1.82; color: var(--fg); }
+.para-block { margin-bottom: 1.6em; max-width: 62ch; }
+.para-trans-toggle {
+  display: inline-block; margin-top: 2px;
+  background: none; border: none; cursor: pointer;
+  font-family: var(--font-ui); font-size: 0.7rem; color: var(--fg-faint);
+  padding: 0; transition: color 0.15s; letter-spacing: 0.01em;
+}
+.para-trans-toggle:hover { color: var(--accent); }
+.para-trans-toggle.active { color: var(--accent); }
+.para-translation {
+  display: none; font-family: var(--font-ui); font-size: 0.82rem; font-style: italic;
+  color: var(--fg-muted); line-height: 1.65;
+  border-left: 2px solid var(--border); padding-left: 10px; margin-top: 5px;
+}
+.para-translation.visible { display: block; }
+
+/* Words */
+.word { cursor: pointer; border-radius: 2px; transition: background 0.1s; padding: 0 1px; }
+.word:hover { background: var(--accent-pale); }
+.word.looked-up { border-bottom: 1.5px dotted var(--accent); color: var(--accent); }
+
+/* Popup */
+#popup {
+  position: fixed; background: var(--popup-bg);
+  border: 1.5px solid var(--popup-bdr); border-radius: 8px;
+  padding: 10px 14px; box-shadow: 0 4px 18px var(--shadow);
+  max-width: 240px; z-index: 200;
+  pointer-events: none; opacity: 0; transform: translateY(4px);
+  transition: opacity 0.14s, transform 0.14s;
+}
+#popup.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+#popup-word { font-family: var(--font-body); font-size: 1rem; font-weight: 600; }
+#popup-article-tag { font-size: 0.78rem; color: var(--accent); font-family: var(--font-ui); margin-top: 1px; }
+#popup-translation { font-size: 0.87rem; color: var(--fg-muted); margin-top: 5px; border-top: 1px solid var(--border); padding-top: 5px; font-family: var(--font-ui); line-height: 1.4; }
+#popup-close { position: absolute; top: 6px; right: 8px; font-size: 0.8rem; color: var(--fg-faint); cursor: pointer; background: none; border: none; padding: 2px 4px; pointer-events: auto; }
+#popup-close:hover { color: var(--fg); }
+.source-link { display: inline-block; margin-top: 24px; font-size: 0.72rem; color: var(--fg-faint); font-family: var(--font-ui); text-decoration: none; border-bottom: 1px solid var(--fg-faint); }
+.source-link:hover { color: var(--fg-muted); }
+
+/* Responsive */
+@media (max-width: 500px) {
+  .catalogue-grid { grid-template-columns: 1fr; }
+}
+</style>
+
+<!-- ── SHELF SCREEN ── -->
+<div id="shelf-screen" class="screen">
+  <header id="shelf-header">
+    <div class="shelf-wordmark">
+      <h1>Leser</h1>
+      <p>Nachrichtenleicht · A1–A2</p>
+    </div>
+    <div id="shelf-stats">
+      <strong id="shelf-word-count">0</strong> Wörter nachgeschlagen
+    </div>
+  </header>
+
+  <div id="catalogue-loading" style="padding: 32px max(20px,env(safe-area-inset-left,0px)); font-family: var(--font-ui); font-size: 0.82rem; color: var(--fg-muted);">Artikel werden geladen…</div>
+  <div class="catalogue-grid" id="catalogue-grid"></div>
+</div>
+
+<!-- ── READER SCREEN ── -->
+<div id="reader-screen" class="screen hidden">
+  <div id="reader-topbar">
+    <button id="back-btn" aria-label="Zurück zur Übersicht">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+      Übersicht
+    </button>
+    <div id="topbar-title"></div>
+    <div id="word-counter"><span id="topbar-word-count">0</span> Wörter</div>
+  </div>
+  <div id="reader-inner"></div>
+</div>
+
+<!-- ── POPUP ── -->
+<div id="popup" role="tooltip">
+  <button id="popup-close" aria-label="Schließen">✕</button>
+  <div id="popup-word"></div>
+  <div id="popup-article-tag"></div>
+  <div id="popup-translation"></div>
+</div>
+
+<script>
+/* ── Dictionary ── */
+const DICT = {
+  "zum":{en:"to the"},"mal":{en:"time / once"},"seit":{en:"since / for"},"langer":{en:"long"},
+  "zeit":{en:"time",article:"die"},"wieder":{en:"again"},"beste":{en:"best"},
+  "welt":{en:"world",article:"die"},"er":{en:"he"},"heißt":{en:"is called / named"},
+  "spätestens":{en:"at the latest"},"dezember":{en:"December"},"wird":{en:"will / becomes"},
+  "ihm":{en:"him"},"hat":{en:"has"},"erst":{en:"only / first"},"anderer":{en:"another"},
+  "geschafft":{en:"achieved / managed"},"boris":{en:"Boris (name)"},"becker":{en:"Becker (name)"},
+  "schon":{en:"already"},"jahre":{en:"years"},"vor":{en:"before / ago"},"vier":{en:"four"},
+  "dachte":{en:"thought"},"ich":{en:"I"},"muss":{en:"must"},"aufhören":{en:"to stop / quit"},
+  "hatte":{en:"had"},"schlimme":{en:"serious / bad"},"verletzung":{en:"injury",article:"die"},
+  "aber":{en:"but"},"sehr":{en:"very"},"viel":{en:"much / a lot"},"trainiert":{en:"trained"},
+  "diesem":{en:"this"},"jahr":{en:"year",article:"das"},"wichtige":{en:"important"},
+  "turniere":{en:"tournaments"},"gewonnen":{en:"won"},"tennis":{en:"tennis"},
+  "spieler":{en:"player",article:"der"},"weltrangliste":{en:"world ranking list",article:"die"},
+  "rang":{en:"rank",article:"der"},"liste":{en:"list",article:"die"},
+  "deutschland":{en:"Germany"},"neuen":{en:"new"},"bundes":{en:"federal"},
+  "arbeits":{en:"work / labour"},"minister":{en:"minister",article:"der"},
+  "alexander":{en:"Alexander (name)"},"schweitzer":{en:"Schweitzer (name)"},
+  "ist":{en:"is"},"alt":{en:"old"},"und":{en:"and"},"partei":{en:"party (political)",article:"die"},
+  "spd":{en:"SPD (Social Democratic Party)"},"bundestag":{en:"federal parliament",article:"der"},
+  "amtseid":{en:"oath of office",article:"der"},"geleistet":{en:"performed / taken (an oath)"},
+  "geschworen":{en:"sworn"},"sich":{en:"himself / oneself"},"für":{en:"for"},
+  "menschen":{en:"people"},"einzusetzen":{en:"to advocate for"},"gesetze":{en:"laws"},
+  "achten":{en:"to respect"},"kommt":{en:"comes"},"aus":{en:"from"},
+  "bundesland":{en:"federal state",article:"das"},"rheinland-pfalz":{en:"Rhineland-Palatinate (German state)"},
+  "dort":{en:"there"},"ministerpräsident":{en:"minister-president / premier",article:"der"},
+  "nun":{en:"now"},"geplante":{en:"planned"},"rentenreform":{en:"pension reform",article:"die"},
+  "kümmern":{en:"to take care of"},"nachfolger":{en:"successor",article:"der"},
+  "zurückgetreten":{en:"resigned"},"war":{en:"was"},"als":{en:"as / when"},
+  "papst":{en:"Pope",article:"der"},"leo":{en:"Leo (name)"},"operiert":{en:"operated on"},
+  "worden":{en:"been (passive)"},"dabei":{en:"in the process / thereby"},
+  "wurde":{en:"was / became"},"klar":{en:"clear"},"lungenkrebs":{en:"lung cancer",article:"der"},
+  "krebs":{en:"cancer",article:"der"},"schwere":{en:"serious / severe"},
+  "krankheit":{en:"illness / disease",article:"die"},"man":{en:"one (impersonal) / you"},
+  "körper":{en:"body",article:"der"},"geschwür":{en:"tumor / growth",article:"das"},
+  "ausbreiten":{en:"to spread"},"kann":{en:"can"},"tumor":{en:"tumor",article:"der"},
+  "ärzte":{en:"doctors"},"lunge":{en:"lung",article:"die"},
+  "herausgeschnitten":{en:"cut out / removed"},"jetzt":{en:"now"},
+  "gibt":{en:"there is / gives"},"weitere":{en:"further"},"untersuchungen":{en:"examinations"},
+  "wollen":{en:"want to"},"herausfinden":{en:"to find out"},"ob":{en:"whether"},
+  "noch":{en:"still / yet"},"woanders":{en:"elsewhere"},"müsste":{en:"would have to"},
+  "weiter":{en:"further / continue"},"behandelt":{en:"treated"},"viele":{en:"many"},
+  "politiker":{en:"politicians"},"kirchen":{en:"church"},"leute":{en:"people"},
+  "gewünscht":{en:"wished / hoped"},"dass":{en:"that"},"gesund":{en:"healthy"},
+  "soll":{en:"is supposed to"},"bis":{en:"until"},"nächsten":{en:"next"},
+  "dienstag":{en:"Tuesday"},"krankenhaus":{en:"hospital",article:"das"},
+  "bleiben":{en:"to stay"},"november":{en:"November"},"will":{en:"wants to"},
+  "weiterhin":{en:"still / continue to"},"reise":{en:"trip / journey",article:"die"},
+  "südamerika":{en:"South America"},"machen":{en:"to make / do"},
+  "die":{en:"the (fem./pl.)"},"der":{en:"the (masc.)"},"das":{en:"the (neut.)"},
+  "ein":{en:"a / an"},"eine":{en:"a / an (fem.)"},"in":{en:"in"},"den":{en:"the (acc.)"},
+  "dem":{en:"the (dat.)"},"des":{en:"of the"},"an":{en:"at / on"},"auf":{en:"on / onto"},
+  "mit":{en:"with"},"von":{en:"from / of"},"zu":{en:"to"},"im":{en:"in the"},
+  "am":{en:"at the / on the"},"nicht":{en:"not"},"sein":{en:"to be / his"},
+  "seine":{en:"his"},"sie":{en:"she / they"},"auch":{en:"also / too"},
+  "nach":{en:"after / to"},"bei":{en:"at / with"},"wie":{en:"how / like"},
+  "so":{en:"so / thus"},"oder":{en:"or"},"wurden":{en:"were (plural past)"},
+  "müssen":{en:"must / have to"},"können":{en:"can / be able to"},"haben":{en:"to have"},
+  "sind":{en:"are"},"einer":{en:"one / a (masc.)"},"einen":{en:"a / an (masc. acc.)"},
+  "dieses":{en:"this (neut.)"},"dieser":{en:"this (masc.)"},"diese":{en:"this (fem./pl.)"},
+  "dann":{en:"then"},"mehr":{en:"more"},"immer":{en:"always / still"},"nur":{en:"only"},
+  "ganz":{en:"whole / completely"},"neue":{en:"new"},"neuer":{en:"new (masc.)"},
+  "über":{en:"about / over"},"unter":{en:"under"},"durch":{en:"through"},
+  "gegen":{en:"against"},"ohne":{en:"without"},"werden":{en:"to become / will"},
+  "einem":{en:"a / an (dative)"},"wegen":{en:"because of"},"keine":{en:"no / none (fem.)"},
+  "kein":{en:"no / none"},"alle":{en:"all / everyone"},"denn":{en:"because / for"},
+  "hier":{en:"here"},"zwei":{en:"two"},"drei":{en:"three"},"ersten":{en:"first"},
+  "ihr":{en:"her / your (informal pl.)"},"ihn":{en:"him (accusative)"},
+  "wer":{en:"who"},"was":{en:"what"},"wo":{en:"where"},"warum":{en:"why"},
+  "beim":{en:"at the"},"zur":{en:"to the (fem.)"},"ins":{en:"into the"},
+  "ans":{en:"to the / at the"}
+};
+
+/* ── Articles (loaded from GitHub) ── */
+let ARTICLES = [];
+
+async function loadArticles() {
+  const LOADING = document.getElementById('catalogue-loading');
+  const GRID = document.getElementById('catalogue-grid');
+  try {
+    const res = await fetch('https://raw.githubusercontent.com/Bananeaa/Leser_German/main/articles.json', {cache: 'no-store'});
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    ARTICLES = await res.json();
+    // assign color + height from index
+    const colors = ['1','2','3'];
+    const heights = ['tall','mid','short','mid','tall','short'];
+    ARTICLES.forEach((a, i) => {
+      a.color = colors[i % 3];
+      a.height = heights[i % 6];
+    });
+  } catch(e) {
+    ARTICLES = FALLBACK_ARTICLES;
+    if (LOADING) LOADING.textContent = 'Fetch-Fehler: ' + e.message + ' — zeige Beispielartikel.';
+    console.error('loadArticles failed:', e);
+  }
+  if (LOADING) LOADING.hidden = true;
+  GRID.innerHTML = '';
+  buildShelf();
+}
+
+/* ── Fallback articles (shown if fetch fails) ── */
+const FALLBACK_ARTICLES = [
+  {
+    id:"zverev", date:"12.10.2026", color:"1", height:"tall",
+    source:"nachrichtenleicht.de",
+    url:"https://www.nachrichtenleicht.de/zverev-weltrangliste-100.html",
+    title:"Alexander Zverev ist der beste Tennis-Spieler der Welt",
+    desc:"Zum ersten Mal seit langer Zeit ist ein Deutscher wieder der beste Tennis-Spieler der Welt.",
+    paragraphs:[
+      { de:"Zum ersten Mal seit langer Zeit ist ein Deutscher wieder der beste Tennis-Spieler der Welt. Er heißt Alexander Zverev. Spätestens im Dezember wird er auf dem ersten Platz der Welt-Rang-Liste stehen.", en:"For the first time in a long time, a German is again the best tennis player in the world. His name is Alexander Zverev. By December at the latest, he will be in 1st place in the world rankings." },
+      { de:"Vor ihm hat das erst ein anderer Deutscher geschafft: Boris Becker. Das ist aber schon 35 Jahre her.", en:"Before him, only one other German had achieved this: Boris Becker. But that was already 35 years ago." },
+      { de:"Vor vier Jahren dachte Alexander Zverev: Ich muss mit dem Tennis aufhören. Zverev hatte eine schlimme Verletzung. Aber er hat sehr viel trainiert und in diesem Jahr zwei wichtige Turniere gewonnen.", en:"Four years ago, Alexander Zverev thought: I have to stop playing tennis. Zverev had a serious injury. But he trained very hard and won two important tournaments this year." }
+    ]
+  },
+  {
+    id:"schweitzer", date:"14.10.2026", color:"2", height:"mid",
+    source:"nachrichtenleicht.de",
+    url:"https://www.nachrichtenleicht.de/schweitzer-arbeitsminister-100.html",
+    title:"Alexander Schweitzer ist neuer Bundes-Arbeits-Minister",
+    desc:"Deutschland hat einen neuen Bundesarbeitsminister. Er heißt Alexander Schweitzer und kommt aus Rheinland-Pfalz.",
+    paragraphs:[
+      { de:"Deutschland hat einen neuen Bundes-Arbeits-Minister. Er heißt Alexander Schweitzer. Er ist 53 Jahre alt und in der Partei SPD. Er hat im Bundestag seinen Amts-Eid geleistet.", en:"Germany has a new Federal Labour Minister. His name is Alexander Schweitzer. He is 53 years old and a member of the SPD party. He took his oath of office in the Bundestag." },
+      { de:"Das heißt: Er hat geschworen, sich für die Menschen in Deutschland einzusetzen und die Gesetze zu achten. Alexander Schweitzer kommt aus dem Bundes-Land Rheinland-Pfalz. Dort war er Minister-Präsident und auch Arbeits-Minister. Als Bundes-Arbeits-Minister muss er sich nun zum Beispiel um die geplante Renten-Reform kümmern.", en:"This means: he swore to stand up for the people of Germany and to respect the laws. Alexander Schweitzer comes from the federal state of Rhineland-Palatinate. There he was Minister-President and also Labour Minister. As Federal Labour Minister, he must now deal with, for example, the planned pension reform." },
+      { de:"Alexander Schweitzer ist Nachfolger von Bärbel Bas. Sie war als Arbeits-Ministerin zurückgetreten.", en:"Alexander Schweitzer is the successor of Bärbel Bas. She had resigned as Labour Minister." }
+    ]
+  },
+  {
+    id:"papst", date:"14.10.2026", color:"3", height:"short",
+    source:"nachrichtenleicht.de",
+    url:"https://www.nachrichtenleicht.de/papst-op-lungenkrebs-100.html",
+    title:"Papst Leo hat Lungen-Krebs",
+    desc:"Papst Leo ist operiert worden. Bei der Operation wurde klar: Der Papst hat Lungenkrebs.",
+    paragraphs:[
+      { de:"Papst Leo ist operiert worden. Dabei wurde klar: Der Papst hat Lungen-Krebs. Krebs ist eine schwere Krankheit. Dabei hat man im Körper ein Geschwür, das sich ausbreiten kann.", en:"Pope Leo has been operated on. During the operation, it became clear: the Pope has lung cancer. Cancer is a serious illness. With cancer, one has a growth in the body that can spread." },
+      { de:"So ein Geschwür nennt man Tumor. Die Ärzte haben bei Leo einen Tumor aus der Lunge herausgeschnitten. Jetzt gibt es weitere Untersuchungen. Die Ärzte wollen herausfinden, ob der Papst noch woanders im Körper Krebs hat. Dann müsste Leo weiter behandelt werden.", en:"Such a growth is called a tumour. The doctors removed a tumour from Leo's lung. Now there are further examinations. The doctors want to find out whether the Pope has cancer elsewhere in his body. If so, Leo would need further treatment." },
+      { de:"Viele Politiker und Kirchen-Leute haben dem Papst gewünscht, dass er wieder ganz gesund wird. Leo soll noch bis nächsten Dienstag im Krankenhaus bleiben. Im November will er weiterhin eine Reise nach Südamerika machen.", en:"Many politicians and church figures have wished the Pope a full recovery. Leo is supposed to stay in hospital until next Tuesday. In November he still plans to make a trip to South America." }
+    ]
+  }
+];
+
+/* ── Persistence ── */
+let seenWords = {};
+try { const s = localStorage.getItem('leser_seen'); if (s) seenWords = JSON.parse(s); } catch(e) {}
+function saveSeenWords() { try { localStorage.setItem('leser_seen', JSON.stringify(seenWords)); } catch(e) {} }
+function isRead(id) { try { return !!localStorage.getItem('leser_read_' + id); } catch(e) { return false; } }
+function markRead(id) { try { localStorage.setItem('leser_read_' + id, '1'); } catch(e) {} }
+
+function updateCounters() {
+  const n = Object.keys(seenWords).length;
+  document.getElementById('shelf-word-count').textContent = n;
+  const wc = document.getElementById('topbar-word-count');
+  if (wc) wc.textContent = n;
+}
+
+/* ── Word helpers ── */
+function tokenize(text) {
+  const tokens = [], re = /([a-zA-ZäöüÄÖÜß\-]+|[^a-zA-ZäöüÄÖÜß\-]+)/g;
+  let m; while ((m = re.exec(text)) !== null) tokens.push(m[0]);
+  return tokens;
+}
+function isWord(t) { return /[a-zA-ZäöüÄÖÜß]/.test(t); }
+function norm(w) { return w.toLowerCase().replace(/[.,!?;:"""()]/g, ''); }
+function lookup(word) {
+  const n = norm(word);
+  if (DICT[n]) return DICT[n];
+  for (const sfx of ['en','er','es','em','s','n','te','ten','t']) {
+    const stem = n.replace(new RegExp(sfx + '$'), '');
+    if (stem.length >= 2 && DICT[stem]) return DICT[stem];
+  }
+  return null;
+}
+function renderWords(text) {
+  return tokenize(text).map(t => {
+    if (!isWord(t)) return t;
+    const entry = lookup(t), n2 = norm(t);
+    if (!entry) return t;
+    const seen = seenWords[n2] ? ' looked-up' : '';
+    return `<span class="word${seen}" data-word="${t}" data-norm="${n2}">${t}</span>`;
+  }).join('');
+}
+
+/* ── Build shelf ── */
+function buildShelf() {
+  const grid = document.getElementById('catalogue-grid');
+
+  ARTICLES.forEach(art => {
+    const read = isRead(art.id);
+
+    /* Catalogue card */
+    const card = document.createElement('div');
+    card.className = 'cat-card' + (read ? ' read' : '');
+    card.dataset.id = art.id;
+    card.innerHTML = `
+      <div class="cat-date">${art.date}</div>
+      <div class="cat-title">${art.title}</div>
+      <div class="cat-desc">${art.desc}</div>
+      <span class="cat-level">A1–A2</span>`;
+    card.addEventListener('click', () => openArticle(art));
+    grid.appendChild(card);
+  });
+
+  updateCounters();
+}
+
+/* ── Navigation ── */
+function openArticle(art) {
+  markRead(art.id);
+  document.querySelectorAll(`.book[data-id="${art.id}"], .cat-card[data-id="${art.id}"]`).forEach(el => el.classList.add('read'));
+  renderArticle(art);
+
+  const shelf = document.getElementById('shelf-screen');
+  const reader = document.getElementById('reader-screen');
+  shelf.classList.add('hidden');
+  reader.classList.remove('hidden');
+  reader.scrollTop = 0;
+}
+
+function goBack() {
+  const shelf = document.getElementById('shelf-screen');
+  const reader = document.getElementById('reader-screen');
+  reader.classList.add('hidden');
+  shelf.classList.remove('hidden');
+  updateCounters();
+}
+
+document.getElementById('back-btn').addEventListener('click', goBack);
+
+/* ── Render article ── */
+function renderArticle(art) {
+  document.getElementById('topbar-title').textContent = art.title;
+
+  const bodyHtml = art.paragraphs.map((p, i) => `
+    <div class="para-block">
+      <div class="para-german">${renderWords(p.de)}</div>
+      <div class="para-translation" data-para="${i}">${p.en}</div>
+      <button class="para-trans-toggle" data-para="${i}" aria-pressed="false">↳ Übersetzung</button>
+    </div>`).join('');
+
+  document.getElementById('reader-inner').innerHTML = `
+    <div class="article-meta">
+      <div class="article-eyebrow">Nachrichtenleicht · A1–A2</div>
+      <h2 class="article-title">${art.title}</h2>
+      <div class="article-date">${art.date}</div>
+    </div>
+    <div id="trans-bar">
+      <label>
+        <span class="toggle-switch">
+          <input type="checkbox" id="trans-toggle">
+          <span class="toggle-track"></span>
+          <span class="toggle-thumb"></span>
+        </span>
+        Alle Übersetzungen zeigen
+      </label>
+    </div>
+    <div class="article-body">${bodyHtml}</div>
+    <a class="source-link" href="${art.url}" target="_blank" rel="noopener">Quelle: ${art.source} ↗</a>`;
+
+  document.getElementById('trans-toggle').addEventListener('change', function() {
+    const on = this.checked;
+    document.querySelectorAll('.para-translation').forEach(el => el.classList.toggle('visible', on));
+    document.querySelectorAll('.para-trans-toggle').forEach(btn => btn.classList.toggle('active', on));
+  });
+}
+
+/* ── Popup ── */
+const popup = document.getElementById('popup');
+function showPopup(el) {
+  const entry = lookup(el.dataset.word);
+  if (!entry) return;
+  const n2 = el.dataset.norm;
+  seenWords[n2] = true; saveSeenWords(); updateCounters();
+  el.classList.add('looked-up');
+  document.getElementById('popup-word').textContent = el.dataset.word;
+  document.getElementById('popup-article-tag').textContent = entry.article ? entry.article : '';
+  document.getElementById('popup-translation').textContent = entry.en;
+  const rect = el.getBoundingClientRect();
+  let left = Math.min(rect.left, window.innerWidth - 256);
+  left = Math.max(left, 16);
+  let top = rect.bottom + 8;
+  if (top + 90 > window.innerHeight) top = rect.top - 90;
+  popup.style.left = left + 'px'; popup.style.top = top + 'px';
+  popup.classList.add('visible');
+}
+function hidePopup() { popup.classList.remove('visible'); }
+
+document.getElementById('reader-screen').addEventListener('click', e => {
+  const toggleBtn = e.target.closest('.para-trans-toggle');
+  if (toggleBtn) {
+    hidePopup();
+    const i = toggleBtn.dataset.para;
+    const transEl = document.querySelector(`.para-translation[data-para="${i}"]`);
+    const on = !transEl.classList.contains('visible');
+    transEl.classList.toggle('visible', on);
+    toggleBtn.classList.toggle('active', on);
+    toggleBtn.setAttribute('aria-pressed', String(on));
+    const all = document.querySelectorAll('.para-translation');
+    document.getElementById('trans-toggle').checked = [...all].every(el => el.classList.contains('visible'));
+    return;
+  }
+  const word = e.target.closest('.word');
+  if (word) { e.stopPropagation(); showPopup(word); return; }
+  if (!popup.contains(e.target)) hidePopup();
+});
+
+document.getElementById('popup-close').addEventListener('click', hidePopup);
+document.getElementById('reader-screen').addEventListener('scroll', hidePopup, {passive:true});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') { hidePopup(); } });
+
+loadArticles();
+</script>
