@@ -1,238 +1,235 @@
-import urllib.request
-import urllib.parse
+import feedparser
+import requests
 import json
 import re
+import os
 import time
-from datetime import datetime
+from bs4 import BeautifulSoup
+import google.generativeai as genai
 
-FEED_URL = "https://www.tagesschau.de/xml/rss2/"
+# ── Gemini setup ──────────────────────────────────────────────
+genai.configure(api_key=os.environ["GEMINI_API_KEY"])
+gemini = genai.GenerativeModel("gemini-1.5-flash")
 
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    "Accept-Language": "de-DE,de;q=0.9",
-}
+# ── Config ────────────────────────────────────────────────────
+RSS_URL   = "https://www.tagesschau.de/xml/rss2/"
+MAX_ART   = 6
+HTML_FILE = "index.html"
 
-# Tagesschau URL path → German tag name
 TAG_MAP = {
-    "/inland/":      "Inland",
-    "/ausland/":     "Ausland",
-    "/wirtschaft/":  "Wirtschaft",
-    "/sport/":       "Sport",
-    "/wissen/":      "Wissen",
-    "/kultur/":      "Kultur",
-    "/faktenfinder/":"Fakten",
-    "/investigativ/":"Investigativ",
+    "inland":       "Inland",
+    "ausland":      "Ausland",
+    "wirtschaft":   "Wirtschaft",
+    "sport":        "Sport",
+    "wissenschaft": "Wissenschaft",
+    "technologie":  "Technologie",
+    "kultur":       "Kultur",
+    "regional":     "Regional",
 }
 
-def fetch(url):
-    req = urllib.request.Request(url, headers=HEADERS)
-    with urllib.request.urlopen(req, timeout=20) as r:
-        return r.read().decode("utf-8", errors="replace")
+# ── Helpers ───────────────────────────────────────────────────
+def detect_tag(url):
+    for key, label in TAG_MAP.items():
+        if f"/{key}/" in url:
+            return label
+    return "Nachrichten"
 
-def translate_mymemory(text):
-    if not text.strip():
-        return ""
-    encoded = urllib.parse.quote(text[:500])
-    url = f"https://api.mymemory.translated.net/get?q={encoded}&langpair=de|en"
+def scrape_article(url):
+    """Return list of paragraph strings from a Tagesschau article."""
     try:
-        with urllib.request.urlopen(url, timeout=10) as r:
-            data = json.loads(r.read().decode())
-        t = data.get("responseData", {}).get("translatedText", "")
-        if t and t.upper() != text.upper():
-            return t
+        r = requests.get(url, timeout=10,
+                         headers={"User-Agent": "Mozilla/5.0"})
+        soup = BeautifulSoup(r.text, "html.parser")
+        paras = []
+        for p in soup.select("p.textabsatz, div.text p, article p"):
+            t = p.get_text(" ", strip=True)
+            if len(t) > 40:
+                paras.append(t)
+        return paras[:12]
     except Exception as e:
-        print(f"    translate failed: {e}")
-    return ""
+        print(f"  scrape error: {e}")
+        return []
+
+def simplify_article(title, paragraphs):
+    """
+    Call Gemini to rewrite the article in simple A2 German.
+    Returns list of {de, en} paragraph dicts.
+    """
+    original_text = "\n\n".join(paragraphs)
+    prompt = f"""Du bist ein Deutschlehrer für Anfänger (A2-Niveau).
+
+Schreibe diesen Nachrichtenartikel neu auf Deutsch für A2-Lerner:
+- Benutze einfache, kurze Sätze (max. 20 Wörter pro Satz)
+- Benutze häufige Wörter (A1-A2 Niveau)
+- Schreibe 4-6 Absätze mit je 2-3 Sätzen
+- Behalte die wichtigsten Fakten
+
+Titel: {title}
+
+Originaltext:
+{original_text}
+
+Antworte NUR mit einem JSON-Array in diesem Format (kein anderer Text):
+[
+  {{"de": "Deutscher vereinfachter Absatz.", "en": "English translation of the paragraph."}},
+  {{"de": "Zweiter Absatz.", "en": "Second paragraph in English."}}
+]"""
+
+    try:
+        response = gemini.generate_content(prompt)
+        raw = response.text.strip()
+        # Strip markdown code fences if present
+        raw = re.sub(r"^```(?:json)?\s*", "", raw)
+        raw = re.sub(r"\s*```$", "", raw)
+        paras = json.loads(raw)
+        # Validate structure
+        if isinstance(paras, list) and all("de" in p and "en" in p for p in paras):
+            return paras
+    except Exception as e:
+        print(f"  Gemini error: {e}")
+
+    # Fallback: return original paragraphs with empty translation
+    return [{"de": p, "en": ""} for p in paragraphs[:6]]
+
+def assign_level(paragraphs):
+    """Assign A2 since we simplified with Gemini."""
+    return "A2"
 
 def wiktionary_lookup(word):
-    """Return {en, article, level} or None. Uses English Wiktionary REST API."""
-    url = f"https://en.wiktionary.org/api/rest_v1/page/summary/{urllib.parse.quote(word)}"
+    """Look up a word on Wiktionary for article, level, and English meaning."""
     try:
-        req = urllib.request.Request(url, headers={"User-Agent": "Leser-German-App/1.0"})
-        with urllib.request.urlopen(req, timeout=8) as r:
-            data = json.loads(r.read().decode())
-        desc = data.get("description", "") or ""
-        extract = data.get("extract", "") or ""
-        # extract article (der/die/das) from description e.g. "das Haus"
-        article = None
-        m = re.search(r'\b(der|die|das)\b', desc.lower())
-        if m:
-            article = m.group(1)
-        # extract level if mentioned (A1-C2)
-        level = None
-        m2 = re.search(r'\b([ABC][12])\b', desc + extract)
-        if m2:
-            level = m2.group(1)
-        # build short English meaning from extract (first sentence)
-        meaning = extract.split(".")[0].strip() if extract else ""
-        if not meaning:
+        url = f"https://en.wiktionary.org/api/rest_v1/page/summary/{word}"
+        r = requests.get(url, timeout=6)
+        if r.status_code != 200:
             return None
-        # trim to reasonable popup length
-        if len(meaning) > 80:
-            meaning = meaning[:77] + "…"
-        result = {"en": meaning}
-        if article:
-            result["article"] = article
-        if level:
-            result["level"] = level
-        return result
+        data = r.json()
+        extract = data.get("extract", "")
+        if not extract or "German" not in extract:
+            return None
+
+        entry = {}
+
+        # Extract grammatical article (der/die/das)
+        desc = data.get("description", "")
+        art_match = re.search(r'\b(der|die|das)\b', desc, re.IGNORECASE)
+        if art_match:
+            entry["article"] = art_match.group(1).lower()
+
+        # Extract CEFR level
+        level_match = re.search(r'\b([ABC][12])\b', extract)
+        if level_match:
+            entry["level"] = level_match.group(1)
+
+        # Extract English meaning: first sentence up to 60 chars
+        sentences = extract.split(".")
+        for s in sentences:
+            s = s.strip()
+            if s and "German" not in s and len(s) > 5:
+                entry["en"] = s[:80]
+                break
+
+        return entry if entry.get("en") else None
     except Exception:
         return None
 
-def extract_tagesschau(html):
-    html = re.sub(r"<script[^>]*>.*?</script>", "", html, flags=re.DOTALL)
-    html = re.sub(r"<style[^>]*>.*?</style>", "", html, flags=re.DOTALL)
-    paras = re.findall(r'<p[^>]+class="[^"]*textabsatz[^"]*"[^>]*>(.*?)</p>', html, re.DOTALL)
-    if not paras:
-        m = re.search(r'<article[^>]*>(.*?)</article>', html, re.DOTALL)
-        if m:
-            paras = re.findall(r'<p[^>]*>(.*?)</p>', m.group(1), re.DOTALL)
-    result = []
-    for p in paras:
-        text = re.sub(r"<[^>]+>", "", p).strip()
-        text = re.sub(r"\s+", " ", text)
-        if len(text) > 60 and "Cookie" not in text and not text.startswith("©"):
-            result.append(text)
-    return result[:10]
-
-def parse_rss(xml):
-    items = re.findall(r"<item>(.*?)</item>", xml, re.DOTALL)
-    result = []
-    for item in items[:6]:
-        def tag(name):
-            m = re.search(rf"<{name}[^>]*>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</{name}>", item, re.DOTALL)
-            return m.group(1).strip() if m else ""
-        title   = tag("title")
-        link    = tag("link")
-        pubdate = tag("pubDate")
-        desc    = tag("description")
-        if not title or not link or "tagesschau.de" not in link:
-            continue
-        try:
-            dt = datetime.strptime(pubdate[:25].strip(), "%a, %d %b %Y %H:%M:%S")
-            date_str = dt.strftime("%Y-%m-%d")
-        except Exception:
-            date_str = pubdate[:10] if pubdate else ""
-        result.append({"title": title, "link": link, "date": date_str, "desc": desc})
-    return result
-
-def detect_tag(url):
-    for path, label in TAG_MAP.items():
-        if path in url:
-            return label
-    return "Aktuell"
-
 def extract_words(paras):
-    """Return unique lowercase words (letters only, length >= 3) from paragraph list."""
+    """Return unique lowercase words ≥3 chars from all paragraphs."""
     words = set()
     for p in paras:
-        for w in re.findall(r"[a-zA-ZäöüÄÖÜß]{3,}", p):
+        text = p.get("de", "") if isinstance(p, dict) else p
+        for w in re.findall(r'[a-zA-ZäöüÄÖÜß]{3,}', text):
             words.add(w.lower())
     return words
 
-# ── Main ──────────────────────────────────────────────────────────────────────
+# ── Main ──────────────────────────────────────────────────────
+def main():
+    print("Fetching RSS…")
+    feed = feedparser.parse(RSS_URL)
+    articles = []
+    all_words = set()
 
-print(f"Fetching feed: {FEED_URL}")
-try:
-    xml = fetch(FEED_URL)
-    feed_items = parse_rss(xml)
-    print(f"Found {len(feed_items)} items")
-except Exception as e:
-    print(f"Feed failed: {e}")
-    feed_items = []
+    for entry in feed.entries[:MAX_ART * 2]:  # fetch extra in case some fail
+        if len(articles) >= MAX_ART:
+            break
 
-articles = []
-all_words = set()   # collect all unique words across all articles
+        url   = entry.get("link", "")
+        title = entry.get("title", "").strip()
+        desc  = entry.get("summary", "").strip()
+        date  = entry.get("published", "")[:10] if entry.get("published") else ""
 
-for item in feed_items:
-    print(f"\nArticle: {item['title'][:60]}")
-    try:
-        html = fetch(item["link"])
-        paras = extract_tagesschau(html)
-        print(f"  Extracted {len(paras)} paragraphs")
-    except Exception as e:
-        print(f"  Fetch failed: {e}")
-        desc = re.sub(r"<[^>]+>", "", item["desc"]).strip()
-        paras = [desc] if len(desc) > 60 else []
+        # Normalise date to YYYY-MM-DD
+        try:
+            from email.utils import parsedate_to_datetime
+            date = parsedate_to_datetime(entry.get("published","")).strftime("%Y-%m-%d")
+        except Exception:
+            pass
 
-    if not paras:
-        print("  Skipping — no text")
-        continue
+        print(f"\nProcessing: {title[:60]}")
 
-    translations = []
-    for i, p in enumerate(paras):
-        print(f"  Translating {i+1}/{len(paras)}...")
-        t = translate_mymemory(p)
-        translations.append(t)
-        time.sleep(0.4)
+        raw_paras = scrape_article(url)
+        if not raw_paras:
+            print("  No paragraphs found, skipping.")
+            continue
 
-    para_pairs = [{"de": p, "en": translations[i] if i < len(translations) else ""} for i, p in enumerate(paras)]
-    desc = paras[0][:120].rsplit(" ", 1)[0] + "…" if paras else ""
-    art_id = re.sub(r"[^a-z0-9]", "-", item["title"].lower())[:40].strip("-")
+        print(f"  Simplifying with Gemini…")
+        paras = simplify_article(title, raw_paras)
+        time.sleep(1)  # be polite to Gemini
 
-    articles.append({
-        "id":         art_id,
-        "title":      item["title"],
-        "date":       item["date"],
-        "level":      "B1",
-        "tag":        detect_tag(item["link"]),
-        "desc":       desc,
-        "source":     "tagesschau.de",
-        "url":        item["link"],
-        "paragraphs": para_pairs,
-    })
+        art_id = re.sub(r'[^a-z0-9]+', '-', title.lower())[:50]
 
-    all_words.update(extract_words(paras))
+        article = {
+            "id":         art_id,
+            "title":      title,
+            "date":       date,
+            "level":      assign_level(paras),
+            "tag":        detect_tag(url),
+            "desc":       desc[:120] if desc else (paras[0]["de"][:100] if paras else ""),
+            "source":     "tagesschau.de",
+            "url":        url,
+            "paragraphs": paras,
+        }
+        articles.append(article)
+        all_words.update(extract_words(paras))
+        print(f"  ✓ {len(paras)} paragraphs, tag={article['tag']}")
 
-print(f"\nDone — {len(articles)} articles, {len(all_words)} unique words")
+    print(f"\nLooking up {len(all_words)} words on Wiktionary…")
+    wikt_dict = {}
+    for i, word in enumerate(sorted(all_words)):
+        entry = wiktionary_lookup(word)
+        if entry:
+            wikt_dict[word] = entry
+        if i % 20 == 0:
+            print(f"  {i}/{len(all_words)}…")
+        time.sleep(0.15)
 
-# ── Wiktionary dictionary lookup ──────────────────────────────────────────────
-print("\nBuilding dictionary from Wiktionary…")
-dictionary = {}
-words_list = sorted(all_words)
-for i, word in enumerate(words_list):
-    entry = wiktionary_lookup(word)
-    if entry:
-        dictionary[word] = entry
-        print(f"  [{i+1}/{len(words_list)}] {word} → {entry['en'][:40]}")
-    else:
-        print(f"  [{i+1}/{len(words_list)}] {word} → (not found)")
-    time.sleep(0.15)   # be polite to Wiktionary
+    print(f"  Got {len(wikt_dict)} dictionary entries.")
 
-print(f"Dictionary: {len(dictionary)} entries")
+    # ── Save articles.json ────────────────────────────────────
+    with open("articles.json", "w", encoding="utf-8") as f:
+        json.dump(articles, f, ensure_ascii=False, indent=2)
+    print("Saved articles.json")
 
-# ── Save articles.json ────────────────────────────────────────────────────────
-with open("articles.json", "w", encoding="utf-8") as f:
-    json.dump(articles, f, ensure_ascii=False, indent=2)
-print("Saved → articles.json")
+    # ── Inject into index.html ────────────────────────────────
+    with open(HTML_FILE, "r", encoding="utf-8") as f:
+        html = f.read()
 
-# ── Inject into index.html ────────────────────────────────────────────────────
-if articles:
-    try:
-        with open("index.html", "r", encoding="utf-8") as f:
-            html = f.read()
+    articles_json = json.dumps(articles, ensure_ascii=False)
+    dict_json     = json.dumps(wikt_dict, ensure_ascii=False)
 
-        articles_json = json.dumps(articles, ensure_ascii=False, indent=2)
-        new_html = re.sub(
-            r'const FALLBACK_ARTICLES = \[.*?\];',
-            f'const FALLBACK_ARTICLES = {articles_json};',
-            html,
-            flags=re.DOTALL
-        )
+    new_html = re.sub(
+        r'const FALLBACK_ARTICLES = \[.*?\];',
+        f'const FALLBACK_ARTICLES = {articles_json};',
+        html, flags=re.DOTALL
+    )
+    new_html = re.sub(
+        r'const WIKT_DICT = \{.*?\};',
+        f'const WIKT_DICT = {dict_json};',
+        new_html, flags=re.DOTALL
+    )
 
-        dict_json = json.dumps(dictionary, ensure_ascii=False)
-        new_html = re.sub(
-            r'const WIKT_DICT = \{.*?\};',
-            f'const WIKT_DICT = {dict_json};',
-            new_html,
-            flags=re.DOTALL
-        )
+    with open(HTML_FILE, "w", encoding="utf-8") as f:
+        f.write(new_html)
+    print(f"Injected into {HTML_FILE}")
 
-        if new_html != html:
-            with open("index.html", "w", encoding="utf-8") as f:
-                f.write(new_html)
-            print("Injected articles + dictionary into index.html")
-        else:
-            print("WARNING: injection patterns not found in index.html")
-    except FileNotFoundError:
-        print("index.html not found — skipping inject")
+if __name__ == "__main__":
+    main()
