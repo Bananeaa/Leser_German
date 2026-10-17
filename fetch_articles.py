@@ -206,10 +206,10 @@ with open("articles.json", "w", encoding="utf-8") as f:
     json.dump(articles, f, ensure_ascii=False, indent=2)
 print("Saved → articles.json")
 
-# ── Inject into leser.html ────────────────────────────────────────────────────
+# ── Inject into index.html ────────────────────────────────────────────────────
 if articles:
     try:
-        with open("leser.html", "r", encoding="utf-8") as f:
+        with open("index.html", "r", encoding="utf-8") as f:
             html = f.read()
 
         articles_json = json.dumps(articles, ensure_ascii=False, indent=2)
@@ -229,10 +229,10 @@ if articles:
         )
 
         if new_html != html:
-            with open("leser.html", "w", encoding="utf-8") as f:
+            with open("index.html", "w", encoding="utf-8") as f:
                 f.write(new_html)
-            print("Injected articles + dictionary into leser.html")
+            print("Injected articles + dictionary into index.html")
         else:
-            print("WARNING: injection patterns not found in leser.html")
+            print("WARNING: injection patterns not found in index.html")
     except FileNotFoundError:
-        print("leser.html not found — skipping inject")
+        print("index.html not found — skipping inject")
