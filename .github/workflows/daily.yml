@@ -18,7 +18,7 @@ jobs:
         with:
           python-version: '3.12'
 
-      - run: pip install feedparser requests beautifulsoup4 google-generativeai --break-system-packages
+      - run: pip install feedparser requests beautifulsoup4 google-genai --break-system-packages
 
       - run: python fetch_articles.py
         env:
