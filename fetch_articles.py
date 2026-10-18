@@ -30,7 +30,7 @@ TAG_MAP = {
 # ── Helpers ───────────────────────────────────────────────────
 def detect_tag(url):
     for key, label in TAG_MAP.items():
-        if f"/{key}/" in url:
+        if "/" + key + "/" in url:
             return label
     return "Nachrichten"
 
@@ -47,11 +47,14 @@ def scrape_article(url):
                 paras.append(t)
         return paras[:12]
     except Exception as e:
-        print(f"  scrape error: {e}")
+        print("  scrape error: " + str(e))
         return []
 
 def simplify_article(title, paragraphs):
-    """Call Gemini to rewrite the article in simple A2 German."""
+    """
+    Call Gemini to rewrite the article in simple A2 German.
+    Returns list of {de, en} paragraph dicts.
+    """
     original_text = "\n\n".join(paragraphs)
     prompt = (
         "Du bist ein Deutschlehrer fuer Anfaenger (A2-Niveau).\n\n"
@@ -62,12 +65,13 @@ def simplify_article(title, paragraphs):
         "- Behalte die wichtigsten Fakten\n\n"
         "Titel: " + title + "\n\n"
         "Originaltext:\n" + original_text + "\n\n"
-        'Antworte NUR mit einem JSON-Array in diesem Format (kein anderer Text):\n'
-        '[\n'
-        '  {"de": "Deutscher vereinfachter Absatz.", "en": "English translation."},\n'
-        '  {"de": "Zweiter Absatz.", "en": "Second paragraph in English."}\n'
-        ']'
+        "Antworte NUR mit einem JSON-Array in diesem Format (kein anderer Text):\n"
+        "[\n"
+        "  {\"de\": \"Deutscher vereinfachter Absatz.\", \"en\": \"English translation.\"},\n"
+        "  {\"de\": \"Zweiter Absatz.\", \"en\": \"Second paragraph in English.\"}\n"
+        "]"
     )
+
     try:
         response = gemini.models.generate_content(model=GEMINI_MODEL, contents=prompt)
         raw = response.text.strip()
@@ -77,52 +81,49 @@ def simplify_article(title, paragraphs):
         if isinstance(paras, list) and all("de" in p and "en" in p for p in paras):
             return paras
     except Exception as e:
-        print(f"  Gemini error: {e}")
+        print("  Gemini error: " + str(e))
+
     return [{"de": p, "en": ""} for p in paragraphs[:6]]
 
 def assign_level(paragraphs):
+    """Assign A2 since we simplified with Gemini."""
     return "A2"
 
-def gemini_word_lookup(paragraphs):
-    """Ask Gemini for vocabulary words from the article."""
-    text = "\n".join(p.get("de", "") if isinstance(p, dict) else p for p in paragraphs)
-    prompt = (
-        "Du bist ein Deutschlehrer. Hier ist ein Artikel auf Deutsch:\n\n"
-        + text +
-        "\n\nWaehle 12-15 nuetzliche Vokabeln aus diesem Text fuer A2-Lerner.\n"
-        "Fuer jedes Wort gib an:\n"
-        '- "word": das Wort in Grundform\n'
-        '- "article": "der", "die" oder "das" (nur fuer Nomen, sonst null)\n'
-        '- "en": kurze englische Bedeutung (max. 6 Woerter)\n'
-        '- "level": geschaetztes CEFR-Niveau ("A1", "A2", "B1", "B2")\n\n'
-        "Antworte NUR mit einem JSON-Array (kein anderer Text):\n"
-        '[\n'
-        '  {"word": "protestieren", "article": null, "en": "to protest", "level": "B1"},\n'
-        '  {"word": "Regierung", "article": "die", "en": "government", "level": "A2"}\n'
-        ']'
-    )
-    try:
-        response = gemini.models.generate_content(model=GEMINI_MODEL, contents=prompt)
-        raw = response.text.strip()
-        raw = re.sub(r"^```(?:json)?\s*", "", raw)
-        raw = re.sub(r"\s*```$", "", raw)
-        entries = json.loads(raw)
-        result = {}
-        for e in entries:
-            word = e.get("word", "").lower().strip()
-            if not word:
-                continue
-            entry = {"en": e.get("en", "")}
-            if e.get("article"):
-                entry["article"] = e["article"].lower()
-            if e.get("level"):
-                entry["level"] = e["level"]
-            if entry.get("en"):
-                result[word] = entry
-        return result
-    except Exception as ex:
-        print(f"  Gemini vocab error: {ex}")
+# ── Vocab from local vocab_dict.json (built from verbformen.de) ───────────────
+_VOCAB_DICT = None
+
+def load_vocab_dict():
+    global _VOCAB_DICT
+    if _VOCAB_DICT is None:
+        vocab_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "vocab_dict.json")
+        if os.path.exists(vocab_path):
+            with open(vocab_path, "r", encoding="utf-8") as f:
+                _VOCAB_DICT = json.load(f)
+            print("  Loaded " + str(len(_VOCAB_DICT)) + " entries from vocab_dict.json")
+        else:
+            print("  vocab_dict.json not found — vocabulary will be empty.")
+            _VOCAB_DICT = {}
+    return _VOCAB_DICT
+
+def local_word_lookup(paragraphs):
+    """
+    Extract words from the article paragraphs and look them up in vocab_dict.json.
+    Returns a dict: { "word": {"article": "der", "en": "meaning", "level": "A2"}, ... }
+    """
+    vocab = load_vocab_dict()
+    if not vocab:
         return {}
+
+    text = " ".join(p.get("de", "") if isinstance(p, dict) else p for p in paragraphs)
+    words = re.findall(r"\b[a-zA-Z\xc4\xd6\xdc\xe4\xf6\xfc\xdf]{3,}\b", text)
+
+    result = {}
+    for word in words:
+        key = word.lower()
+        if key in vocab and key not in result:
+            result[key] = vocab[key]
+
+    return result
 
 # ── Main ──────────────────────────────────────────────────────
 def main():
@@ -145,7 +146,7 @@ def main():
         except Exception:
             pass
 
-        print(f"\nProcessing: {title[:60]}")
+        print("\nProcessing: " + title[:60])
 
         raw_paras = scrape_article(url)
         if not raw_paras:
@@ -170,22 +171,23 @@ def main():
             "paragraphs": paras,
         }
         articles.append(article)
-        print(f"  checkmark {len(paras)} paragraphs, tag={article['tag']}")
+        print("  OK " + str(len(paras)) + " paragraphs, tag=" + article["tag"])
 
-    print("\nBuilding vocabulary with Gemini...")
+    print("\nBuilding vocabulary from vocab_dict.json...")
     wikt_dict = {}
     for art in articles:
-        print(f"  Vocab for: {art['title'][:50]}...")
-        vocab = gemini_word_lookup(art["paragraphs"])
+        print("  Vocab for: " + art["title"][:50] + "...")
+        vocab = local_word_lookup(art["paragraphs"])
         wikt_dict.update(vocab)
-        time.sleep(65)
 
-    print(f"  Got {len(wikt_dict)} dictionary entries.")
+    print("  Got " + str(len(wikt_dict)) + " dictionary entries.")
 
+    # ── Save articles.json ────────────────────────────────────
     with open("articles.json", "w", encoding="utf-8") as f:
         json.dump(articles, f, ensure_ascii=False, indent=2)
     print("Saved articles.json")
 
+    # ── Inject into index.html ────────────────────────────────
     with open(HTML_FILE, "r", encoding="utf-8") as f:
         html = f.read()
 
@@ -194,18 +196,18 @@ def main():
 
     new_html = re.sub(
         r'const FALLBACK_ARTICLES = \[.*?\];',
-        f'const FALLBACK_ARTICLES = {articles_json};',
+        'const FALLBACK_ARTICLES = ' + articles_json + ';',
         html, flags=re.DOTALL
     )
     new_html = re.sub(
         r'const WIKT_DICT = \{.*?\};',
-        f'const WIKT_DICT = {dict_json};',
+        'const WIKT_DICT = ' + dict_json + ';',
         new_html, flags=re.DOTALL
     )
 
     with open(HTML_FILE, "w", encoding="utf-8") as f:
         f.write(new_html)
-    print(f"Injected into {HTML_FILE}")
+    print("Injected into " + HTML_FILE)
 
 if __name__ == "__main__":
     main()
