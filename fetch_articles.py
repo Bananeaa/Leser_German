@@ -178,7 +178,7 @@ def main():
         print(f"  Vocab for: {art['title'][:50]}...")
         vocab = gemini_word_lookup(art["paragraphs"])
         wikt_dict.update(vocab)
-        time.sleep(1)
+        time.sleep(65)
 
     print(f"  Got {len(wikt_dict)} dictionary entries.")
 
