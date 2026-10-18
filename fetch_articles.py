@@ -5,7 +5,7 @@ import re
 import os
 import time
 from bs4 import BeautifulSoup
-import google import genai as genai_new
+from google import genai as genai_new
 
 # ── Gemini setup ──────────────────────────────────────────────
 gemini = genai_new.Client(api_key=os.environ["GEMINI_API_KEY"])
