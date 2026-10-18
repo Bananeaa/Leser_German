@@ -5,11 +5,11 @@ import re
 import os
 import time
 from bs4 import BeautifulSoup
-import google.generativeai as genai
+import google import genai as genai_new
 
 # ── Gemini setup ──────────────────────────────────────────────
-genai.configure(api_key=os.environ["GEMINI_API_KEY"])
-gemini = genai.GenerativeModel("gemini-3.8-flash")
+gemini = genai_new.Client(api_key=os.environ["GEMINI_API_KEY"])
+GEMINI_MODEL = "gemini-3.8-flash"
 
 # ── Config ────────────────────────────────────────────────────
 RSS_URL   = "https://www.tagesschau.de/xml/rss2/"
@@ -76,7 +76,7 @@ Antworte NUR mit einem JSON-Array in diesem Format (kein anderer Text):
 ]"""
 
     try:
-        response = gemini.generate_content(prompt)
+        response = gemini.models.generate_content(model=GEMINI_MODEL, contents=prompt)
         raw = response.text.strip()
         # Strip markdown code fences if present
         raw = re.sub(r"^```(?:json)?\s*", "", raw)
