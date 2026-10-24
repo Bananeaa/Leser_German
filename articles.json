@@ -1,213 +1,197 @@
 [
   {
-    "id": "fachgesellschaften-ver-ffentlichen-leitlinien-f-r-",
-    "title": "Fachgesellschaften veröffentlichen Leitlinien für Suizidassistenz",
-    "date": "2026-10-23",
+    "id": "massive-waldbr-nde-in-indonesien-kritik-an-regieru",
+    "title": "Massive Waldbrände in Indonesien - Kritik an Regierung",
+    "date": "2026-10-24",
+    "level": "A2",
+    "tag": "Ausland",
+    "desc": "In Indonesien wüten die schlimmsten Feuer seit 2015. Hauptsächlich ausgelöst wurden die Feuer durch illegale Brandrodung",
+    "source": "tagesschau.de",
+    "url": "https://www.tagesschau.de/ausland/asien/braende-indonesien-100.html",
+    "paragraphs": [
+      {
+        "de": "In Indonesien gibt es zurzeit sehr große Waldbrände. Menschen haben die Feuer oft illegal gelegt, um Land zu bekommen. Eine riesige Fläche Wald ist schon verbrannt.",
+        "en": "There are currently very large forest fires in Indonesia. People often started the fires illegally to gain land. A huge area of forest has already burned."
+      },
+      {
+        "de": "Der dicke Rauch ist sehr gefährlich für die Gesundheit. Viele Menschen können schlecht atmen und müssen Masken tragen. Mehr als 10.000 Schulen sind deshalb geschlossen.",
+        "en": "The thick smoke is very dangerous for people's health. Many people have trouble breathing and have to wear masks. More than 10,000 schools are therefore closed."
+      },
+      {
+        "de": "Viele Freiwillige helfen der Feuerwehr bei den Löscharbeiten. Ein Mann namens Aries ist bei der Arbeit gestorben. Seine Frau und seine kleine Tochter vermissen ihn sehr.",
+        "en": "Many volunteers are helping the fire department fight the flames. A man named Aries died while working. His wife and young daughter miss him very much."
+      },
+      {
+        "de": "Auch die Nachbarländer Singapur und Malaysia leiden unter dem Rauch. Viele Menschen in Indonesien demonstrieren jetzt auf der Straße. Sie sind wütend auf die Regierung.",
+        "en": "The neighboring countries Singapore and Malaysia are also suffering from the smoke. Many people in Indonesia are now demonstrating on the streets. They are angry with the government."
+      },
+      {
+        "de": "Die Demonstranten fordern schnelle Hilfe von den Politikern. Sie wollen, dass die Brandstifter hart bestraft werden. Die Situation ist für alle eine große Katastrophe.",
+        "en": "The protesters are demanding quick help from politicians. They want the arsonists to be punished severely. The situation is a major disaster for everyone."
+      }
+    ]
+  },
+  {
+    "id": "studie-ber-zeitumstellung-welche-zeit-ist-besser-f",
+    "title": "Studie über Zeitumstellung - Welche Zeit ist besser für unsere Gesundheit?",
+    "date": "2026-10-24",
+    "level": "A2",
+    "tag": "Nachrichten",
+    "desc": "Was einmal Energie sparen sollte, ist jetzt für viele ein Ärgernis. Die EU-Kommission schlug 2018 vor, die Zeitumstellun",
+    "source": "tagesschau.de",
+    "url": "https://www.tagesschau.de/wissen/gesundheit/zeitumstellung-winterzeit-sommerzeit-114.html",
+    "paragraphs": [
+      {
+        "de": "Was einmal Energie sparen sollte, ist jetzt für viele ein Ärgernis. Die EU-Kommission schlug 2018 vor, die Zeitumstellung abzuschaffen. Nur: Welche Zeit soll gelten? Forschende haben eine Antwort.",
+        "en": ""
+      },
+      {
+        "de": "Vom Wecker aus dem Schlaf gerissen zu werden, ist unangenehm. Noch schwieriger wird es, sich aus dem Bett zu quälen, wenn es draußen dunkel ist. Denn Licht macht den feinen Unterschied - das bestätigt auch die Wissenschaft.",
+        "en": ""
+      },
+      {
+        "de": "Um zu verstehen, was die Zeit mit unserem Körper und unserer Gesundheit macht, ist ein Blick in unser Inneres erforderlich: die biologische Uhr. In der Wissenschaft trägt sie den Namen zirkadiane Uhr. Sie bestimmt unseren Schlaf-Wach-Rhythmus und muss jeden Tag aufs Neue gestellt werden, wie Henrik Oster, Chronobiologe an der Universität zu Lübeck, erklärt.",
+        "en": ""
+      },
+      {
+        "de": "In dieser Nacht ist die Uhr wieder um eine Stunde vorgestellt worden. mehr",
+        "en": ""
+      },
+      {
+        "de": "Denn unsere inneren Uhren laufen von Natur aus etwas langsamer als 24 Stunden. Um mit dem Tagesrhythmus Schritt zu halten, passen sie sich täglich an - und das geschieht über das Licht am Morgen.",
+        "en": ""
+      },
+      {
+        "de": "\"Man muss sich das wie eine Uhr vorstellen, die ein kleines bisschen zu langsam läuft und sich jeden Tag eine Stunde verschieben würde. Morgens geht man ran, zieht sie auf und stellt den Zeiger wieder ein Stück nach vorne. Das ist im Grunde genommen der Effekt des Morgenlichts\", sagt Oster.",
+        "en": ""
+      }
+    ]
+  },
+  {
+    "id": "sommerzeit-endet-um-3-00-uhr-wird-an-der-uhr-gedre",
+    "title": "Sommerzeit endet - Um 3:00 Uhr wird an der Uhr gedreht",
+    "date": "2026-10-24",
+    "level": "A2",
+    "tag": "Nachrichten",
+    "desc": "Es ist wieder so weit: Die Uhren werden um eine Stunde zurückgestellt. Auch wenn es in der ersten Nacht Vorteile bringt,",
+    "source": "tagesschau.de",
+    "url": "https://www.tagesschau.de/wissen/gesundheit/zeitumstellung-sommerzeit-138.html",
+    "paragraphs": [
+      {
+        "de": "Es ist wieder so weit: Die Uhren werden um eine Stunde zurückgestellt. Auch wenn es in der ersten Nacht Vorteile bringt, sind die meisten Menschen nicht zufrieden mit der Zeitumstellung.",
+        "en": ""
+      },
+      {
+        "de": "In der kommenden Nacht endet wieder die Sommerzeit - die Menschen können damit von Samstag auf Sonntag länger schlafen. Um 3:00 Uhr werden die Uhren um eine Stunde auf die Mitteleuropäische Normalzeit zurückgestellt.",
+        "en": ""
+      },
+      {
+        "de": "Dann ist es morgens wieder früher hell und dafür nachmittags früher dunkel. Am 28. März 2027 beginnt wieder die Sommerzeit",
+        "en": ""
+      },
+      {
+        "de": "In der Europäischen Union wird schon seit Jahren über ein Ende der Zeitumstellung diskutiert. Die Mitgliedsstaaten konnten sich bislang aber nicht einigen, welche Zeit dauerhaft gelten soll - die sogenannte Normalzeit oder die Sommerzeit.",
+        "en": ""
+      },
+      {
+        "de": "In dieser Nacht ist die Uhr wieder um eine Stunde vorgestellt worden. mehr",
+        "en": ""
+      },
+      {
+        "de": "Auch bei den meisten Deutschen ist die Zeitumstellung unbeliebt. Einer aktuellen Forsa-Erhebung zufolge meinen 71 Prozent der Befragten, der Wechsel sei überflüssig und sollte abgeschafft werden. Ein Teil berichtet auch über gesundheitliche Auswirkungen, etwa Schlafprobleme.",
+        "en": ""
+      }
+    ]
+  },
+  {
+    "id": "energie-entkoppelung-so-abh-ngig-ist-europa-noch-v",
+    "title": "Energie-Entkoppelung: So abhängig ist Europa noch von Russland",
+    "date": "2026-10-24",
+    "level": "A2",
+    "tag": "Wirtschaft",
+    "desc": "Nach dem Vollangriff auf die Ukraine wollte Europa schnell unabhängig werden von russischer Energie. Teilweise ist das a",
+    "source": "tagesschau.de",
+    "url": "https://www.tagesschau.de/wirtschaft/weltwirtschaft/abhaengigkeit-russische-energie-100.html",
+    "paragraphs": [
+      {
+        "de": "Nach dem Beginn des Krieges in der Ukraine wollte Europa keine Energie mehr aus Russland kaufen. Das hat beim Gas schon gut funktioniert. Die Europäische Union kauft heute viel weniger russisches Gas als früher.",
+        "en": "After the start of the war in Ukraine, Europe wanted to stop buying energy from Russia. This has already worked well with gas. Today, the European Union buys much less Russian gas than before."
+      },
+      {
+        "de": "Trotzdem hat Europa noch sehr viel Geld für russische Energie bezahlt. Vor allem beim Öl gibt es Probleme. Länder wie Ungarn und die Slowakei brauchen weiter Öl aus Russland.",
+        "en": "Nevertheless, Europe has still paid a lot of money for Russian energy. There are problems, especially with oil. Countries like Hungary and Slovakia still need oil from Russia."
+      },
+      {
+        "de": "Viele Politiker in Europa wollen gar kein russisches Öl mehr kaufen. Sie sagen: Russland benutzt das Geld für den Krieg. Aber die USA und Donald Trump machen wieder neue Verträge mit Russland.",
+        "en": "Many politicians in Europe do not want to buy any Russian oil at all anymore. They say: Russia uses the money for the war. But the US and Donald Trump are making new deals with Russia again."
+      },
+      {
+        "de": "Auch bei der Atomkraft ist Europa noch von Russland abhängig. Die EU kauft fast genauso viel Uran wie vor dem Krieg. Eine russische Firma arbeitet sogar weiter mit europäischen Firmen zusammen.",
+        "en": "Europe is also still dependent on Russia for nuclear power. The EU buys almost as much uranium as before the war. A Russian company even continues to work together with European companies."
+      },
+      {
+        "de": "Europa ist also noch nicht ganz unabhängig von Russland. Beim Gas gibt es große Fortschritte. Doch beim Öl und Uran bleibt die Situation kompliziert.",
+        "en": "So Europe is not yet completely independent of Russia. There is great progress with gas. But with oil and uranium, the situation remains complicated."
+      }
+    ]
+  },
+  {
+    "id": "verletzte-und-sch-den-nach-sturmtief-luise",
+    "title": "Verletzte und Schäden nach \"Sturmtief\" Luise",
+    "date": "2026-10-24",
     "level": "A2",
     "tag": "Inland",
-    "desc": "Wie sollen Ärzte oder Pflegekräfte reagieren, wenn Menschen in existenzieller Not sagen, dass sie sterben wollen? Ein Ge",
+    "desc": "Bäume und Äste auf Straßen und Gleisen, ein umgestürztes Gestell: Sturmtief \"Luise\" ist über Teile Deutschlands hinwegge",
     "source": "tagesschau.de",
-    "url": "https://www.tagesschau.de/inland/gesellschaft/leitlinien-suizidassistenz-100.html",
+    "url": "https://www.tagesschau.de/inland/herbststurm-104.html",
     "paragraphs": [
       {
-        "de": "Wie sollen Ärzte oder Pflegekräfte reagieren, wenn Menschen in existenzieller Not sagen, dass sie sterben wollen? Ein Gesetz, das dafür Regeln vorgibt, fehlt. Eine neue Leitlinie setzt auf eingehende Beratung.",
-        "en": ""
+        "de": "Ein starker Herbststurm namens Luise ist über Teile von Deutschland gezogen. Der Sturm hat besonders im Westen und Südwesten viele Schäden hinterlassen. Die Polizei und die Feuerwehr hatten sehr viele Einsätze.",
+        "en": "A strong autumn storm named Luise swept across parts of Germany. The storm left a lot of damage, especially in the west and southwest. The police and fire department had many operations."
       },
       {
-        "de": "2020 hat das Bundesverfassungsgericht entschieden , dass Menschen das Recht haben, selbstbestimmt über ihr Sterben zu entscheiden. Unabhängig von psychischen Erkrankungen oder anderen Krankheiten. Dafür dürfen sie die freiwillige Hilfe anderer in Anspruch nehmen. Allerdings nur dann, wenn dies \"freiverantwortlich\" geschieht, so hat es das Bundesverfassungsgericht formuliert.",
-        "en": ""
+        "de": "In der Stadt Nastätten warf der Wind ein großes Gestell auf einem Fest um. Zwei Menschen wurden dabei schwer verletzt. Ein Hubschrauber brachte eine Person in Lebensgefahr in ein Krankenhaus.",
+        "en": "In the town of Nastätten, the wind knocked over a large frame at a festival. Two people were seriously injured. A helicopter brought one person with life-threatening injuries to a hospital."
       },
       {
-        "de": "Wie sollen Fachkräfte aus dem Gesundheits- und Sozialwesen reagieren, wenn Menschen den Wunsch nach einem assistierten Suizid äußern? Da das Bundesverfassungsgericht in seinem Urteil lediglich den Rahmen für diese Entscheidung vorgegeben hat, waren Empfehlungen zur konkreten Umsetzung notwendig. Deshalb haben mehr als 30 Fachgesellschaften zusammengearbeitet und die neue Leitlinie Zum Umgang mit Anfragen zur Suizidassistenz veröffentlicht.",
-        "en": ""
+        "de": "Viele Bäume und Äste fielen auf Straßen und Bahngleise. Ein Zug mit Hunderten Fahrgästen fuhr gegen einen Ast und musste anhalten. Auch einige Autobahnen waren zeitweise gesperrt.",
+        "en": "Many trees and branches fell onto roads and train tracks. A train with hundreds of passengers hit a branch and had to stop. Some highways were also temporarily closed."
       },
       {
-        "de": "Was aus dem Urteil nun folgt, erklärt Kolja Schwartz. mehr",
-        "en": ""
+        "de": "Der Wind hat auch Autos und Häuser beschädigt. In Duisburg fuhr eine Autofahrerin gegen einen Baum, blieb aber unverletzt. Die Helfer mussten dort fast 40 Mal ausrücken.",
+        "en": "The wind also damaged cars and houses. In Duisburg, a driver crashed into a tree but was not injured. The emergency services had to respond almost 40 times there."
       },
       {
-        "de": "Im Zentrum der neuen Leitlinie stehen deshalb 45 Kriterien, die die interdisziplinären Fachgesellschaften entwickelt haben. Mit ihnen soll sichergestellt werden, dass der Suizidwunsch tatsächlich \"selbstbestimmt und freiverantwortlich\" zustande gekommen ist, so wie es das Bundesverfassungsgericht in seinem Urteil 2020 formuliert hat.",
-        "en": ""
-      },
-      {
-        "de": "Bisher gab es keine klaren Richtlinien, wie mit dieser ethisch und juristisch komplexen Situation im konkreten Fall umzugehen sei. Ärztinnen, Ärzte und Pflegende waren deshalb häufig unsicher, wie sie sich verhalten sollten. Der Umgang war deshalb extrem unterschiedlich.",
-        "en": ""
+        "de": "Das Sturmtief Luise zieht jetzt langsam nach Norden ab. Aber das Wetter in Deutschland bleibt stürmisch und regnerisch. Mit Manja kommt schon bald der nächste Sturm.",
+        "en": "Storm Luise is now slowly moving away to the north. But the weather in Germany remains stormy and rainy. With Manja, the next storm is already coming soon."
       }
     ]
   },
   {
-    "id": "finnland-genehmigt-unterirdisches-atomm-ll-endlage",
-    "title": "Finnland genehmigt unterirdisches Atommüll-Endlager",
-    "date": "2026-10-23",
+    "id": "repr-sentationsbau-der-nazis-gro-brand-im-kehlstei",
+    "title": "Repräsentationsbau der Nazis: Großbrand im Kehlsteinhaus am Obersalzberg",
+    "date": "2026-10-24",
     "level": "A2",
-    "tag": "Ausland",
-    "desc": "Finnland setzt zur Stromgewinnung auch auf Kernenergie - und hat nun grünes Licht für den Betrieb eines unterirdischen E",
+    "tag": "Inland",
+    "desc": "Es diente den Nazis als Repräsentationsort hoch in den Bergen. Nun ist im Kehlsteinhaus am Obersalzberg bei Berchtesgade",
     "source": "tagesschau.de",
-    "url": "https://www.tagesschau.de/ausland/europa/finnland-endlager-atommuell-100.html",
+    "url": "https://www.tagesschau.de/inland/gesellschaft/berchtesgaden-feuer-nazihaus-100.html",
     "paragraphs": [
       {
-        "de": "Finnland nutzt Atomkraft für Strom. Nun hat das Land als erstes Land der Welt ein tiefes Endlager für gefährlichen Atommüll erlaubt. Dieser Müll soll 400 Meter tief unter der Erde liegen.",
-        "en": "Finland uses nuclear power for electricity. Now the country is the first in the world to approve a deep permanent repository for dangerous nuclear waste. This waste is to be stored 400 meters deep underground."
+        "de": "Am Freitagabend hat es im Kehlsteinhaus gebrannt. Das bekannte Gebäude liegt auf einem hohen Berg bei Berchtesgaden. Die Nationalsozialisten haben das Haus im Jahr 1938 gebaut.",
+        "en": "On Friday evening, a fire broke out in the Kehlsteinhaus. The well-known building is located on a high mountain near Berchtesgaden. The Nazis built the house in 1938."
       },
       {
-        "de": "Das Endlager heißt Onkalo und liegt auf einer Insel im Westen von Finnland. Das Wort Onkalo bedeutet „Höhle“. Die Arbeiter bauen schon seit dem Jahr 2016 an dem Projekt.",
-        "en": "The permanent repository is called Onkalo and is located on an island in western Finland. The word Onkalo means \"cave\". Workers have been building the project since 2016."
+        "de": "Rund 200 Einsatzkräfte von der Feuerwehr waren schnell am Berg. Die Fahrt nach oben war für die großen Autos aber sehr schwer. Zum Glück war zur Zeit des Feuers niemand im Gebäude.",
+        "en": "Around 200 emergency personnel from the fire department quickly arrived at the mountain. However, the drive up was very difficult for the large trucks. Fortunately, nobody was in the building at the time of the fire."
       },
       {
-        "de": "In Onkalo kann man bis zu 6.500 Tonnen Atommüll lagern. Der Müll kommt in dicke Behälter aus Eisen und Kupfer. Danach schützt man die Behälter mit Beton tief im Felsen.",
-        "en": "Up to 6,500 tons of nuclear waste can be stored in Onkalo. The waste is placed into thick containers made of iron and copper. Afterwards, the containers are protected with concrete deep in the rock."
+        "de": "Die Polizei vermutet, dass jemand das Feuer mit Absicht gelegt hat. Die Beamten haben einen verdächtigen Mann in der Nähe festgenommen. Nun prüft die Polizei, ob er wirklich für den Brand verantwortlich ist.",
+        "en": "The police suspect that someone set the fire intentionally. Officers arrested a suspicious man nearby. Now, the police are checking whether he is really responsible for the fire."
       },
       {
-        "de": "Man weiß noch nicht genau, wann der erste Müll in das Lager kommt. Eine Sicherheitsbehörde muss die Anlage zuerst noch prüfen. Erst nach dieser Kontrolle darf der Betrieb starten.",
-        "en": "It is not yet known exactly when the first waste will arrive at the repository. A safety authority must inspect the facility first. Operations can only start after this inspection."
-      },
-      {
-        "de": "Auch Deutschland sucht seit vielen Jahren nach einem sicheren Endlager. Die deutschen Atomkraftwerke sind seit 2023 aus. Aber der alte Atommüll liegt noch immer in sechzehn Zwischenlagern über der Erde.",
-        "en": "Germany has also been searching for a safe permanent repository for many years. German nuclear power plants have been shut down since 2023. But the old nuclear waste is still stored in sixteen temporary facilities above ground."
-      }
-    ]
-  },
-  {
-    "id": "vor-knesset-wahl-junge-israelis-zwischen-trauma-un",
-    "title": "Vor Knesset-Wahl: Junge Israelis zwischen Trauma und Zukunftssorge",
-    "date": "2026-10-23",
-    "level": "A2",
-    "tag": "Ausland",
-    "desc": "Der Terrorangriff der Hamas vor gut drei Jahren hat auch bei den jungen Wählern Israels tiefe Spuren hinterlassen. Siche",
-    "source": "tagesschau.de",
-    "url": "https://www.tagesschau.de/ausland/asien/israel-parlamentswahlen-erstwaehler-100.html",
-    "paragraphs": [
-      {
-        "de": "Der Terrorangriff der Hamas vor gut drei Jahren hat auch bei den jungen Wählern Israels tiefe Spuren hinterlassen. Sicherheit, Identität und die Sorge vor dem nächsten Krieg beeinflussen ihre Wahlentscheidung.",
-        "en": ""
-      },
-      {
-        "de": "Israel hat eine im internationalen Vergleich relativ junge Bevölkerung, und deshalb sind junge Wählerinnen und Wähler bei der Parlamentswahl am 27. Oktober wichtig. Etwa 640.000 junge Israelis wählen dann zum ersten Mal - umgerechnet entscheiden ihre Stimmen über zwölf von 120 Mandaten im Parlament.",
-        "en": ""
-      },
-      {
-        "de": "Tammy Hoffman vom Israel Democracy Institute hat gerade eine Studie über die Erstwähler veröffentlicht und sagt, viele Jahre lang habe es die Annahme gegeben, dass junge Leute wie ihre Eltern wählen.",
-        "en": ""
-      },
-      {
-        "de": "Das sei nicht mehr der Fall, so Hoffman. Insgesamt, das belegen mehrere Studien, gab es in den vergangenen Jahren einen Rechtsruck unter jungen Israelis. Weil die Erstwählerinnen und Erstwähler fast zehn Prozent der Wählerschaft insgesamt stellten, werde es einen Effekt haben, ob sie zur Wahl gehen und welche Partei sie wählen.",
-        "en": ""
-      },
-      {
-        "de": "Die politische Landschaft in Israel hat sich in den letzten Jahren verändert. Wie steht es um das linke Lager? mehr",
-        "en": ""
-      },
-      {
-        "de": "Es scheint so, als seien sich die Jungen dessen auch bewusst. Mehr als 60 Prozent wollen der Studie von Hoffman zufolge zur Wahl gehen. Etwa 80 Prozent glauben, dass die Wahl wichtig ist. Das geht quer durch alle Bevölkerungsgruppen und Schichten.",
-        "en": ""
-      }
-    ]
-  },
-  {
-    "id": "frankreichs-schuldenkrise-droht-eine-neue-eurokris",
-    "title": "Frankreichs Schuldenkrise: Droht eine neue Eurokrise?",
-    "date": "2026-10-23",
-    "level": "A2",
-    "tag": "Wirtschaft",
-    "desc": "Frankreichs Anleiherenditen sind auf den höchsten Stand seit 2002 gestiegen. Wie groß ist die Ansteckungsgefahr für ande",
-    "source": "tagesschau.de",
-    "url": "https://www.tagesschau.de/wirtschaft/finanzen/frankreich-anleiherenditen-schuldenkrise-eurokrise-ezb-100.html",
-    "paragraphs": [
-      {
-        "de": "Frankreichs Anleiherenditen sind auf den höchsten Stand seit 2002 gestiegen. Wie groß ist die Ansteckungsgefahr für andere hochverschuldete Euroländer - und was kann die EZB dagegen tun?",
-        "en": ""
-      },
-      {
-        "de": "Frankreich gerät an den Finanzmärkten immer stärker unter Druck. Der Risikoaufschlag französischer Staatsanleihen gegenüber deutschen Bundesanleihen ist in dieser Woche auf rund 1,6 Prozentpunkte gestiegen - den höchsten Stand seit 15 Jahren. Am Freitagabend nach Börsenschluss droht bereits die nächste schlechte Nachricht: Dann könnte die Ratingagentur Moody's die Kreditwürdigkeit Frankreichs herabstufen - so die Erwartung vieler Ökonomen .",
-        "en": ""
-      },
-      {
-        "de": "Denn Frankreichs Schuldenberg wächst weiter, während die politische Krise in Paris einen Sparkurs erschwert. Volker Schilling vom Vermögensverwalter Greiff Capital spricht gegenüber der ARD-Finanzredaktion von einem \"Trilemma\": Frankreich müsse sich zwischen seinem Sozialstaat, höheren Verteidigungsausgaben und Schuldentragfähigkeit entscheiden. \"Alles drei wird nicht gehen. Man wird Prioritäten setzen müssen - und das wird der Markt erzwingen.\"",
-        "en": ""
-      },
-      {
-        "de": "Die Gewalteskalation in Frankreich lastet auch auf den Finanzmärkten. mehr",
-        "en": ""
-      },
-      {
-        "de": "Wie schwierig die Ausgangslage ist, zeigen Zahlen des Internationalen Währungsfonds (IWF) . Demnach dürfte die französische Staatsverschuldung 2026 auf 118,5 Prozent der Wirtschaftsleistung steigen. Zum Vergleich: Zu Beginn der Euro-Schuldenkrise 2010 lag sie noch bei rund 86 Prozent.",
-        "en": ""
-      },
-      {
-        "de": "Auch beim Haushaltsdefizit gehört das Land zu den Problemfällen der Eurozone. Der IWF erwartet für dieses Jahr ein Minus von etwa 5,4 Prozent der Wirtschaftsleistung - weit mehr als die nach europäischen Regeln grundsätzlich erlaubten drei Prozent. Höhere Renditen verteuern die Aufnahme neuer Schulden und die Refinanzierung auslaufender Anleihen.",
-        "en": ""
-      }
-    ]
-  },
-  {
-    "id": "marktbericht-tech-sorgen-und-hohe-lpreise-belasten",
-    "title": "Marktbericht: Tech-Sorgen und hohe Ölpreise belasten den DAX",
-    "date": "2026-10-23",
-    "level": "A2",
-    "tag": "Wirtschaft",
-    "desc": "Sorgen um den Technologiesektor und die Angst vor einer erneuten Eskalation im Nahen Osten drücken auf die Stimmung der ",
-    "source": "tagesschau.de",
-    "url": "https://www.tagesschau.de/wirtschaft/finanzen/marktberichte/marktbericht-dax-dow-ki-boom-100.html",
-    "paragraphs": [
-      {
-        "de": "Sorgen um den Technologiesektor und die Angst vor einer erneuten Eskalation im Nahen Osten drücken auf die Stimmung der Anleger. Der Ölpreis legt kräftig zu, damit steigen auch die Inflationsgefahren.",
-        "en": ""
-      },
-      {
-        "de": "Der DAX sinkt im frühen Handel um rund ein halbes Prozent auf 25.210 Punkte. Bereits am Donnerstag hatten Sorgen über den Technologiesektor, negativ aufgenommene Konzernbilanzen und ein Anstieg beim Ölpreis den Markt belastet . Der deutsche Leitindex fiel um 1,1 Prozent auf 25.371 Punkte.",
-        "en": ""
-      },
-      {
-        "de": "Timo Emden, Chefmarktanalyst von CapTrader, fasst die Lage am Aktienmarkt zusammen: \"Schwelende Nahostrisiken, eine unklare geldpolitische Marschroute und kritisch hinterfragte KI-Bewertungen halten den DAX in einer Nebelkiste gefangen und lassen eine klare Orientierung vermissen\", stellt der Fachmann fest.",
-        "en": ""
-      },
-      {
-        "de": "Die Anlegerinnen und Anleger würden weiterhin mit angezogener Handbremse agieren, getrieben von Zinssorgen und den ambitionierten Erwartungen im KI-Sektor. \"Ohne festen Orientierungspunkt fehlt Anlegern in einem Spannungsfeld aus geopolitischen Risiken und Zinserwartungen sowie KI-Fantasien der rote Faden\", lautet Emdens Einschätzung.",
-        "en": ""
-      },
-      {
-        "de": "Dass geopolitische Sorgen an den Märkten wieder eine größere Rolle spielen, zeigt auch ein Blick auf die Rohstoffmärkte. Die Ölpreise legen kräftig zu. Derzeit notieren die Sorten Brent und WTI auf dem höchsten Stand seit rund fünf Monaten.",
-        "en": ""
-      },
-      {
-        "de": "Die Anlegerinnen und Anleger fürchten, dass die USA und Israel neue Angriffe auf Iran planen - nach den US-Zwischenwahlen am 3. November. Zudem schüren Angriffe der Huthi-Miliz in Saudi-Arabien Ängste vor weiteren Unterbrechungen der Energieversorgung. Auch die Sorgen, dass der Konflikt im Nahen Osten die Inflation anheizen und die Notenbanken zu weiteren Zinserhöhungen zwingen könnte, belasten die Aktienmärkte.",
-        "en": ""
-      }
-    ]
-  },
-  {
-    "id": "pferdekutschen-im-new-yorker-central-park-sollen-a",
-    "title": "Pferdekutschen im New Yorker Central Park sollen abgeschafft werden",
-    "date": "2026-10-23",
-    "level": "A2",
-    "tag": "Ausland",
-    "desc": "In New York geht eine Ära zu Ende. Die berühmten Pferdekutschen im Central Park werden schrittweise bis Juni 2028 abgesc",
-    "source": "tagesschau.de",
-    "url": "https://www.tagesschau.de/ausland/amerika/new-york-pferdekutschen-100.html",
-    "paragraphs": [
-      {
-        "de": "In New York geht eine Ära zu Ende. Die berühmten Pferdekutschen im Central Park werden schrittweise bis Juni 2028 abgeschafft. Der Stadtrat stimmte einem Gesetzesentwurf von Bürgermeister Mamdani zu.",
-        "en": ""
-      },
-      {
-        "de": "Kaum ein Thema erhitzt die Gemüter in New York so sehr wie die Pferdekutschen im Central Park. Tierschützer fordern seit vielen Jahren ein Verbot der Kutschen. Die Pferde seien schlecht untergebracht und überarbeitet.",
-        "en": ""
-      },
-      {
-        "de": "Traditionalisten argumentieren dagegen, dass die Pferdekutschen im Central Park zu New York gehören, wie die Fiaker zu Wien. Auch US-Präsident Donald Trump kritisierte die Abschaffung einer \"großartigen Tradition\". Ein weiteres Stück Geschichte verschwinde aus New York.",
-        "en": ""
-      },
-      {
-        "de": "Mehrere Kutschen stehen im Central Park in New York hintereinander",
-        "en": ""
-      },
-      {
-        "de": "Frühere Bürgermeister scheiterten stets am Widerstand der Gewerkschaft der Pferdekutschenfahrer oder an mangelnder Unterstützung im Stadtrat. Doch die Stimmung änderte sich nach einem tragischen Unfall im Juni. Ein 18-jähriger Tourist aus Indien kam im Central Park ums Leben, nachdem ein Kutschenpferd in Panik davon galoppiert war.",
-        "en": ""
-      },
-      {
-        "de": "Bürgermeister Zohran Mamdani stellte daraufhin seinen Verbotsentwurf vor, dem der Stadtrat jetzt zustimmte. Bis Juni 2028 sollen für die knapp 200 Kutscher neue Jobs gefunden werden. Einer der Vorschläge: sie könnten die Touristen künftig in speziellen Rikschas durch den Central Park fahren. Die Kutschergewerkschaft kündigte an, vor Gericht zu ziehen.",
-        "en": ""
+        "de": "Seit 1952 ist das Kehlsteinhaus ein beliebtes Restaurant für Besucher. Viele Menschen auf der Welt kennen das Haus auch unter dem englischen Namen „Eagle's Nest“. Früher empfing Adolf Hitler dort ausländische Gäste.",
+        "en": "Since 1952, the Kehlsteinhaus has been a popular restaurant for visitors. Many people around the world also know the house by its English name, \"Eagle's Nest\". In the past, Adolf Hitler received foreign guests there."
       }
     ]
   }
