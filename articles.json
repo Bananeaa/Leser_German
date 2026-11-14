@@ -1,216 +1,192 @@
 [
   {
-    "id": "bundestag-beschlie-t-reform-mehr-befugnisse-f-r-di",
-    "title": "Bundestag beschließt Reform: Mehr Befugnisse für die Nachrichtendienste",
-    "date": "2026-11-13",
-    "level": "A2",
-    "tag": "Inland",
-    "desc": "Heimlich Wohnungen betreten, Hackerangriffe, Falschinformationen: Deutsche Nachrichtendienste bekommen mehr Befugnisse. ",
-    "source": "tagesschau.de",
-    "url": "https://www.tagesschau.de/inland/innenpolitik/nachrichtendienst-reform-beschlossen-100.html",
-    "paragraphs": [
-      {
-        "de": "Heimlich Wohnungen betreten, Hackerangriffe, Falschinformationen: Die deutschen Nachrichtendienste bekommen mehr Befugnisse. Der Bundestag hat die Reform nun beschlossen. Damit reagiert die Koalition auf die verschärfte Bedrohungslage.",
-        "en": ""
-      },
-      {
-        "de": "Die deutschen Nachrichtendienste bekommen mehr Befugnisse für die Abwehr von Spionage, Terrorismus und Sabotage. Der Bundestag hat eine grundsätzliche Reform des Nachrichtendienstrechts beschlossen.",
-        "en": ""
-      },
-      {
-        "de": "309 Abgeordnete stimmten mit Ja, 190 mit Nein, 71 enthielten sich. Damit erhalten Bundesnachrichtendienst (BND) und Bundesamt für Verfassungsschutz (BfV) zusätzliche Werkzeuge etwa in der Telekommunikationsüberwachung und zum Abgleich biometrischer Daten.",
-        "en": ""
-      },
-      {
-        "de": "Der Bundestag wird heute über eine Reform von Bundesnachrichtendienst und Verfassungsschutz abstimmen. mehr",
-        "en": ""
-      },
-      {
-        "de": "Der Verfassungsschutz darf künftig nicht mehr nur Informationen sammeln und Personen überwachen, sondern unter bestimmten Bedingungen zum Beispiel heimlich in Wohnungen eindringen und gegen Sprengstoff oder Waffen vorgehen. Er darf nun mit Cyberattacken die Infrastruktur von Angreifern stören, den Datenverkehr umleiten, für Angriffe gespeicherte Informationen löschen oder gezielt Falschinformationen verbreiten.",
-        "en": ""
-      },
-      {
-        "de": "Festnahmen oder offene Durchsuchungen bleiben aber der Polizei vorbehalten.",
-        "en": ""
-      }
-    ]
-  },
-  {
-    "id": "marktbericht-mehr-pleiten-aber-auch-mehr-gr-ndunge",
-    "title": "Marktbericht: Mehr Pleiten, aber auch mehr Gründungen in Deutschland",
-    "date": "2026-11-13",
-    "level": "A2",
-    "tag": "Wirtschaft",
-    "desc": "In Deutschland wurden im August so viele Unternehmens-Insolvenzen registriert wie seit 13 Jahren nicht mehr. Die Pleitew",
-    "source": "tagesschau.de",
-    "url": "https://www.tagesschau.de/wirtschaft/finanzen/firmenpleiten-deutschland-bundesamt-100.html",
-    "paragraphs": [
-      {
-        "de": "In Deutschland wurden im August so viele Unternehmens-Insolvenzen registriert wie seit 13 Jahren nicht mehr. Die Pleitewelle dürfte weitergehen, meinen Experten. Gleichzeitig wird aber auch mehr gegründet.",
-        "en": ""
-      },
-      {
-        "de": "Die Zahl der Firmenpleiten in Deutschland nimmt weiter zu. Im August haben die Amtsgerichte laut Statistischem Bundesamt (Destatis) insgesamt 2.067 beantragte Unternehmens-Insolvenzen registriert. Das waren 4,4 Prozent mehr als im Vorjahresmonat.",
-        "en": ""
-      },
-      {
-        "de": "Von Januar bis August summierten sich die registrierten Insolvenzen nach den aktuellen Destatis-Zahlen auf 17.252 - ein Plus von 6,6 Prozent gegenüber dem Vorjahreszeitraum. Am häufigsten betroffen waren Betriebe in den Branchen Verkehr und Lagerei, im Gastgewerbe und im Baugewerbe.",
-        "en": ""
-      },
-      {
-        "de": "\"Die Rekordwelle an Unternehmensinsolvenzen ebbt nicht ab\", kommentiert Marc Evers, Mittelstandsexperte bei der Deutschen Industrie- und Handelskammer (DIHK). \"Das ist der nächste traurige Rekord.\"",
-        "en": ""
-      },
-      {
-        "de": "Auch die derzeitige leichte konjunkturelle Aufwärtsbewegung könne die Entwicklung nicht stoppen: \"Zu tief sind die strukturellen Wirkungen jahrelanger Krisen und Stagnation. Die finanziellen Reserven vieler Betriebe sind aufgezehrt. Gleichzeitig lässt der anhaltend hohe Kostendruck vielen Unternehmen kaum Luft für Investitionen und Wachstum.\"",
-        "en": ""
-      },
-      {
-        "de": "Für das Gesamtjahr 2026 rechnet die DIHK mit rund 26.000 Unternehmensinsolvenzen. \"Das wären im Schnitt mehr als 70 Insolvenzen pro Tag und der höchste Jahresstand seit 2012\", sagt Evers.",
-        "en": ""
-      }
-    ]
-  },
-  {
-    "id": "microsoft-ausf-lle-f-r-viele-unternehmen-digitaler",
-    "title": "Microsoft-Ausfälle: \"Für viele Unternehmen digitaler Hirntod\"",
-    "date": "2026-11-13",
-    "level": "A2",
-    "tag": "Wirtschaft",
-    "desc": "Spätestens nach dem Ausfall bei Microsoft sollten wir uns fragen, wie wir uns unabhängiger machen können, sagt IT-Sicher",
-    "source": "tagesschau.de",
-    "url": "https://www.tagesschau.de/wirtschaft/unternehmen/sicherheitsexperte-abhaengigkeit-microsoft-outlook-teams-risiken-100.html",
-    "paragraphs": [
-      {
-        "de": "Spätestens nach dem Ausfall bei Microsoft sollten wir uns fragen, wie wir uns unabhängiger machen können, sagt IT-Sicherheitsexperte Dennis-Kenji Kipker. In unsicheren Zeiten brauche es mehr digitale Souveränität - und das sei möglich.",
-        "en": ""
-      },
-      {
-        "de": "tagesschau24: Unternehmen und Regierungen weltweit sind betroffen, auch wir bei der tagesschau haben damit zu tun. Machen sich Unternehmen zu abhängig von einzelnen Softwareanbietern?",
-        "en": ""
-      },
-      {
-        "de": "Dennis-Kenji Kipker: Das kann man durchaus so sehen. Wir haben den Warnschuss ja eigentlich schon vor zwei Jahren mit den Crowdstrike-Vorfällen gehabt. Damals betraf es ein fehlerhaftes Software-Update, wodurch eben Betriebssysteme in PCs millionenfach lahmgelegt worden sind und sich in einer Neustartschleife verfangen haben.",
-        "en": ""
-      },
-      {
-        "de": "Man hat damals nicht viel gemacht. Die meisten Unternehmen haben das einfach hingenommen. Jetzt sehen wir zweieinhalb Jahre später einen ähnlichen Vorfall mit ähnlichen Auswirkungen. Millionen von Betrieben sind betroffen. Es sind bereits Millionenschäden entstanden - und eigentlich müssten wir uns spätestens jetzt überlegen: Wie können wir uns unabhängiger machen von einem einzelnen Unternehmen, das unsere gesamte digitale Infrastruktur abdeckt?",
-        "en": ""
-      },
-      {
-        "de": "Für viele Unternehmen war das heute Morgen der digitale Hirntod: Es war keine Kommunikation mehr möglich, man hat keinen Zugriff mehr auf Kalender gehabt. Viele sind mit einem Blindflug in den Tag gestartet.",
-        "en": ""
-      },
-      {
-        "de": "tagesschau24: Kann man diese Abhängigkeit überhaupt noch verringern? Welche Mittel gibt es?",
-        "en": ""
-      }
-    ]
-  },
-  {
-    "id": "dhl-erh-ht-preise-f-r-pakete-und-p-ckchen-f-r-priv",
-    "title": "DHL erhöht Preise für Pakete und Päckchen für Privatkunden ab 2027",
-    "date": "2026-11-13",
-    "level": "A2",
-    "tag": "Wirtschaft",
-    "desc": "Wer seinen Liebsten etwas schicken möchte, der muss ab dem kommenden Jahr deutlich tiefer in die Tasche greifen. Denn de",
-    "source": "tagesschau.de",
-    "url": "https://www.tagesschau.de/wirtschaft/verbraucher/post-hebt-paketpreise-privatkunden-an-2027-100.html",
-    "paragraphs": [
-      {
-        "de": "Wer seinen Liebsten etwas schicken möchte, der muss ab dem kommenden Jahr deutlich tiefer in die Tasche greifen. Denn der deutsche Marktführer DHL erhöht seine Portopreise deutlich - vor allem für Päckchen.",
-        "en": ""
-      },
-      {
-        "de": "Die Verbraucherinnen und Verbraucher werden im kommenden Jahr für viele Paketsendungen der Deutschen Post mehr zahlen ‌müssen. Der ​Konzern werde seine Preise für Privatkundinnen und Privatkunden 2027 \"moderat anpassen\", teilte der Logistikkonzern DHL in Bonn mit.",
-        "en": ""
-      },
-      {
-        "de": "So steigt etwa der Preis für ein Päckchen S in der Filiale zum Jahreswechsel von 4,19 Euro auf 5,19 Euro. Beim Päckchen M sind ‌es 5,79 Euro statt 5,19 Euro und bei Paketen bis zu ​zwei Kilo 6,79 Euro anstelle von 6,19 Euro. Auch Päckchen und Pakete in Länder außerhalb der EU werden teurer.",
-        "en": ""
-      },
-      {
-        "de": "Die Deutsche Post AG hat ihren Namenswechsel zu DHL AG umgesetzt. mehr",
-        "en": ""
-      },
-      {
-        "de": "Gleichzeitig bekommen die Verbraucherinnen und Verbraucher bei Päckchen dem Konzern zufolge aber mehr Leistung. Künftig seien Sendungsverfolgung und Haftung bis 20 Euro automatisch enthalten.",
-        "en": ""
-      },
-      {
-        "de": "Der Konzern differenziert im kommenden Jahr darüber hinaus die Preise in Filialen und im Internet. Der Onlinepreis für besonders stark nachgefragte Produkte wie das DHL Paket mit bis zu zwei Kilo bleibt etwa mit 6,19 Euro stabil. 2028 soll es dann weitere Preiserhöhungen geben. Auch Geschäftskunden sollen 2027 mehr zahlen müssen. ​",
-        "en": ""
-      }
-    ]
-  },
-  {
-    "id": "-sterreich-barmherzige-br-der-wegen-medikamentenpr",
-    "title": "Österreich: Barmherzige Brüder wegen Medikamentenpreisen in Kritik",
-    "date": "2026-11-13",
+    "id": "usa-bieten-ukraine-laut-selenskyj-nato-beitritt-be",
+    "title": "USA bieten Ukraine laut Selenskyj NATO-Beitritt bei Gebietsverzicht",
+    "date": "2026-11-14",
     "level": "A2",
     "tag": "Ausland",
-    "desc": "Ein Orden soll in Österreich Medikamente zu massiv überhöhten Preisen an eigene Krankenhäuser verkauft haben. Dadurch kö",
+    "desc": "Ein Rückzug aus dem Donbass im Tausch für einen NATO-Beitritt - das haben die USA der Ukraine nach Angaben Selenskyjs na",
     "source": "tagesschau.de",
-    "url": "https://www.tagesschau.de/ausland/europa/oesterreich-orden-barmherzige-brueder-hohe-medikamentenpreise-100.html",
+    "url": "https://www.tagesschau.de/ausland/europa/ukraine-usa-nato-gebietsverzicht-100.html",
     "paragraphs": [
       {
-        "de": "Ein Orden soll in Österreich Medikamente zu massiv überhöhten Preisen an eigene Krankenhäuser verkauft haben. Dadurch könnte Steuerzahlern ein Millionenschaden entstanden sein. Der Orden widerspricht.",
+        "de": "Die USA haben der Ukraine einen neuen Vorschlag gemacht. Die Ukraine kann vielleicht Mitglied in der NATO werden. Aber dafür soll die Ukraine Gebiete im Donbass aufgeben.",
+        "en": "The USA made a new proposal to Ukraine. Ukraine might be able to become a NATO member. But in return, Ukraine would have to give up territories in the Donbass."
+      },
+      {
+        "de": "Präsident Wolodymyr Selenskyj möchte eigentlich kein Land abgeben. Er sagt aber: Die Bürger der Ukraine können vielleicht darüber abstimmen. Er kann diese schwere Entscheidung nicht alleine treffen.",
+        "en": "President Volodymyr Zelenskyy does not really want to give up land. But he says: The citizens of Ukraine could perhaps vote on it. He cannot make this difficult decision alone."
+      },
+      {
+        "de": "Sicherheitsgarantien sind für die Ukraine besonders wichtig. Das Land ist noch nicht in der NATO und braucht Schutz. Nur so kann es nach dem Krieg echten Frieden geben.",
+        "en": "Security guarantees are especially important for Ukraine. The country is not yet in NATO and needs protection. Only then can there be real peace after the war."
+      },
+      {
+        "de": "Russland fordert weiterhin sehr viel im Krieg gegen die Ukraine. Präsident Putin will die besetzten Gebiete im Osten und Süden behalten. Außerdem verlangt Russland, dass die Ukraine neutral bleibt.",
+        "en": "Russia continues to demand a lot in the war against Ukraine. President Putin wants to keep the occupied territories in the east and south. In addition, Russia demands that Ukraine remain neutral."
+      },
+      {
+        "de": "Selenskyj lehnt eine Neutralität für sein Land aber klar ab. Das Ziel von einem NATO-Beitritt steht fest in der ukrainischen Verfassung. Der Präsident möchte dieses wichtige Gesetz nicht ändern.",
+        "en": "However, Zelenskyy clearly rejects neutrality for his country. The goal of joining NATO is fixed in the Ukrainian constitution. The president does not want to change this important law."
+      }
+    ]
+  },
+  {
+    "id": "trauerakt-in-m-nchen-gro-e-anteilnahme-bei-abschie",
+    "title": "Trauerakt in München: Große Anteilnahme bei Abschied von Aiwanger",
+    "date": "2026-11-14",
+    "level": "A2",
+    "tag": "Inland",
+    "desc": "In München haben zahlreiche Menschen am Trauerakt für den bayerischen Vize-Ministerpräsidenten und Freie-Wähler-Chef Aiw",
+    "source": "tagesschau.de",
+    "url": "https://www.tagesschau.de/inland/aiwanger-trauerfeier-100.html",
+    "paragraphs": [
+      {
+        "de": "In München gab es eine große Trauerfeier für Hubert Aiwanger. Er war ein bekannter bayerischer Politiker und Vize-Ministerpräsident. Mehr als 1.000 Menschen kamen in die Münchner Frauenkirche.",
+        "en": "There was a large memorial service for Hubert Aiwanger in Munich. He was a well-known Bavarian politician and Deputy Minister-President. More than 1,000 people came to the Munich Frauenkirche."
+      },
+      {
+        "de": "Hubert Aiwanger ist vor zehn Tagen plötzlich gestorben. Er wurde nur 55 Jahre alt. Man fand ihn tot in einem Hotelzimmer in Berlin.",
+        "en": "Hubert Aiwanger died suddenly ten days ago. He was only 55 years old. He was found dead in a hotel room in Berlin."
+      },
+      {
+        "de": "Kardinal Reinhard Marx leitete den Gottesdienst in der Kirche. Er sagte, dass der plötzliche Tod ein großer Schock für alle ist. Marx nannte Aiwanger eine ganz besondere Persönlichkeit.",
+        "en": "Cardinal Reinhard Marx led the service in the church. He said that the sudden death was a great shock to everyone. Marx called Aiwanger a very special personality."
+      },
+      {
+        "de": "Nach dem Gottesdienst gab es einen feierlichen Staatsakt. Wichtige Politiker wie Ministerpräsident Markus Söder hielten dort Reden. Auch viele normale Bürger waren da, denn Aiwanger war ein volksnaher Politiker.",
+        "en": "After the church service, there was a ceremonial state act. Important politicians like Minister-President Markus Söder gave speeches there. Many ordinary citizens were also there, because Aiwanger was a politician close to the people."
+      },
+      {
+        "de": "Traditionelle Gruppen wie bayerische Gebirgsschützen ehrten Aiwanger vor der Kirche. Die eigentliche Beisetzung findet später statt. Er wird in seiner Heimat in Niederbayern begraben.",
+        "en": "Traditional groups like Bavarian mountain riflemen honored Aiwanger outside the church. The actual burial will take place later. He will be buried in his home region of Lower Bavaria."
+      }
+    ]
+  },
+  {
+    "id": "microsoft-systeme-nach-st-rung-komplett-wiederherg",
+    "title": "Microsoft: Systeme nach Störung komplett wiederhergestellt",
+    "date": "2026-11-14",
+    "level": "A2",
+    "tag": "Wirtschaft",
+    "desc": "Probleme bei Microsoft hatten zentrale Cloud-Dienste stundenlang lahmgelegt - Unternehmen und Verbraucher weltweit waren",
+    "source": "tagesschau.de",
+    "url": "https://www.tagesschau.de/wirtschaft/unternehmen/microsoft-stoerung-behoben-100.html",
+    "paragraphs": [
+      {
+        "de": "Probleme bei Microsoft hatten zentrale Cloud-Dienste stundenlang lahmgelegt - Unternehmen und Verbraucher weltweit waren betroffen. Laut Microsoft laufen nun alle Systeme wieder. Hinweise auf böswillige Aktivitäten gebe es nicht.",
         "en": ""
       },
       {
-        "de": "Im Mai hatte die Kleine Zeitung aus Österreich über Fälle in einer Apotheke in Graz berichtet - jetzt folgte der Spiegel: Es soll weitere Fälle in Linz, Eisenstadt und Wien gegeben haben. Immer geht es um Apotheken, die vom katholischen Männerorden Barmherzige Brüder betrieben werden - und um Krankenhäuser des Ordens.",
+        "de": "Die massive Störung bei zentralen Cloud-Angeboten von Microsoft ist nach Angaben des US-Softwarekonzerns beendet. Alle Systeme liefen wieder, teilte das Unternehmen am Samstagmorgen (MEZ) auf seiner Webseite mit. \"Wir haben unsere Maßnahmen zur Behebung der Ursache des Vorfalls abgeschlossen und den Dienst für die verbleibenden betroffenen Kunden und Regionen wiederhergestellt\", schrieb Microsoft zudem auf der Kurznachrichtenplattform X.",
         "en": ""
       },
       {
-        "de": "Eine anonym gehaltene Person meldete sich beim Wiener Verein Ans Licht, bei dem Whistleblower unterstützt werden. Die Person habe um ein Gespräch gebeten, erzählt Ramin Mirfakhrai: \"Sie hatte eine Reihe von Dokumenten, die wir prüfen konnten.\"",
+        "de": "Die Probleme hatten am Donnerstagabend begonnen. Davon waren nicht nur der E-Mail-Dienst Outlook, sondern generell Dienste aus dem Cloud-Paket Microsoft 365 betroffen. Nutzer konnten zeitweise keine E-Mails senden, Kalender verwalten oder Videokonferenzen abhalten. Zudem waren der KI-Assistent Copilot sowie Schnittstellen zu Drittanbietern zeitweise gestört, darunter KI-Dienste wie OpenAI und Anthropic.",
         "en": ""
       },
       {
-        "de": "Der Wiener ist bekannt als der Anwalt, der 2019 das sogenannte Ibiza-Video mitinitiiert hatte. Das brachte den damaligen Vizekanzler der rechten FPÖ, Heinz-Christian Strache, zu Fall - und mit ihm die damalige Regierungskoalition.",
+        "de": "Wer von den Microsoft-Störungen betroffen ist und welche Hintergründe vermutet werden - ein Überblick. mehr",
         "en": ""
       },
       {
-        "de": "Das Oberlandesgericht Wien hat ein Urteil der Vorinstanz gegen Österreichs früheren Kanzler aufgehoben. mehr",
+        "de": "Die Störung hatte Auswirkungen auf Unternehmen und Behörden und andere Nutzer weltweit, da Outlook und Teams zu den am häufigsten genutzten Büroanwendungen gehören.",
         "en": ""
       },
       {
-        "de": "Jetzt liegen Mirfakhrai und seiner Vereinspartnerin Ursula Bittner Abrechnungen der Apotheken der Barmherzigen Brüder vor. Aufgelistet sind rund zwanzig Medikamente, die zu extrem hohen Preisen an die eigenen Krankenhäuser verkauft wurden.",
+        "de": "So hatten etwa der Geheimdienst und die Bundespolizei in Australien Ausfälle gemeldet. Die Regierung in Canberra aktivierte ein Abkommen mit Microsoft, um eine vorrangige Wiederherstellung der Systeme sicherzustellen. ​Auch das US-Repräsentantenhaus meldete Einschränkungen für seine Nutzenden.",
         "en": ""
       }
     ]
   },
   {
-    "id": "kritik-auch-aus-der-union-an-ausbleibender-stromst",
-    "title": "Kritik auch aus der Union an ausbleibender Stromsteuer-Senkung",
-    "date": "2026-11-13",
+    "id": "bahn-zieht-positive-bilanz-zu-alkoholverbot-an-bah",
+    "title": "Bahn zieht positive Bilanz zu Alkoholverbot an Bahnhöfen",
+    "date": "2026-11-14",
     "level": "A2",
     "tag": "Inland",
-    "desc": "Der Bund darf 2027 sehr viel Geld ausgeben: Geplant sind mehr als 560 Milliarden Euro im Haushalt. Für eine Stromsteuers",
+    "desc": "Seit einem Monat ist bundesweit der Konsum von Alkohol an Bahnhöfen untersagt. Die Deutsche Bahn zeigt sich in einer ers",
     "source": "tagesschau.de",
-    "url": "https://www.tagesschau.de/inland/innenpolitik/stromsteuer-haushalt-kritik-merz-100.html",
+    "url": "https://www.tagesschau.de/inland/gesellschaft/bahn-alkohol-verbot-bilanz-100.html",
     "paragraphs": [
       {
-        "de": "Der Bund darf 2027 sehr viel Geld ausgeben: Geplant sind mehr als 560 Milliarden Euro im Haushalt. Für eine Stromsteuersenkung reicht es aber weiterhin nicht. Die Kritik ist massiv, nicht nur bei der Opposition. Nun äußerte sich Kanzler Merz.",
+        "de": "Seit einem Monat ist Alkohol an deutschen Bahnhöfen verboten. Die Deutsche Bahn zieht eine positive Bilanz. Es gibt jetzt weniger Müll und weniger Streit.",
+        "en": "Alcohol has been banned at German train stations for a month. Deutsche Bahn has drawn a positive conclusion. There is now less trash and less conflict."
+      },
+      {
+        "de": "Sicherheitskräfte haben schon mit mehr als 15.000 Menschen gesprochen. Fast alle Personen hören auf das Personal und packen ihre Flaschen weg. Etwa 80 Prozent der Reisenden finden das Verbot gut.",
+        "en": "Security staff have already spoken to more than 15,000 people. Almost all individuals listen to the staff and put their bottles away. About 80 percent of travelers support the ban."
+      },
+      {
+        "de": "Die Regel gilt seit Mitte Oktober in ganz Deutschland. Man darf nur noch in Restaurants am Bahnhof Alkohol trinken. In den Zügen gibt es andere Regeln als im Bahnhof.",
+        "en": "The rule has applied throughout Germany since mid-October. Drinking alcohol is now only allowed in train station restaurants. Trains have different rules than the stations."
+      },
+      {
+        "de": "Nicht alle Menschen sind mit dem Verbot zufrieden. Organisationen für Obdachlose sagen: Das Verbot hilft den Menschen in Not nicht. Die Betroffenen gehen nun an andere Orte, wo es gefährlicher ist.",
+        "en": "Not everyone is happy with the ban. Organizations for the homeless say: The ban does not help people in need. Those affected now move to other places that are more dangerous."
+      }
+    ]
+  },
+  {
+    "id": "kassen-rzte-chef-erwartet-mehr-selbstzahler-termin",
+    "title": "Kassenärzte-Chef erwartet mehr Selbstzahler-Termine für gesetzlich Versicherte",
+    "date": "2026-11-14",
+    "level": "A2",
+    "tag": "Inland",
+    "desc": "Wer längere Wartezeiten als gesetzlich Versicherter vermeiden will, muss künftig Behandlungen auch aus der eigenen Tasch",
+    "source": "tagesschau.de",
+    "url": "https://www.tagesschau.de/inland/gesetzlich-versicherte-behandlung-selbstzahler-100.html",
+    "paragraphs": [
+      {
+        "de": "Viele Menschen in Deutschland haben eine gesetzliche Krankenversicherung. In Zukunft müssen manche Patienten Arztbesuche selbst bezahlen, wenn sie nicht lange warten wollen. Das sagt Andreas Gassen, der Chef der Kassenärzte.",
+        "en": "Many people in Germany have statutory health insurance. In the future, some patients will have to pay for doctor visits themselves if they do not want to wait a long time. This is according to Andreas Gassen, the head of statutory health insurance physicians."
+      },
+      {
+        "de": "Der Grund dafür ist ein neues Sparprogramm der Regierung. Die Ärzte bekommen bald weniger Geld von den Krankenkassen für ihre Behandlungen. Deshalb haben viele Arztpraxen finanzielle Probleme.",
+        "en": "The reason for this is a new savings program by the government. Doctors will soon receive less money from health insurance funds for their treatments. As a result, many medical practices are facing financial problems."
+      },
+      {
+        "de": "Ärzte können deshalb weniger Kassenpatienten pro Monat behandeln. Wenn das Budget aufgebraucht ist, müssen Patienten oft lange auf Termine warten. Wer die Behandlung selbst bezahlt, bekommt jedoch schneller einen Termin.",
+        "en": "Doctors can therefore treat fewer statutory insurance patients per month. When the budget is used up, patients often have to wait a long time for appointments. However, anyone who pays for the treatment themselves gets an appointment faster."
+      },
+      {
+        "de": "Diese Probleme gibt es besonders bei vielen Fachärzten. Dazu gehören zum Beispiel Orthopäden und Herzspezialisten. Für medizinisch dringende Notfälle soll es aber weiterhin freie Termine geben.",
+        "en": "These problems exist especially with many medical specialists. This includes, for example, orthopedists and heart specialists. However, there are still supposed to be available appointments for urgent medical emergencies."
+      }
+    ]
+  },
+  {
+    "id": "warum-in-polen-schneller-gebaut-wird-als-in-deutsc",
+    "title": "Warum in Polen schneller gebaut wird als in Deutschland",
+    "date": "2026-11-14",
+    "level": "A2",
+    "tag": "Wirtschaft",
+    "desc": "Wird in Polen eine neue Straße oder Brücke errichtet, geht es deutlich schneller als westlich der Oder in Deutschland. F",
+    "source": "tagesschau.de",
+    "url": "https://www.tagesschau.de/wirtschaft/weltwirtschaft/bauen-polen-100.html",
+    "paragraphs": [
+      {
+        "de": "Wird in Polen eine neue Straße oder Brücke errichtet, geht es deutlich schneller als westlich der Oder in Deutschland. Fachleuten zufolge gibt es dafür mehrere Gründe.",
         "en": ""
       },
       {
-        "de": "Fast 16 Stunden wurde verhandelt , dann stand der Mammuthaushalt für 2027. Mehr als 560 Milliarden Euro schwer, davon neue Schulden von über 210 Milliarden Euro, was die zweithöchste Neuverschuldung in der Geschichte der Bundesrepublik bedeutet.",
+        "de": "Wer aus Brandenburg über die A11 nach Szczecin - das ehemalige Stettin - fährt, fährt kurz hinter der deutsch-polnischen Grenze bei Kołbaskowo unter dem Rohbau einer neuen Brücke durch. Über sie soll einmal eine neue Umgehungsstraße führen: das neueste Stück der Schnellstraße S6, die Westumfahrung von Stettin.",
         "en": ""
       },
       {
-        "de": "Was weiterhin fehlt: das Geld für die Senkung der Stromsteuer. Die dafür nötigen rund 5,4 Milliarden Euro sind im Entwurf nicht enthalten. Ob es dabei bleibt, bis der Etat Ende November im Bundestag endgültig beschlossen wird, ist offen.",
+        "de": "Wenn sie fertig ist, soll sie die westpolnische Großstadt von weiten Teilen des Durchgangsverkehrs befreien. Außerdem wird dieses letzte, 50 Kilometer lange Teilstück die S6 vollenden - eine der zahlreichen Schnellstraßen und Autobahnen, die in Polen in den vergangenen 20 Jahren gebaut wurden.",
         "en": ""
       },
       {
-        "de": "Massiv ist die Kritik, auch und gerade in der Union. Hatte Kanzler und CDU-Chef Friedrich Merz doch vor vier Wochen erst eine Senkung der Stromsteuer für alle angekündig t. Auch im schwarz-roten Koalitionsvertrag ist sie vereinbart. Bundesfinanzminister Lars Klingbeil (SPD) sieht derzeit aber keine Spielräume für eine Stromsteuersenkung. Die Union konnte sich hier bislang nicht durchsetzen.",
+        "de": "Modernste Infrastruktur, radikale Digitalisierung und steuerliche Anreize: macht Polen gerade alles richtig? mehr",
         "en": ""
       },
       {
-        "de": "Die Regierungsspitze sucht Milliarden für eine Stromsteuersenkung. Kann sie sie noch finden? mehr",
+        "de": "Allein in Westpommern, also dem Gebiet, das direkt an Mecklenburg-Vorpommern und Teile Brandenburgs grenzt, hat sich das Fernstraßennetz seit 2006 beinahe verzehnfacht. Vor 20 Jahren noch kam die Region auf gerade einmal 48 Kilometer Autobahnen und Schnellstraßen - 2026 waren es 468 Kilometer.",
         "en": ""
       },
       {
-        "de": "\"Wenn man nach außen tritt und dem Bürger etwas zusagt, dann muss man es am Ende auch einhalten\", sagte CDU-Haushaltspolitiker Mathias Middelberg im gemeinsamen Morgenmagazin von ARD und ZDF. \"Sonst habe ich volles Verständnis dafür, wenn die Leute von uns enttäuscht sind.\"",
+        "de": "Einerseits zeigen die Zahlen: Polen hatte enormen Nachholbedarf, besonders im verhältnismäßig bevölkerungsarmen Westen des Landes. Das Tempo, in dem neue Trassen geplant, genehmigt und gebaut wurden, ist - zumindest gemessen am häufig beschworenen \"Deutschland-Tempo\" - bemerkenswert. Das \"Polen-Tempo\" ist deutlich höher als beim größeren Nachbarn im Westen.",
         "en": ""
       }
     ]
