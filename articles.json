@@ -1,189 +1,209 @@
 [
   {
-    "id": "israelischer-angriff-im-gazastreifen-ranghoher-ham",
-    "title": "Israelischer Angriff im Gazastreifen: Ranghoher Hamas-Kommandeur tot",
-    "date": "2026-11-15",
-    "level": "A2",
-    "tag": "Ausland",
-    "desc": "Die israelische Armee hat im Gazastreifen einen ranghohen Kommandeur der Hamas getötet. Samir Abu Junis soll einer der w",
-    "source": "tagesschau.de",
-    "url": "https://www.tagesschau.de/ausland/asien/hamas-kommandeur-gazastreifen-getoetet-100.html",
-    "paragraphs": [
-      {
-        "de": "Die israelische Armee hat einen wichtigen Kommandeur der Hamas getötet. Sein Name war Samir Abu Junis. Er starb bei einem Angriff im Gazastreifen.",
-        "en": "The Israeli army has killed an important Hamas commander. His name was Samir Abu Junis. He died during an attack in the Gaza Strip."
-      },
-      {
-        "de": "Abu Junis war ein Anführer der Hamas in der Stadt Rafah. Israel sagt, dass er den großen Angriff auf Israel am 7. Oktober 2023 geplant hat. Auch die Hamas hat seinen Tod bestätigt.",
-        "en": "Abu Junis was a Hamas leader in the city of Rafah. Israel says that he planned the major attack on Israel on October 7, 2023. Hamas has also confirmed his death."
-      },
-      {
-        "de": "Der israelische Angriff fand im Süden des Gazastreifens statt. Nach Angaben von Rettungskräften wurden dabei auch weitere Menschen getötet und verletzt.",
-        "en": "The Israeli attack took place in the south of the Gaza Strip. According to rescue workers, other people were also killed and injured."
-      },
-      {
-        "de": "Der Krieg begann am 7. Oktober 2023. An diesem Tag griff die Terrororganisation Hamas Israel an. Dabei wurden mehr als 1.200 Menschen getötet und viele Geiseln genommen.",
-        "en": "The war began on October 7, 2023. On that day, the terrorist organization Hamas attacked Israel. More than 1,200 people were killed and many hostages were taken."
-      }
-    ]
-  },
-  {
-    "id": "arzttermin-gegen-bezahlung-warum-der-vorsto-f-r-em",
-    "title": "Arzttermin gegen Bezahlung - warum der Vorstoß für Empörung sorgt",
-    "date": "2026-11-15",
-    "level": "A2",
-    "tag": "Inland",
-    "desc": "Schneller zum Facharzt - aber nur wenn man die Behandlung selbst zahlt: Kassenärzte-Chef Gassen hat mit seinen Äußerunge",
-    "source": "tagesschau.de",
-    "url": "https://www.tagesschau.de/inland/gesellschaft/arzttermine-selbst-zahlen-debatte-100.html",
-    "paragraphs": [
-      {
-        "de": "In Deutschland müssen viele Menschen sehr lange auf einen Arzttermin warten. Privatpatienten bekommen Termine oft schneller als gesetzlich versicherte Patienten. Viele Menschen finden das ungerecht.",
-        "en": "In Germany, many people have to wait a very long time for a doctor's appointment. Privately insured patients often get appointments faster than publicly insured patients. Many people find this unfair."
-      },
-      {
-        "de": "Der Chef der Kassenärzte heißt Andreas Gassen. Er hat einen neuen Vorschlag gemacht. Patienten sollen selbst bezahlen, wenn sie schneller einen Termin beim Facharzt bekommen wollen.",
-        "en": "The head of the statutory health insurance physicians is named Andreas Gassen. He made a new proposal. Patients should pay themselves if they want to get an appointment with a specialist faster."
-      },
-      {
-        "de": "Herr Gassen begründet das mit Sparplänen der Regierung. Die Praxen der Ärzte bekommen in Zukunft weniger Geld. Deshalb können sie Termine angeblich nicht mehr so schnell vergeben.",
-        "en": "Mr. Gassen justifies this with the government's spending cuts. Doctors' offices will receive less money in the future. That is supposedly why they can no longer give out appointments as quickly."
-      },
-      {
-        "de": "Politiker und Krankenkassen kritisieren diesen Vorschlag sehr scharf. Sie sagen, dass ärmere Menschen dadurch benachteiligt werden. Gute medizinische Hilfe darf nicht vom Geld abhängen.",
-        "en": "Politicians and health insurance companies criticize this proposal very sharply. They say that poorer people would be disadvantaged by it. Good medical care must not depend on money."
-      },
-      {
-        "de": "Die deutsche Regierung will diesen Plan nicht akzeptieren. Alle Bürger sollen auch in Zukunft verlässliche Termine ohne zusätzliche Kosten bekommen.",
-        "en": "The German government does not want to accept this plan. In the future, all citizens should still receive reliable appointments without extra costs."
-      }
-    ]
-  },
-  {
-    "id": "iran-greift-erneut-us-st-tzpunkt-in-bahrain-an",
-    "title": "Iran greift erneut US-Stützpunkt in Bahrain an",
-    "date": "2026-11-15",
-    "level": "A2",
-    "tag": "Ausland",
-    "desc": "Iran hat nach eigenen Angaben einen US-Stützpunkt in Bahrain angegriffen. Die Revolutionsgarde habe eine Radaranlage att",
-    "source": "tagesschau.de",
-    "url": "https://www.tagesschau.de/ausland/asien/iran-revolutionsgarde-angriff-bahrain-100.html",
-    "paragraphs": [
-      {
-        "de": "Der Iran hat eine Militärbasis der USA in Bahrain angegriffen. Das iranische Militär schickte sechs Drohnen gegen eine Radaranlage. Der Iran sagt, das war eine Reaktion auf Angriffe der USA.",
-        "en": "Iran has attacked a US military base in Bahrain. The Iranian military sent six drones against a radar installation. Iran says this was a reaction to attacks by the US."
-      },
-      {
-        "de": "Das Militär in Bahrain konnte die Angriffe jedoch stoppen. Die Luftabwehr zerstörte die Drohnen direkt in der Luft. Vor dem Angriff gingen viele Menschen in Schutzräume.",
-        "en": "However, the military in Bahrain was able to stop the attacks. The air defense destroyed the drones directly in the air. Before the attack, many people went into shelters."
-      },
-      {
-        "de": "Auch die US-Armee fing iranische Drohnen ab. Nach Angaben der USA gab es keine Schäden. Bereits vor wenigen Tagen gab es ähnliche Angriffe.",
-        "en": "The US military also intercepted Iranian drones. According to the US, there was no damage. Similar attacks had already occurred a few days ago."
-      },
-      {
-        "de": "Der Iran ist wütend über die USA. Vor kurzem griffen US-Soldaten nämlich Ziele im Süden des Irans an. Deshalb attackiert der Iran nun amerikanische Stützpunkte.",
-        "en": "Iran is angry with the US. Recently, US soldiers attacked targets in the south of Iran. That is why Iran is now attacking American bases."
-      },
-      {
-        "de": "Zurzeit sprechen beide Länder über ein Abkommen für den Frieden. Bisher gibt es aber noch keine Lösung für den Konflikt. Viele Menschen in der Region haben große Angst vor einer Eskalation.",
-        "en": "Both countries are currently talking about a peace agreement. So far, however, there is still no solution to the conflict. Many people in the region are very afraid of an escalation."
-      }
-    ]
-  },
-  {
-    "id": "krise-im-handwerk-stilles-sterben-der-betriebe-",
-    "title": "Krise im Handwerk: \"Stilles Sterben der Betriebe\"",
-    "date": "2026-11-15",
+    "id": "die-eu-will-europ-ischen-stahl-konkurrenzf-hig-mac",
+    "title": "Die EU will europäischen Stahl konkurrenzfähig machen",
+    "date": "2026-11-16",
     "level": "A2",
     "tag": "Wirtschaft",
-    "desc": "Weniger Aufträge, steigende Kosten: Handwerkspräsident Dittrich warnt davor, dass die Branche bis zu 80.000 Arbeitsplätz",
+    "desc": "Die EU möchte dafür sorgen, dass hiesige Stahlkonzerne es leichter haben gegen die Übermacht aus China. Dafür werden inz",
     "source": "tagesschau.de",
-    "url": "https://www.tagesschau.de/wirtschaft/unternehmen/handwerk-krise-100.html",
+    "url": "https://www.tagesschau.de/wirtschaft/weltwirtschaft/stahl-eu-china-massnahmen-100.html",
     "paragraphs": [
       {
-        "de": "Das Handwerk in Deutschland hat große Probleme. Handwerkspräsident Jörg Dittrich warnt vor einer schweren Krise. Jedes Jahr könnten bis zu 80.000 Arbeitsplätze verloren gehen.",
-        "en": "The craft trade in Germany has big problems. Craft president Jörg Dittrich warns of a serious crisis. Up to 80,000 jobs could be lost every year."
+        "de": "Die Stahl-Industrie in Europa hat große Probleme. China produziert sehr viel billigen Stahl und bekommt viel Geld vom Staat. Deshalb haben europäische Firmen seit 2018 rund 30.000 Arbeitsplätze verloren.",
+        "en": "The steel industry in Europe has big problems. China produces a lot of cheap steel and receives a lot of money from the government. Because of this, European companies have lost around 30,000 jobs since 2018."
       },
       {
-        "de": "In den letzten zwei Jahren haben schon 150.000 Menschen ihre Arbeit im Handwerk verloren. Viele Firmen haben zu wenig Geld und müssen für immer schließen. Dittrich nennt diese Situation ein „stilles Sterben der Betriebe“.",
-        "en": "In the last two years, 150,000 people have already lost their jobs in the craft trade. Many companies have too little money and have to close forever. Dittrich calls this situation a 'silent dying of businesses'."
+        "de": "Die Europäische Union will den Firmen in Europa jetzt helfen. Es gibt neue Steuern und Zölle auf Stahl aus dem Ausland. Dadurch kommen im Moment weniger Importe nach Europa.",
+        "en": "The European Union now wants to help companies in Europe. There are new taxes and tariffs on steel from abroad. As a result, fewer imports are currently coming to Europe."
       },
       {
-        "de": "Das Leben in Deutschland ist für viele Bürger sehr teuer geworden. Deshalb sparen die Kunden und gehen zum Beispiel seltener zum Friseur. Gleichzeitig steigen die Kosten für Strom und Steuern für die Handwerker.",
-        "en": "Life in Germany has become very expensive for many citizens. Therefore, customers are saving money and, for example, go to the hairdresser less often. At the same time, costs for electricity and taxes are rising for craft businesses."
+        "de": "Viele europäische Fabriken wollen umweltfreundlichen, grünen Stahl herstellen. Dieser saubere Stahl ist gut für das Klima, aber die Produktion ist sehr teuer. Ohne Hilfe können die Hersteller gegen den billigen Stahl aus China nicht gewinnen.",
+        "en": "Many European factories want to produce environmentally friendly, green steel. This clean steel is good for the climate, but production is very expensive. Without help, manufacturers cannot compete against cheap steel from China."
       },
       {
-        "de": "Ein weiteres Problem sind unfaire Regeln. Traditionelle Bäcker dürfen am Sonntag nur drei Stunden frisches Brot backen. Große Backstationen in Supermärkten oder Tankstellen dürfen das den ganzen Tag.",
-        "en": "Another problem is unfair rules. Traditional bakers are only allowed to bake fresh bread for three hours on Sunday. Large bakery stations in supermarkets or gas stations are allowed to do this all day."
+        "de": "Die Politiker in Brüssel planen deshalb ein neues Gesetz. Der Staat soll in Zukunft mehr Produkte mit europäischem grünem Stahl kaufen. Dieser Stahl soll zum Beispiel in Autos oder Wärmepumpen benutzt werden.",
+        "en": "Politicians in Brussels are therefore planning a new law. In the future, the state should buy more products made with European green steel. This steel should be used, for example, in cars or heat pumps."
       },
       {
-        "de": "Dittrich fordert deshalb schnelle Hilfe von der Politik. Die Politiker müssen Steuern und Zusatzkosten für die Betriebe senken. Die Regierung soll ihre alten Versprechungen jetzt endlich erfüllen.",
-        "en": "Dittrich is therefore demanding quick help from politicians. Politicians must lower taxes and additional costs for businesses. The government should finally fulfill its old promises now."
+        "de": "Experten sagen aber: Es gibt immer noch Probleme und Regeln werden umgangen. Chinesischer Stahl kommt manchmal versteckt in fertigen Bauteilen nach Europa. Die EU muss deshalb noch strengere Kontrollen einführen.",
+        "en": "However, experts say that there are still problems and rules are being bypassed. Chinese steel sometimes arrives in Europe hidden inside finished components. Therefore, the EU must introduce even stricter controls."
       }
     ]
   },
   {
-    "id": "sachsen-anhalt-weggehen-d-rfen-wenn-es-gef-hrlich-",
-    "title": "Sachsen-Anhalt: Weggehen dürfen, wenn es gefährlich wird",
-    "date": "2026-11-15",
+    "id": "stahlgipfel-in-salzgitter-unternehmen-fordern-entl",
+    "title": "Stahlgipfel in Salzgitter: Unternehmen fordern Entlastung beim Strompreis",
+    "date": "2026-11-16",
     "level": "A2",
-    "tag": "Inland",
-    "desc": "In rund einem Monat will sich der AfD-Politiker Siegmund in Sachsen-Anhalt zum Ministerpräsidenten wählen lassen. Viele ",
+    "tag": "Wirtschaft",
+    "desc": "Strom ist für die Stahlindustrie ein entscheidender Faktor: Beim Stahlgipfel in Salzgitter forderte die Branche deshalb ",
     "source": "tagesschau.de",
-    "url": "https://www.tagesschau.de/inland/gesellschaft/sachsen-anhalt-afd-migranten-residenzpflicht-100.html",
+    "url": "https://www.tagesschau.de/wirtschaft/stahlgipfel-klimawandel-produktion-100.html",
     "paragraphs": [
       {
-        "de": "In Sachsen-Anhalt gibt es bald eine wichtige Wahl. Ein Politiker von der Partei AfD möchte Ministerpräsident werden. Deshalb haben viele Migrantinnen und Migranten im Bundesland große Angst.",
-        "en": "There will soon be an important election in Saxony-Anhalt. A politician from the AfD party wants to become minister-president. Because of this, many migrants in the state are very afraid."
+        "de": "Strom ist für die Stahlindustrie ein entscheidender Faktor: Beim Stahlgipfel in Salzgitter forderte die Branche deshalb einen verlässlichen Strompreis. Bundeswirtschaftsministerin Reiche verwies auf bereits Erreichtes.",
+        "en": ""
       },
       {
-        "de": "Mika Kaiyama arbeitet bei einer Hilfsorganisation für Migranten in Sachsen-Anhalt. Sie berichtet, dass viele Menschen große Sorgen haben. Manche fragen sogar, ob sie bald ihre Koffer packen müssen.",
-        "en": "Mika Kaiyama works for a support organization for migrants in Saxony-Anhalt. She reports that many people have great worries. Some even ask if they will have to pack their bags soon."
+        "de": "\"Strom ist ein Schlüsselfaktor für eine emissionsarme Stahlproduktion\". So heißt es in einem Positionspapier zum \"Nationalen Stahlgipfel\" in Salzgitter. Ziel müsse deshalb ein wettbewerbsfähiger und planbarer Preis für die Industrie sein. Davon sei das tatsächliche Strompreisniveau in Deutschland aber weit entfernt, kritisieren Branchenvertreter. Das wirtschaftliche Umfeld für die Unternehmen habe sich in den vergangenen Jahren dramatisch gewandelt, heißt es in dem Papier weiter. Für einen planbaren Strompreis müsse die Regierung alle bestehenden Entlastungsspielräume nutzen, lautete der Appell Richtung Bundesregierung und an Wirtschaftsministerin Katherina Reiche. Es brauche wettbewerbsfähige Energiepreise, wirksame Leitmärkte und Handelsschutz.",
+        "en": ""
       },
       {
-        "de": "Viele Menschen aus anderen Ländern möchten deshalb wegziehen. In einer Umfrage sagte fast jeder Vierte: Ich möchte Sachsen-Anhalt verlassen. Der wichtigste Grund dafür sind schlimme Erfahrungen mit Rassismus.",
-        "en": "Many people from other countries therefore want to move away. In a survey, almost one in four said: I want to leave Saxony-Anhalt. The main reason for this is bad experiences with racism."
+        "de": "Trotz Milliardeninvestitionen: Grüner Stahl findet kaum Abnehmer - die Politik liefert keine Antworten. mehr",
+        "en": ""
       },
       {
-        "de": "Aber viele Geflüchtete dürfen nicht einfach so umziehen. Für sie gibt es in Deutschland eine feste Wohnsitzauflage. Sie müssen oft mindestens drei Jahre lang in einem bestimmten Bundesland wohnen.",
-        "en": "However, many refugees are not allowed to simply move away. In Germany, there is a strict residence requirement for them. They often have to live in a specific federal state for at least three years."
+        "de": "Hauptthema beim Stahlgipfel war der Aufbau einer klimaneutralen Stahlproduktion und die politischen Rahmenbedingungen für Wettbewerbsfähigkeit, Investitionen und Beschäftigung. Auf dem Gelände des Stahlwerks in Salzgitter trafen sich heute Politiker, Unternehmensvertreter und Gewerkschafter.",
+        "en": ""
       },
       {
-        "de": "Was passiert aber, wenn ein Wohnort für Migranten gefährlich wird? Die Behörden erlauben einen Umzug nur in sehr seltenen Notfällen. Das Gesetz sagt nicht klar, ob Rassismus als Grund für einen Umzug gilt.",
-        "en": "But what happens if a place of residence becomes dangerous for migrants? The authorities only allow a move in very rare emergencies. The law does not clearly state whether racism counts as a reason to move."
+        "de": "Vor dem Treffen demonstrierten mehr als 2.000 Beschäftigte und drückten ihren Unmut aus. Unter den Stahlarbeitern gebe es den Eindruck, dass die Wirtschaftsministerin die Forderung nach einem wettbewerbsfähigen Strompreis nicht mal beachte, sagte Murat Develioglu, Betriebsrat bei ArcelorMittal Bremen.",
+        "en": ""
+      },
+      {
+        "de": "Ute Buggeln von der IG Metall Bremen sagte vor dem Treffen: \"Wir haben über ein Jahrzehnt unsere Forderungen immer wieder an die Politik vorgetragen, die Reaktionen sind bisher zu langsam und zu halbherzig gewesen\". Es brauche dringend Ergbnisse und nicht nur Absichtserklärungen.",
+        "en": ""
       }
     ]
   },
   {
-    "id": "treibstoffmangel-wie-die-kubaner-mit-der-krise-zur",
-    "title": "Treibstoffmangel: Wie die Kubaner mit der Krise zurechtkommen",
-    "date": "2026-11-15",
+    "id": "depardieu-akzeptiert-bel-stigungsurteil-und-bittet",
+    "title": "Depardieu akzeptiert Belästigungsurteil und bittet um Entschuldigung",
+    "date": "2026-11-16",
     "level": "A2",
     "tag": "Ausland",
-    "desc": "Stromausfälle, Treibstoffmangel, steigende Preise: Die verschärften US-Sanktionen treffen die Menschen in Kuba hart. In ",
+    "desc": "Seit Jahren werfen Frauen dem Schauspieler Depardieu sexuelle Übergriffe und Gewalt vor. Der 77-Jährige hat sich nie ein",
     "source": "tagesschau.de",
-    "url": "https://www.tagesschau.de/ausland/amerika/kuba-energiekrise-alltag-100.html",
+    "url": "https://www.tagesschau.de/ausland/europa/depardieu-belaestigung-urteil-entschuldigung-100.html",
     "paragraphs": [
       {
-        "de": "In Kuba gibt es eine schwere Krise mit wenig Treibstoff und Strom. Oft fällt der Strom in der Stadt Havanna komplett aus. Trotzdem wollen die Menschen ihr Leben positiv weiterleben.",
-        "en": "In Cuba, there is a severe crisis with little fuel and electricity. Power often goes out completely in the city of Havana. Nevertheless, people want to continue living their lives positively."
+        "de": "Seit Jahren werfen Frauen dem Schauspieler Depardieu sexuelle Übergriffe und Gewalt vor. Der 77-Jährige hat sich nie einsichtig gezeigt - bis jetzt. Schon nächste Woche steht für Depardieu der nächste Gerichtstermin an.",
+        "en": ""
       },
       {
-        "de": "David Gonzalez ist 29 Jahre alt und wohnt in Havanna. Er organisiert jede Woche Partys und Konzerte in seinem Haus. Die jungen Leute kommen zu ihm, um Musik zu hören und Probleme zu vergessen.",
-        "en": "David Gonzalez is 29 years old and lives in Havana. He organizes parties and concerts in his house every week. Young people come to him to listen to music and forget their problems."
+        "de": "Der französische Schauspieler Gérard Depardieu verzichtet auf Berufung und akzeptiert seine Verurteilung wegen sexueller Übergriffe auf zwei Frauen. Das erklärte der Anwalt des 77-Jährigen überraschend zum Auftakt seines Berufungsprozesses - bislang hatte Depardieu die Vorwürfe von sich gewiesen.",
+        "en": ""
       },
       {
-        "de": "Draußen auf den Straßen ist es oft dunkel, aber bei David läuft Musik. Er benutzt eine große Batterie aus Spanien für den Strom. So funktionieren der Kühlschrank und die Musikanlage auch ohne öffentliches Netz.",
-        "en": "Outside on the streets it is often dark, but music plays at David's place. He uses a large battery from Spain for power. This way, the refrigerator and the sound system work even without the public power grid."
+        "de": "Weil auch die Anklage ihre Berufung zurücknahm, ist der einst so gefeierte Filmheld (\"Cyrano de Bergerac\", \"Obelix\") damit rechtskräftig zu 18 Monaten Haft auf Bewährung verurteilt. Zudem erhält er eine Eintragung ins französische Register für Sexualstraftäter. Er war im Mai 2025 wegen Übergriffen auf zwei Frauen bei Dreharbeiten zum Film \"Les volets verts\" in erster Instanz verurteilt worden.",
+        "en": ""
       },
       {
-        "de": "Die Krise bringt aber auch viele Probleme im Alltag. Weil Benzin fehlt, können die normalen Müllwagen nicht mehr fahren. Der Müll bleibt oft in der Hitze auf den Straßen liegen.",
-        "en": "However, the crisis also brings many problems to everyday life. Because there is no petrol, regular garbage trucks can no longer run. The trash often remains on the streets in the heat."
+        "de": "Depardieu selbst war - wie schon bei der Urteilsverkündung - vor Gericht nicht anwesend. Die beiden Klägerinnen zeigten sich überrascht von dessen Rückzug, aber zufrieden über den juristischen Erfolg.",
+        "en": ""
       },
       {
-        "de": "Ein junger Unternehmer hatte deshalb eine neue Idee mit kleinen Elektromobilen. Alexis Nueva und 45 andere Mitarbeiter sammeln jetzt den Müll mit diesen Elektroautos. Private Leute und der Staat bezahlen die Firma, damit das Viertel sauber bleibt.",
-        "en": "A young entrepreneur therefore had a new idea using small electric vehicles. Alexis Nueva and 45 other employees now collect the garbage with these electric cars. Private individuals and the state pay the company so that the neighborhood stays clean."
+        "de": "Der französische Schauspieler Gérard Depardieu erhielt eine 18-monatige Bewährungsstrafe. mehr",
+        "en": ""
+      },
+      {
+        "de": "Die Dekorateurin und die Regieassistentin hatten angegeben, von Depardieu an den Brüsten und am Po begrapscht worden zu sein. Schon seit Jahren mehren sich Vorwürfe sexueller Übergriffe gegen Depardieu.",
+        "en": ""
+      }
+    ]
+  },
+  {
+    "id": "tesla-k-ndigt-milliarden-investition-in-werk-in-br",
+    "title": "Tesla kündigt Milliarden-Investition in Werk in Brandenburg an",
+    "date": "2026-11-16",
+    "level": "A2",
+    "tag": "Inland",
+    "desc": "Der US-Elektroautobauer Tesla will drei Milliarden Euro für den Ausbau des Werks in Grünheide östlich von Berlin ausgebe",
+    "source": "tagesschau.de",
+    "url": "https://www.tagesschau.de/inland/regional/brandenburg/tesla-investitionen-brandenburg-100.html",
+    "paragraphs": [
+      {
+        "de": "Tesla will drei Milliarden Euro für den Ausbau des Werks in Grünheide östlich von Berlin ausgeben. Der US-Elektroautobauer will damit ein neues Produktionsgebäude finanzieren. Künftig sollen dort \"Cybercaps\" - fahrerlose Taxis - gebaut werden.",
+        "en": ""
+      },
+      {
+        "de": "Der US-Elektroautobauer Tesla will drei Milliarden Euro für den Ausbau des Werks in Grünheide (Oder-Spree) ausgeben. Damit soll zunächst ein neues Produktionsgebäude errichtet werden, teilte das Unternehmen mit. In dem Gebäude soll es später möglich sein, bis zu einer Million \"Cybercabs\" zu produzieren. Diese sollen als Robotaxi fahrerlos Menschen befördern. Im Zuge des Ausbaus sollen auch mehrere Hundert neue Mitarbeiter eingestellt werden, hieß es von Tesla.",
+        "en": ""
+      },
+      {
+        "de": "Dem Unternehmen zufolge ist der Baubeginn für das erste Halbjahr 2027 geplant, Produktionsbeginn für das Jahr 2029. Ein Genehmigungsantrag für das Gebäude soll noch dieses Jahr eingereicht werden . Er beruhe auf einem Antrag von 2023 für das Gesamtvorhaben, hieß es. Die drei Milliarden Euro seien neben dem Bau des neuen Produktionsgebäudes auch für Nebengebäude und etwa eine weitere Abwasserbehandlungsanlage vorgesehen.",
+        "en": ""
+      },
+      {
+        "de": "Der Brandenburger Ministerpräsident Dietmar Woidke (SPD) äußerte sich erfreut über die Ankündigung. \"Die Investition von drei Milliarden Euro und die Perspektive, künftig bis zu eine Million Cybercabs in Grünheide zu produzieren, ist eine Entscheidung von enormer wirtschaftlicher Bedeutung\", erklärte er laut einer Mitteilung. Woidke betonte, dass Grünheide mit dieser Entscheidung zu einem noch wichtigerem Standort der Automobilindustrie werde. \"Hier bei uns in Brandenburg entstehen neue Technologien, neue Wertschöpfung und viele neue Arbeitsplätze. Gerade in wirtschaftlich schwierigen Zeiten ist das ein starkes Signal: Deutschland ist auch heute ein interessanter Standort für große Industrieinvestitionen und Brandenburg zeigt, wie das geht.\"",
+        "en": ""
+      },
+      {
+        "de": "Ähnlich äußerte sich die Brandenburger Wirtschaftsministerin Martina Klement (CSU): \"Drei Milliarden Euro für Grünheide – das ist der absolute Hammer!\" In einer Zeit, in der in Deutschland viel darüber diskutiert werde, wie wir unsere Automobilindustrie in die Zukunft führen, werde in Brandenburg genau diese Zukunft gebaut, so Klement. \"Was mich besonders freut: Für viele Menschen in der Region eröffnen sich damit ganz neue Perspektiven.\"",
+        "en": ""
+      },
+      {
+        "de": "Tesla hatte die Ausbaupläne auch während eines Absatzeinbruchs nicht aufgegeben, aber zunächst auf Eis gelegt und von einer besseren Marktlage abhängig gemacht. Zuletzt zog die Nachfrage wieder an, und Tesla stellte gegen den Trend Beschäftigte ein. Die Fabrik bei Berlin, die im März 2022 öffnete, hatte nach Angaben von Tesla im Oktober 12.600 Beschäftigte. Zwischenzeitlich war die Zahl unter 11.000 Mitarbeiter gesunken. Das Unternehmen hatte zuletzt angekündigt, die Produktion auf 7.500 Fahrzeuge pro Woche steigern zu wollen. Das entspricht rund 375.000 Fahrzeugen im Jahr. Außerdem sollte die Batteriezellfertigung in Grünheide ausgebaut werden. In den vergangenen Monaten seien bereits 2.000 Mitarbeiter zusätzlich eingestellt worden, hieß es von einer Sprecherin.",
+        "en": ""
+      }
+    ]
+  },
+  {
+    "id": "-lterer-programmfehler-l-ste-ausfall-von-microsoft",
+    "title": "Älterer Programmfehler löste Ausfall von Microsoft-Diensten aus",
+    "date": "2026-11-16",
+    "level": "A2",
+    "tag": "Wirtschaft",
+    "desc": "Ausfälle bei Outlook oder Teams - und das über viele Stunden. Ende letzter Woche hatte die Microsoft-Störung weltweit fü",
+    "source": "tagesschau.de",
+    "url": "https://www.tagesschau.de/wirtschaft/unternehmen/microsoft-stoerung-fehler-100.html",
+    "paragraphs": [
+      {
+        "de": "Letzte Woche gab es ein großes Problem bei Microsoft. Wichtige Programme wie Outlook und Teams haben viele Stunden lang weltweit nicht funktioniert. Viele Menschen konnten keine E-Mails schreiben oder an Online-Meetings teilnehmen.",
+        "en": "Last week, there was a big problem at Microsoft. Important programs like Outlook and Teams did not work worldwide for many hours. Many people could not write emails or join online meetings."
+      },
+      {
+        "de": "Jetzt erklärt Microsoft den Grund für die Störung. Ein Fehler in der Software war schon seit Juli im System. Bei Tests hat niemand den Fehler bemerkt, weil die Computer im Labor zu alt waren.",
+        "en": "Now Microsoft is explaining the reason for the outage. An error in the software had already been in the system since July. Nobody noticed the bug during tests because the computers in the lab were too old."
+      },
+      {
+        "de": "Am Donnerstag gab es plötzlich zu viele Daten auf einmal. Zuerst fielen wenige Computer aus, danach folgten schnell viele andere Rechner. So verbreitete sich das Problem in weniger als zwei Stunden über die ganze Welt.",
+        "en": "On Thursday, there was suddenly too much data at once. First, a few computers failed, and then many other servers quickly followed. In this way, the problem spread across the whole world in less than two hours."
+      },
+      {
+        "de": "Die Folgen waren in mehr als 70 Ländern sehr schwer. Firmen, Schulen und Behörden konnten nicht normal arbeiten. In manchen Krankenhäusern mussten Ärzte wieder echte Papierakten benutzen und Termine verschieben.",
+        "en": "The consequences were very severe in more than 70 countries. Companies, schools, and public authorities could not work normally. In some hospitals, doctors had to use real paper files again and reschedule appointments."
+      },
+      {
+        "de": "Die Reparatur dauerte bis Samstag, besonders bei dem Programm Outlook. Die Techniker mussten die Server langsam und Schritt für Schritt neu starten. Jetzt funktionieren die Dienste wieder normal.",
+        "en": "The repair lasted until Saturday, especially for the Outlook program. Technicians had to restart the servers slowly and step by step. Now the services are working normally again."
+      }
+    ]
+  },
+  {
+    "id": "vor-30-jahren-ging-der-kult-messenger-icq-online",
+    "title": "Vor 30 Jahren ging der Kult-Messenger ICQ online",
+    "date": "2026-11-16",
+    "level": "A2",
+    "tag": "Kultur",
+    "desc": "Vor 30 Jahren ging ICQ an den Start. Der Instant-Messenger prägte eine ganze Generation - und tut das bis heute. Doch So",
+    "source": "tagesschau.de",
+    "url": "https://www.tagesschau.de/kultur/30-jahre-icq-messenger-100.html",
+    "paragraphs": [
+      {
+        "de": "Vor 30 Jahren ging ICQ an den Start. Der Instant-Messenger prägte eine ganze Generation - und tut das bis heute. Doch Soziale Netzwerke, WhatsApp und KI haben das Chatten grundlegend verändert.",
+        "en": ""
+      },
+      {
+        "de": "\"Uh-Oh\" - dieser Sound hat viele Millennials in ihrer Jugend begleitet. ICQ war der erste massentaugliche Messenger, mit dem man in Echtzeit mit dem Schwarm aus der Nachbarklasse oder der besten Freundin chatten konnte. Bis heute kennen viele ihre ICQ-Nummer auswendig. \"ICQ hat auch einen Raum eröffnet, sich über intime Sachen auszutauschen, die man vielleicht nicht unbedingt von Angesicht zu Angesicht besprechen würde\", erinnert sich Kommunikationswissenschaftler Manuel Menke an seine ersten Chats. \"Das war ziemlich aufregend!\"",
+        "en": ""
+      },
+      {
+        "de": "Menke forscht an der Uni Kopenhagen zu Medienwandel und Mediennostalgie. Er war selbst aktiv im Messenger, der vor 30 Jahren am 15. November 1996 startete. Fragt man ihn heute nach dem Erfolgsrezept von ICQ, antwortet er so: \"Das war eine der ersten Anwendungen, die auf den Kommunikationsdrang junger Menschen reagiert hat.\"",
+        "en": ""
+      },
+      {
+        "de": "Während sich in Deutschland nach und nach Internet-Flatrates etablierten, blieben SMS vergleichsweise teuer. Da lag es nahe, die Kommunikation in einen Chat zu verlagern. Geholfen hat auch, dass die Nutzer ihrem Chat eine eigene Note geben konnten - etwa, indem sie sich für eine grelle Farbe oder eine außergewöhnliche Schriftart entschieden.",
+        "en": ""
+      },
+      {
+        "de": "Der Mitgründer der Digital-Konferenz re:publica, Markus Beckedahl, hält noch etwas für entscheidend: \"ICQ hat populär gemacht, dass es eine einfach zu nutzende Oberfläche war.\" Eine Benutzeroberfläche, die theoretisch sogar weniger technikaffine Eltern hätten bedienen können. Doch für die interessierten sich die großen Software-Unternehmen Ende der 90er nur zweitrangig: Ihr Hauptfokus lag auf den Jugendlichen.",
+        "en": ""
+      },
+      {
+        "de": "Die Nutzung sozialer Medien hat in Deutschland in allen Altersgruppen deutlich zugenommen - auch bei Älteren. mehr",
+        "en": ""
       }
     ]
   }
